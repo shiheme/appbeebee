@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "strict": true,
+        "jsx": "preserve",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "lib": ["ESNext", "DOM"],
+        "types": [],
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"]
+        }
+    },
+    "include": [
+        ".vitepress/**/*.ts",
+        ".vitepress/**/*.d.ts",
+        ".vitepress/**/*.tsx",
+        ".vitepress/**/*.vue",
+        "shims-vue.d.ts"
+, ".vitepress/theme/basic.data.mts", ".vitepress/theme/posts.data.ts"    ],
+    "exclude": ["dist", "node_modules"]
+}
