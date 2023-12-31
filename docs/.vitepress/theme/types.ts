@@ -21,6 +21,17 @@ export interface Post{
   relativePath?: string
 }
 
+export interface Work{
+  title?: string
+  view?: string
+  viewtit?: string
+  beecode?: string
+  github?: string
+  wxwords?: string
+  via?: string
+  qrcode?: string
+}
+
 export interface Song {
   title?: string
   id?: number

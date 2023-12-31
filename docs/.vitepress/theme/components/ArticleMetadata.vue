@@ -30,11 +30,11 @@
     </div>
     <p class="readtime" v-if="type === 'single'"><span class="warning">全文共{{ wordCount }}字，{{ '预计阅读' + readTime + '分钟'
     }}</span></p>
-    <div class="cover" v-if="type === 'single' && dataSource.frontmatter?.cover">
+    <!-- <div class="cover" v-if="type === 'single' && dataSource.frontmatter?.cover">
       <p>
         <img class="img" :src="dataSource.frontmatter.cover" alt="效果">
       </p>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -177,13 +177,24 @@ onMounted(() => {
     .tags {
       display: flex;
       flex-direction: row;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
 
       .tag {
         margin-top: 5px;
         margin-bottom: 5px;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical !important
       }
     }
+  }
+}
+
+.postlist .list .articlemeta.grid {
+  .tags {
+      flex-wrap: nowrap;
   }
 }
 
@@ -278,6 +289,11 @@ onMounted(() => {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+
+    .tag {
+      margin-left: 0px!important;
+      margin-right: 10px;
+    }
     }
   }
 }

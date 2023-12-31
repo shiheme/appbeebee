@@ -157,14 +157,18 @@ onMounted(() => {
   margin-bottom: 50px;
 }
 .pageaside {
-  min-height: 284px;
+  min-height: 315px;
   width:100%;
 
   .acontent {
     background-color: var(--vp-c-bg-alt);
     border-radius: 8px;
     border: .5px solid var(--vp-c-gray-soft);
-    min-height: 284px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width:100%;
     /* box-shadow: var(--vp-shadow-1); */
   }

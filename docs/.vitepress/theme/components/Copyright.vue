@@ -2,9 +2,9 @@
     <div class="site-footer">
         <div class="btmgroup">
             <div class="msgcard">
-                <div class="gzh">
+                <!-- <div class="gzh">
                     <PageGZH />
-                </div>
+                </div> -->
                 <div class="copyright" v-if="website?.showFooter">
                     Copyright © {{ new Date().getFullYear() === 2023 ? '' : '2023-' }}{{ new Date().getFullYear() }} <a
                         class="title strong" :href="website?.link">{{ webTitle }}</a> | 使用 vitepress 构建本站<br />
@@ -37,7 +37,7 @@ const webTitle = site.value.title
     padding: 15px 0;
     overflow: auto;
     max-width: calc(var(--vp-layout-max-width) - 64px);
-    margin: 0 auto;
+    margin: 65px auto 0 auto;
     position: relative;
 }
 

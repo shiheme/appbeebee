@@ -27,7 +27,7 @@
   margin-top: 32px;
   text-align: center;
   font-size: 0.7rem;
-  /* background-color: var(--vp-c-bg-alt); */
+  background-color: var(--vp-c-bg-alt);
 
   .title {
     font-size: 0.875rem;

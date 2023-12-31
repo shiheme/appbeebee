@@ -140,7 +140,7 @@ const props = defineProps<{
   box-shadow: var(--vp-shadow-1);
 
   .cover {
-    height: 10rem;
+    height: 12rem;
     width: 100%;
     overflow: hidden;
     position: relative;

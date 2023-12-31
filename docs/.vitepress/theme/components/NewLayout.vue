@@ -22,7 +22,7 @@
         <template #nav-bar-content-before>
             <!-- 在导航搜索框💰添加 -->
             <ClientOnly>
-                <div v-if="!isPause" class="" style="padding-left: 32px;position: relative;height:40px;width:220px;">
+                <div v-if="!isPause" class="" style="padding-left: 32px;position: relative;height:40px;margin-right:0px;">
                     <Player />
                 </div>
             </ClientOnly>
@@ -47,9 +47,10 @@
                 <ArticleMetadata v-if="(frontmatter?.post)" type="single" :article="page" :key="md5(page.relativePath)" />
             </ClientOnly>
         </template>
-        <template #aside-top>
+        <template #aside-bottom>
             <ClientOnly>
-                <ArticleLink v-if="(frontmatter?.post)" :key="md5(page.relativePath)" />
+                <PageGZH v-if="(frontmatter?.post)" />
+                <!-- <ArticleLink v-if="(frontmatter?.post)" :key="md5(page.relativePath)" /> -->
                 <PageASide v-if="(frontmatter.index)" />
             </ClientOnly>
         </template>

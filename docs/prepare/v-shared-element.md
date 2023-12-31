@@ -4,9 +4,6 @@ title: V-shared-element | vue.js实现Web端/H5端共享元素内容切换
 date: 2023-12-10
 cover: https://fc.sinaimg.cn/large/6364aa43gy1hl0kg09eqog20k00dcqci.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/v-shared-element.gif
-github: justintaddei/v-shared-element
-view: https://justintaddei.github.io/v-shared-element/examples/dynamic-lists/
-wxwords: v-shared-element
 categories:
  - 小程序
 tags:
@@ -27,7 +24,11 @@ description: 共享元素能够快速实现不同页面元素间的无缝衔接�
 
 > 它支持Vue 3，并为Vue 2提供向后兼容性。
 ## 下载
-<ArticleLink via="post" />
-
-## 使用教程
-[https://github.com/justintaddei/v-shared-element/](https://github.com/justintaddei/v-shared-element/)
+<ArticleLink via="post" :work="{
+    title: 'v-shared-element',
+    view: 'https://justintaddei.github.io/v-shared-element/',
+    github: 'justintaddei/v-shared-element',
+    beecode: '1234',
+    viewtit: '效果',
+    wxwords: 'v-shared-element',
+    }" />

@@ -4,8 +4,6 @@ title: iPhone Pro 15 3D模型 Figma源文件
 date: 2023-12-27
 cover: https://fc.sinaimg.cn/large/6364aa43gy1hl8pp677wxg20k00dckai.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/iphone-pro-15-3d-mockups-free.gif
-view: https://www.figma.com/community/file/1303247171848616022
-wxwords: iphone-pro-15-3d-mockups-free
 categories:
  - 设计
 tags:
@@ -25,7 +23,14 @@ description: 免费 iPhone15 设备渲染模型，方便你展示你的应用作
 > 提供 16 个角度的设备渲染，通过 Figma方便在线生成你的作品
 
 ## 下载
-<ArticleLink via="post" />
+<ArticleLink via="post" :work="{
+    title: 'iphone-pro-15-3d-mockups-free',
+    view: 'https://www.figma.com/community/file/1303247171848616022',
+    github: '',
+    beecode: '4880',
+    viewtit: '下载',
+    wxwords: 'iphone-pro-15-3d-mockups-free',
+    }" />
 
 
 

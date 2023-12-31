@@ -1,6 +1,6 @@
 <template>
 	<!-- 音乐播放器。由PageAside点击播放显示在头部，可拖拽 -->
-		<div ref="el" v-tooltip="'拖拽移动，双击回到原位'" class="player" :class="{ back: !isdrag }" @dblclick="reback" :style="{
+		<div ref="el" class="player" :class="{ back: !isdrag }" :style="{
 			background: 'var(--vp-c-bg-alt)',
 			opacity: isPause ? 0 : 1,
 			'pointer-events': isPause ? 'none' : 'auto',
@@ -53,16 +53,16 @@ const el = ref<HTMLElement | null>(null)
 const { top, left } = useElementBounding(el)
 const adjustedLeft = ref(0)
 const adjustedTop = ref(0)
-useDraggable(el, {
-  initialValue: {
-    x: 0,
-    y: 0,
-  },
-  onMove({ x, y }) {
-    adjustedLeft.value = x - unref(left.value)
-    adjustedTop.value = y - unref(top.value)
-  },
-})
+// useDraggable(el, {
+//   initialValue: {
+//     x: 0,
+//     y: 0,
+//   },
+//   onMove({ x, y }) {
+//     adjustedLeft.value = x - unref(left.value)
+//     adjustedTop.value = y - unref(top.value)
+//   },
+// })
 const isdrag = ref(true)
 const reback = () => {
 	adjustedLeft.value = 0
@@ -96,12 +96,12 @@ const reback = () => {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	position: absolute;
+	position: relative;
 	z-index: 272;
 	overflow: hidden;
-	left: 32px;
+	left: 0px;
 	top: 0px;
-	cursor: move;
+	/* cursor: move; */
 
 	.state {
 		width: 100%;

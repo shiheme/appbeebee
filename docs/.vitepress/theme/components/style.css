@@ -11,8 +11,11 @@
     --vp-c-bg-alt: #ffffff;
     --vp-c-bg-elv: #f6f6f7;
     --vp-c-bg-soft: #ffffff; */
+    /* --vp-c-brand-1: #000000;
+    --vp-c-brand-2: #001000;
+    --vp-c-brand-3: #002000; */
     --vp-font-family-base: Fira Code,-apple-system,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica,Arial,sans-serif;
-    /* --vp-layout-max-width: 1280px; */
+    --vp-layout-max-width: 1280px;
 }
 
 .Layout {
@@ -41,6 +44,11 @@
     border-radius: 12px;
     border: 5px solid var(--vp-c-bg-alt);
     box-shadow: var(--vp-shadow-1);
+}
+
+.VPDoc {
+    padding: 32px 24px 24px!important;
+    width: 100%;
 }
 /* .content a[rel~='noreferrer']:link, a[rel~='noreferrer']:visited {
     color: var(--vp-c-brand);
@@ -84,6 +92,9 @@
 }
 
 @media (min-width: 768px) {
+    .VPDoc {
+        padding: 48px 32px 32px!important;
+    }
 
     .VPDoc.has-aside:not(.has-sidebar) .postlist.grid,
     .VPDoc.has-sidebar:not(.has-aside) .postlist.grid {
