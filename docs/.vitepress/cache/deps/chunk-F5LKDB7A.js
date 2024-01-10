@@ -39,9 +39,9 @@ import {
   version,
   watch,
   watchEffect
-} from "./chunk-UTZHRSP4.js";
+} from "./chunk-PXHMLM5Y.js";
 
-// node_modules/@vueuse/shared/index.mjs
+// node_modules/@vueuse/core/node_modules/@vueuse/shared/index.mjs
 function computedEager(fn, options) {
   var _a;
   const result = shallowRef();
@@ -523,8 +523,7 @@ function objectEntries(obj) {
   return Object.entries(obj);
 }
 function getLifeCycleTarget(target) {
-  const instance = target || getCurrentInstance();
-  return isVue3 ? instance : instance == null ? void 0 : instance.proxy;
+  return target || getCurrentInstance();
 }
 function toRef2(...args) {
   if (args.length !== 1)
@@ -784,7 +783,7 @@ function toRefs2(objectRef, options = {}) {
 function tryOnBeforeMount(fn, sync = true, target) {
   const instance = getLifeCycleTarget(target);
   if (instance)
-    onBeforeMount(fn, instance);
+    onBeforeMount(fn, target);
   else if (sync)
     fn();
   else
@@ -793,12 +792,12 @@ function tryOnBeforeMount(fn, sync = true, target) {
 function tryOnBeforeUnmount(fn, target) {
   const instance = getLifeCycleTarget(target);
   if (instance)
-    onBeforeUnmount(fn, instance);
+    onBeforeUnmount(fn, target);
 }
 function tryOnMounted(fn, sync = true, target) {
-  const instance = getLifeCycleTarget(target);
+  const instance = getLifeCycleTarget();
   if (instance)
-    onMounted(fn, instance);
+    onMounted(fn, target);
   else if (sync)
     fn();
   else
@@ -807,7 +806,7 @@ function tryOnMounted(fn, sync = true, target) {
 function tryOnUnmounted(fn, target) {
   const instance = getLifeCycleTarget(target);
   if (instance)
-    onUnmounted(fn, instance);
+    onUnmounted(fn, target);
 }
 function createUntil(r, isNot = false) {
   function toMatch(condition, { flush = "sync", deep = false, timeout, throwOnTimeout } = {}) {
@@ -1754,7 +1753,7 @@ var _iOSWorkaround = false;
 function onClickOutside(target, handler, options = {}) {
   const { window: window2 = defaultWindow, ignore = [], capture = true, detectIframe = false } = options;
   if (!window2)
-    return;
+    return noop;
   if (isIOS && !_iOSWorkaround) {
     _iOSWorkaround = true;
     Array.from(window2.document.body.children).forEach((el) => el.addEventListener("click", noop));
@@ -4023,6 +4022,9 @@ function useElementBounding(target, options = {}) {
   }
   useResizeObserver(target, update);
   watch(() => unrefElement(target), (ele) => !ele && update());
+  useMutationObserver(target, update, {
+    attributeFilter: ["style", "class"]
+  });
   if (windowScroll)
     useEventListener("scroll", update, { capture: true, passive: true });
   if (windowResize)
@@ -8933,4 +8935,4 @@ export {
   useWindowScroll,
   useWindowSize
 };
-//# sourceMappingURL=chunk-JKEAUO6S.js.map
+//# sourceMappingURL=chunk-F5LKDB7A.js.map

@@ -24,7 +24,7 @@ import {
   withCtx,
   withKeys,
   withScopeId
-} from "./chunk-UTZHRSP4.js";
+} from "./chunk-PXHMLM5Y.js";
 import "./chunk-Y2F7D3TJ.js";
 
 // node_modules/@floating-ui/utils/dist/floating-ui.utils.mjs
@@ -470,7 +470,7 @@ var autoPlacement = function(options) {
         const alignment2 = getAlignment(d2.placement);
         return [d2.placement, alignment2 && crossAxis ? (
           // Check along the mainAxis and main crossAxis side.
-          d2.overflows.slice(0, 2).reduce((acc, v2) => acc + v2, 0)
+          d2.overflows.slice(0, 2).reduce((acc, v) => acc + v, 0)
         ) : (
           // Check only the mainAxis.
           d2.overflows[0]
@@ -481,7 +481,7 @@ var autoPlacement = function(options) {
         // Aligned placements should not check their opposite crossAxis
         // side.
         getAlignment(d2[0]) ? 2 : 3
-      ).every((v2) => v2 <= 0));
+      ).every((v) => v <= 0));
       const resetPlacement = ((_placementsThatFitOnE = placementsThatFitOnEachSide[0]) == null ? void 0 : _placementsThatFitOnE[0]) || placementsSortedByMostSpace[0][0];
       if (resetPlacement !== placement) {
         return {
@@ -1301,9 +1301,9 @@ var computePosition2 = (reference, floating, options) => {
 };
 
 // node_modules/floating-vue/dist/floating-vue.mjs
-function fe(e, t) {
+function $e(e, t) {
   for (const o in t)
-    Object.prototype.hasOwnProperty.call(t, o) && (typeof t[o] == "object" && e[o] ? fe(e[o], t[o]) : e[o] = t[o]);
+    Object.prototype.hasOwnProperty.call(t, o) && (typeof t[o] == "object" && e[o] ? $e(e[o], t[o]) : e[o] = t[o]);
 }
 var u = {
   // Disable popper components
@@ -1319,7 +1319,7 @@ var u = {
   // Skip delay & CSS transitions when another popper is shown, so that the popper appear to instanly move to the new position.
   instantMove: false,
   // Auto destroy tooltip DOM nodes (ms)
-  disposeTimeout: 5e3,
+  disposeTimeout: 150,
   // Triggers on the popper itself
   popperTriggers: [],
   // Positioning strategy
@@ -1372,7 +1372,7 @@ var u = {
     menu: {
       $extend: "dropdown",
       triggers: ["hover", "focus"],
-      popperTriggers: ["hover", "focus"],
+      popperTriggers: ["hover"],
       delay: {
         show: 0,
         hide: 400
@@ -1380,14 +1380,14 @@ var u = {
     }
   }
 };
-function b(e, t) {
+function S(e, t) {
   let o = u.themes[e] || {}, i;
   do
     i = o[t], typeof i > "u" ? o.$extend ? o = u.themes[o.$extend] || {} : (o = null, i = u[t]) : o = null;
   while (o);
   return i;
 }
-function Je(e) {
+function Qe(e) {
   const t = [e];
   let o = u.themes[e] || {};
   do
@@ -1395,7 +1395,7 @@ function Je(e) {
   while (o);
   return t.map((i) => `v-popper--theme-${i}`);
 }
-function oe(e) {
+function ne(e) {
   const t = [e];
   let o = u.themes[e] || {};
   do
@@ -1403,41 +1403,41 @@ function oe(e) {
   while (o);
   return t;
 }
-var _ = false;
+var $ = false;
 if (typeof window < "u") {
-  _ = false;
+  $ = false;
   try {
     const e = Object.defineProperty({}, "passive", {
       get() {
-        _ = true;
+        $ = true;
       }
     });
     window.addEventListener("test", null, e);
   } catch {
   }
 }
-var me = false;
-typeof window < "u" && typeof navigator < "u" && (me = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream);
-var ge = ["auto", "top", "bottom", "left", "right"].reduce((e, t) => e.concat([
+var ve = false;
+typeof window < "u" && typeof navigator < "u" && (ve = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream);
+var ye = ["auto", "top", "bottom", "left", "right"].reduce((e, t) => e.concat([
   t,
   `${t}-start`,
   `${t}-end`
 ]), []);
-var ie = {
+var re = {
   hover: "mouseenter",
   focus: "focus",
   click: "click",
   touch: "touchstart",
   pointer: "pointerdown"
 };
-var se = {
+var pe = {
   hover: "mouseleave",
   focus: "blur",
   click: "click",
   touch: "touchend",
   pointer: "pointerup"
 };
-function ne(e, t) {
+function ae(e, t) {
   const o = e.indexOf(t);
   o !== -1 && e.splice(o, 1);
 }
@@ -1448,21 +1448,21 @@ function W() {
 }
 var d = [];
 var g = null;
-var re = {};
-function pe(e) {
-  let t = re[e];
-  return t || (t = re[e] = []), t;
+var de = {};
+function le(e) {
+  let t = de[e];
+  return t || (t = de[e] = []), t;
 }
-var X = function() {
+var Y = function() {
 };
-typeof window < "u" && (X = window.Element);
+typeof window < "u" && (Y = window.Element);
 function n(e) {
   return function(t) {
-    return b(t.theme, e);
+    return S(t.theme, e);
   };
 }
 var G = "__floating-vue__popper";
-var K = () => defineComponent({
+var J = () => defineComponent({
   name: "VPopper",
   provide() {
     return {
@@ -1514,7 +1514,7 @@ var K = () => defineComponent({
     placement: {
       type: String,
       default: n("placement"),
-      validator: (e) => ge.includes(e)
+      validator: (e) => ye.includes(e)
     },
     delay: {
       type: [String, Number, Object],
@@ -1553,11 +1553,11 @@ var K = () => defineComponent({
       default: n("popperHideTriggers")
     },
     container: {
-      type: [String, Object, X, Boolean],
+      type: [String, Object, Y, Boolean],
       default: n("container")
     },
     boundary: {
-      type: [String, X],
+      type: [String, Y],
       default: n("boundary")
     },
     strategy: {
@@ -1648,18 +1648,17 @@ var K = () => defineComponent({
       default: n("disposeTimeout")
     }
   },
-  emits: [
-    "show",
-    "hide",
-    "update:shown",
-    "apply-show",
-    "apply-hide",
-    "close-group",
-    "close-directive",
-    "auto-hide",
-    "resize",
-    "dispose"
-  ],
+  emits: {
+    show: () => true,
+    hide: () => true,
+    "update:shown": (e) => true,
+    "apply-show": () => true,
+    "apply-hide": () => true,
+    "close-group": () => true,
+    "close-directive": () => true,
+    "auto-hide": () => true,
+    resize: () => true
+  },
   data() {
     return {
       isShown: false,
@@ -1791,7 +1790,7 @@ var K = () => defineComponent({
       this.$_isDisposed && (this.$_isDisposed = false, this.isMounted = false, this.$_events = [], this.$_preventShow = false, this.$_referenceNode = ((e = this.referenceNode) == null ? void 0 : e.call(this)) ?? this.$el, this.$_targetNodes = this.targetNodes().filter((t) => t.nodeType === t.ELEMENT_NODE), this.$_popperNode = this.popperNode(), this.$_innerNode = this.$_popperNode.querySelector(".v-popper__inner"), this.$_arrowNode = this.$_popperNode.querySelector(".v-popper__arrow-container"), this.$_swapTargetAttrs("title", "data-original-title"), this.$_detachPopperNode(), this.triggers.length && this.$_addEventListeners(), this.shown && this.show());
     },
     dispose() {
-      this.$_isDisposed || (this.$_isDisposed = true, this.$_removeEventListeners(), this.hide({ skipDelay: true }), this.$_detachPopperNode(), this.isMounted = false, this.isShown = false, this.$_updateParentShownChildren(false), this.$_swapTargetAttrs("data-original-title", "title"), this.$emit("dispose"));
+      this.$_isDisposed || (this.$_isDisposed = true, this.$_removeEventListeners(), this.hide({ skipDelay: true }), this.$_detachPopperNode(), this.isMounted = false, this.isShown = false, this.$_updateParentShownChildren(false), this.$_swapTargetAttrs("data-original-title", "title"));
     },
     async onResize() {
       this.isShown && (await this.$_computePosition(), this.$emit("resize"));
@@ -1914,8 +1913,8 @@ var K = () => defineComponent({
           t = d[o], t.showGroup !== e && (t.hide(), t.$emit("close-group"));
       }
       d.push(this), document.body.classList.add("v-popper--some-open");
-      for (const t of oe(this.theme))
-        pe(t).push(this), document.body.classList.add(`v-popper--some-open--${t}`);
+      for (const t of ne(this.theme))
+        le(t).push(this), document.body.classList.add(`v-popper--some-open--${t}`);
       this.$emit("apply-show"), this.classes.showFrom = true, this.classes.showTo = false, this.classes.hideFrom = false, this.classes.hideTo = false, await W(), this.classes.showFrom = false, this.classes.showTo = true, this.noAutoFocus || this.$_popperNode.focus();
     },
     async $_applyHide(e = false) {
@@ -1925,10 +1924,10 @@ var K = () => defineComponent({
       }
       if (clearTimeout(this.$_scheduleTimer), !this.isShown)
         return;
-      this.skipTransition = e, ne(d, this), d.length === 0 && document.body.classList.remove("v-popper--some-open");
-      for (const o of oe(this.theme)) {
-        const i = pe(o);
-        ne(i, this), i.length === 0 && document.body.classList.remove(`v-popper--some-open--${o}`);
+      this.skipTransition = e, ae(d, this), d.length === 0 && document.body.classList.remove("v-popper--some-open");
+      for (const o of ne(this.theme)) {
+        const i = le(o);
+        ae(i, this), i.length === 0 && document.body.classList.remove(`v-popper--some-open--${o}`);
       }
       g === this && (g = null), this.isShown = false, this.$_applyAttrsToTarget({
         "aria-describedby": void 0,
@@ -1954,14 +1953,14 @@ var K = () => defineComponent({
       const e = (o) => {
         this.isShown && !this.$_hideInProgress || (o.usedByTooltip = true, !this.$_preventShow && this.show({ event: o }));
       };
-      this.$_registerTriggerListeners(this.$_targetNodes, ie, this.triggers, this.showTriggers, e), this.$_registerTriggerListeners([this.$_popperNode], ie, this.popperTriggers, this.popperShowTriggers, e);
+      this.$_registerTriggerListeners(this.$_targetNodes, re, this.triggers, this.showTriggers, e), this.$_registerTriggerListeners([this.$_popperNode], re, this.popperTriggers, this.popperShowTriggers, e);
       const t = (o) => {
         o.usedByTooltip || this.hide({ event: o });
       };
-      this.$_registerTriggerListeners(this.$_targetNodes, se, this.triggers, this.hideTriggers, t), this.$_registerTriggerListeners([this.$_popperNode], se, this.popperTriggers, this.popperHideTriggers, t);
+      this.$_registerTriggerListeners(this.$_targetNodes, pe, this.triggers, this.hideTriggers, t), this.$_registerTriggerListeners([this.$_popperNode], pe, this.popperTriggers, this.popperHideTriggers, t);
     },
     $_registerEventListeners(e, t, o) {
-      this.$_events.push({ targetNodes: e, eventType: t, handler: o }), e.forEach((i) => i.addEventListener(t, o, _ ? {
+      this.$_events.push({ targetNodes: e, eventType: t, handler: o }), e.forEach((i) => i.addEventListener(t, o, $ ? {
         passive: true
       } : void 0));
     },
@@ -2010,12 +2009,12 @@ var K = () => defineComponent({
     },
     $_isAimingPopper() {
       const e = this.$_referenceNode.getBoundingClientRect();
-      if (v >= e.left && v <= e.right && y >= e.top && y <= e.bottom) {
-        const t = this.$_popperNode.getBoundingClientRect(), o = v - f, i = y - m, r = t.left + t.width / 2 - f + (t.top + t.height / 2) - m + t.width + t.height, p = f + o * r, a = m + i * r;
-        return S(f, m, p, a, t.left, t.top, t.left, t.bottom) || // Left edge
-        S(f, m, p, a, t.left, t.top, t.right, t.top) || // Top edge
-        S(f, m, p, a, t.right, t.top, t.right, t.bottom) || // Right edge
-        S(f, m, p, a, t.left, t.bottom, t.right, t.bottom);
+      if (y >= e.left && y <= e.right && _ >= e.top && _ <= e.bottom) {
+        const t = this.$_popperNode.getBoundingClientRect(), o = y - c, i = _ - m, r = t.left + t.width / 2 - c + (t.top + t.height / 2) - m + t.width + t.height, p = c + o * r, a = m + i * r;
+        return C(c, m, p, a, t.left, t.top, t.left, t.bottom) || // Left edge
+        C(c, m, p, a, t.left, t.top, t.right, t.top) || // Top edge
+        C(c, m, p, a, t.right, t.top, t.right, t.bottom) || // Right edge
+        C(c, m, p, a, t.left, t.bottom, t.right, t.bottom);
       }
       return false;
     }
@@ -2024,14 +2023,14 @@ var K = () => defineComponent({
     return this.$slots.default(this.slotData);
   }
 });
-typeof document < "u" && typeof window < "u" && (me ? (document.addEventListener("touchstart", ae, _ ? {
+typeof document < "u" && typeof window < "u" && (ve ? (document.addEventListener("touchstart", he, $ ? {
   passive: true,
   capture: true
-} : true), document.addEventListener("touchend", Ze, _ ? {
+} : true), document.addEventListener("touchend", et, $ ? {
   passive: true,
   capture: true
-} : true)) : (window.addEventListener("mousedown", ae, true), window.addEventListener("click", Qe, true)), window.addEventListener("resize", ot));
-function ae(e) {
+} : true)) : (window.addEventListener("mousedown", he, true), window.addEventListener("click", Ze, true)), window.addEventListener("resize", it));
+function he(e) {
   for (let t = 0; t < d.length; t++) {
     const o = d[t];
     try {
@@ -2041,20 +2040,20 @@ function ae(e) {
     }
   }
 }
-function Qe(e) {
-  $e(e);
-}
 function Ze(e) {
-  $e(e, true);
+  _e(e);
 }
-function $e(e, t = false) {
+function et(e) {
+  _e(e, true);
+}
+function _e(e, t = false) {
   const o = {};
   for (let i = d.length - 1; i >= 0; i--) {
     const s = d[i];
     try {
-      const r = s.$_containsGlobalTarget = et(s, e);
+      const r = s.$_containsGlobalTarget = tt(s, e);
       s.$_pendingHide = false, requestAnimationFrame(() => {
-        if (s.$_pendingHide = false, !o[s.randomId] && de(s, r, e)) {
+        if (s.$_pendingHide = false, !o[s.randomId] && ue(s, r, e)) {
           if (s.$_handleGlobalClose(e, t), !e.closeAllPopover && e.closePopover && r) {
             let a = s.parentPopper;
             for (; a; )
@@ -2062,7 +2061,7 @@ function $e(e, t = false) {
             return;
           }
           let p = s.parentPopper;
-          for (; p && de(p, p.$_containsGlobalTarget, e); ) {
+          for (; p && ue(p, p.$_containsGlobalTarget, e); ) {
             p.$_handleGlobalClose(e, t);
             p = p.parentPopper;
           }
@@ -2072,51 +2071,51 @@ function $e(e, t = false) {
     }
   }
 }
-function et(e, t) {
+function tt(e, t) {
   const o = e.popperNode();
   return e.$_mouseDownContains || o.contains(t.target);
 }
-function de(e, t, o) {
-  return o.closeAllPopover || o.closePopover && t || tt(e, o) && !t;
+function ue(e, t, o) {
+  return o.closeAllPopover || o.closePopover && t || ot(e, o) && !t;
 }
-function tt(e, t) {
+function ot(e, t) {
   if (typeof e.autoHide == "function") {
     const o = e.autoHide(t);
     return e.lastAutoHide = o, o;
   }
   return e.autoHide;
 }
-function ot(e) {
+function it(e) {
   for (let t = 0; t < d.length; t++)
     d[t].$_computePosition(e);
 }
-function Ht() {
+function Ot() {
   for (let e = 0; e < d.length; e++)
     d[e].hide();
 }
-var f = 0;
+var c = 0;
 var m = 0;
-var v = 0;
 var y = 0;
+var _ = 0;
 typeof window < "u" && window.addEventListener("mousemove", (e) => {
-  f = v, m = y, v = e.clientX, y = e.clientY;
-}, _ ? {
+  c = y, m = _, y = e.clientX, _ = e.clientY;
+}, $ ? {
   passive: true
 } : void 0);
-function S(e, t, o, i, s, r, p, a) {
+function C(e, t, o, i, s, r, p, a) {
   const l = ((p - s) * (t - r) - (a - r) * (e - s)) / ((a - r) * (o - e) - (p - s) * (i - t)), h2 = ((o - e) * (t - r) - (i - t) * (e - s)) / ((a - r) * (o - e) - (p - s) * (i - t));
   return l >= 0 && l <= 1 && h2 >= 0 && h2 <= 1;
 }
-var it = {
-  extends: K()
+var st = {
+  extends: J()
 };
-var k = (e, t) => {
+var M = (e, t) => {
   const o = e.__vccOpts || e;
   for (const [i, s] of t)
     o[i] = s;
   return o;
 };
-function st(e, t, o, i, s, r) {
+function nt(e, t, o, i, s, r) {
   return openBlock(), createElementBlock("div", {
     ref: "reference",
     class: normalizeClass(["v-popper", {
@@ -2126,8 +2125,8 @@ function st(e, t, o, i, s, r) {
     renderSlot(e.$slots, "default", normalizeProps(guardReactiveProps(e.slotData)))
   ], 2);
 }
-var nt = k(it, [["render", st]]);
-function rt() {
+var rt = M(st, [["render", nt]]);
+function pt() {
   var e = window.navigator.userAgent, t = e.indexOf("MSIE ");
   if (t > 0)
     return parseInt(e.substring(t + 5, e.indexOf(".", t)), 10);
@@ -2141,9 +2140,9 @@ function rt() {
 }
 var z;
 function U() {
-  U.init || (U.init = true, z = rt() !== -1);
+  U.init || (U.init = true, z = pt() !== -1);
 }
-var E = {
+var B = {
   name: "ResizeObserver",
   props: {
     emitOnMount: {
@@ -2190,31 +2189,31 @@ var E = {
     }
   }
 };
-var pt = withScopeId("data-v-b329ee4c");
+var at = withScopeId("data-v-b329ee4c");
 pushScopeId("data-v-b329ee4c");
-var at = {
+var dt = {
   class: "resize-observer",
   tabindex: "-1"
 };
 popScopeId();
-var dt = pt((e, t, o, i, s, r) => (openBlock(), createBlock("div", at)));
-E.render = dt;
-E.__scopeId = "data-v-b329ee4c";
-E.__file = "src/components/ResizeObserver.vue";
-var J = (e = "theme") => ({
+var lt = at((e, t, o, i, s, r) => (openBlock(), createBlock("div", dt)));
+B.render = lt;
+B.__scopeId = "data-v-b329ee4c";
+B.__file = "src/components/ResizeObserver.vue";
+var Q = (e = "theme") => ({
   computed: {
     themeClass() {
-      return Je(this[e]);
+      return Qe(this[e]);
     }
   }
 });
 var ht = defineComponent({
   name: "VPopperContent",
   components: {
-    ResizeObserver: E
+    ResizeObserver: B
   },
   mixins: [
-    J()
+    Q()
   ],
   props: {
     popperId: String,
@@ -2237,18 +2236,18 @@ var ht = defineComponent({
     }
   }
 });
-var lt = ["id", "aria-hidden", "tabindex", "data-popper-placement"];
-var ut = {
+var ut = ["id", "aria-hidden", "tabindex", "data-popper-placement"];
+var ft = {
   ref: "inner",
   class: "v-popper__inner"
 };
 var ct = createBaseVNode("div", { class: "v-popper__arrow-outer" }, null, -1);
-var ft = createBaseVNode("div", { class: "v-popper__arrow-inner" }, null, -1);
-var mt = [
+var mt = createBaseVNode("div", { class: "v-popper__arrow-inner" }, null, -1);
+var gt = [
   ct,
-  ft
+  mt
 ];
-function gt(e, t, o, i, s, r) {
+function wt(e, t, o, i, s, r) {
   const p = resolveComponent("ResizeObserver");
   return openBlock(), createElementBlock("div", {
     id: e.popperId,
@@ -2287,7 +2286,7 @@ function gt(e, t, o, i, s, r) {
         transformOrigin: e.result.transformOrigin
       } : void 0)
     }, [
-      createBaseVNode("div", ut, [
+      createBaseVNode("div", ft, [
         e.mounted ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
           createBaseVNode("div", null, [
             renderSlot(e.$slots, "default")
@@ -2305,12 +2304,12 @@ function gt(e, t, o, i, s, r) {
           left: e.toPx(e.result.arrow.x),
           top: e.toPx(e.result.arrow.y)
         } : void 0)
-      }, mt, 4)
+      }, gt, 4)
     ], 4)
-  ], 46, lt);
+  ], 46, ut);
 }
-var Q = k(ht, [["render", gt]]);
-var Z = {
+var Z = M(ht, [["render", wt]]);
+var ee = {
   methods: {
     show(...e) {
       return this.$refs.popper.show(...e);
@@ -2326,21 +2325,193 @@ var Z = {
     }
   }
 };
+var X = function() {
+};
+typeof window < "u" && (X = window.Element);
 var $t = defineComponent({
   name: "VPopperWrapper",
   components: {
-    Popper: nt,
-    PopperContent: Q
+    Popper: rt,
+    PopperContent: Z
   },
   mixins: [
-    Z,
-    J("finalTheme")
+    ee,
+    Q("finalTheme")
   ],
   props: {
     theme: {
       type: String,
       default: null
+    },
+    referenceNode: {
+      type: Function,
+      default: null
+    },
+    shown: {
+      type: Boolean,
+      default: false
+    },
+    showGroup: {
+      type: String,
+      default: null
+    },
+    // eslint-disable-next-line vue/require-prop-types
+    ariaId: {
+      default: null
+    },
+    disabled: {
+      type: Boolean,
+      default: void 0
+    },
+    positioningDisabled: {
+      type: Boolean,
+      default: void 0
+    },
+    placement: {
+      type: String,
+      default: void 0
+    },
+    delay: {
+      type: [String, Number, Object],
+      default: void 0
+    },
+    distance: {
+      type: [Number, String],
+      default: void 0
+    },
+    skidding: {
+      type: [Number, String],
+      default: void 0
+    },
+    triggers: {
+      type: Array,
+      default: void 0
+    },
+    showTriggers: {
+      type: [Array, Function],
+      default: void 0
+    },
+    hideTriggers: {
+      type: [Array, Function],
+      default: void 0
+    },
+    popperTriggers: {
+      type: Array,
+      default: void 0
+    },
+    popperShowTriggers: {
+      type: [Array, Function],
+      default: void 0
+    },
+    popperHideTriggers: {
+      type: [Array, Function],
+      default: void 0
+    },
+    container: {
+      type: [String, Object, X, Boolean],
+      default: void 0
+    },
+    boundary: {
+      type: [String, X],
+      default: void 0
+    },
+    strategy: {
+      type: String,
+      default: void 0
+    },
+    autoHide: {
+      type: [Boolean, Function],
+      default: void 0
+    },
+    handleResize: {
+      type: Boolean,
+      default: void 0
+    },
+    instantMove: {
+      type: Boolean,
+      default: void 0
+    },
+    eagerMount: {
+      type: Boolean,
+      default: void 0
+    },
+    popperClass: {
+      type: [String, Array, Object],
+      default: void 0
+    },
+    computeTransformOrigin: {
+      type: Boolean,
+      default: void 0
+    },
+    /**
+     * @deprecated
+     */
+    autoMinSize: {
+      type: Boolean,
+      default: void 0
+    },
+    autoSize: {
+      type: [Boolean, String],
+      default: void 0
+    },
+    /**
+     * @deprecated
+     */
+    autoMaxSize: {
+      type: Boolean,
+      default: void 0
+    },
+    autoBoundaryMaxSize: {
+      type: Boolean,
+      default: void 0
+    },
+    preventOverflow: {
+      type: Boolean,
+      default: void 0
+    },
+    overflowPadding: {
+      type: [Number, String],
+      default: void 0
+    },
+    arrowPadding: {
+      type: [Number, String],
+      default: void 0
+    },
+    arrowOverflow: {
+      type: Boolean,
+      default: void 0
+    },
+    flip: {
+      type: Boolean,
+      default: void 0
+    },
+    shift: {
+      type: Boolean,
+      default: void 0
+    },
+    shiftCrossAxis: {
+      type: Boolean,
+      default: void 0
+    },
+    noAutoFocus: {
+      type: Boolean,
+      default: void 0
+    },
+    disposeTimeout: {
+      type: Number,
+      default: void 0
     }
+  },
+  emits: {
+    show: () => true,
+    hide: () => true,
+    "update:shown": (e) => true,
+    "apply-show": () => true,
+    "apply-hide": () => true,
+    "close-group": () => true,
+    "close-directive": () => true,
+    "auto-hide": () => true,
+    resize: () => true
   },
   computed: {
     finalTheme() {
@@ -2353,85 +2524,93 @@ var $t = defineComponent({
     }
   }
 });
-function _t(e, t, o, i, s, r) {
+function vt(e, t, o, i, s, r) {
   const p = resolveComponent("PopperContent"), a = resolveComponent("Popper");
-  return openBlock(), createBlock(a, {
-    ref: "popper",
+  return openBlock(), createBlock(a, mergeProps({ ref: "popper" }, e.$props, {
     theme: e.finalTheme,
     "target-nodes": e.getTargetNodes,
     "popper-node": () => e.$refs.popperContent.$el,
-    class: normalizeClass([
+    class: [
       e.themeClass
-    ])
-  }, {
+    ],
+    onShow: t[0] || (t[0] = () => e.$emit("show")),
+    onHide: t[1] || (t[1] = () => e.$emit("hide")),
+    "onUpdate:shown": t[2] || (t[2] = (l) => e.$emit("update:shown", l)),
+    onApplyShow: t[3] || (t[3] = () => e.$emit("apply-show")),
+    onApplyHide: t[4] || (t[4] = () => e.$emit("apply-hide")),
+    onCloseGroup: t[5] || (t[5] = () => e.$emit("close-group")),
+    onCloseDirective: t[6] || (t[6] = () => e.$emit("close-directive")),
+    onAutoHide: t[7] || (t[7] = () => e.$emit("auto-hide")),
+    onResize: t[8] || (t[8] = () => e.$emit("resize"))
+  }), {
     default: withCtx(({
       popperId: l,
       isShown: h2,
-      shouldMountContent: B,
-      skipTransition: D,
-      autoHide: I,
-      show: R,
-      hide: w,
+      shouldMountContent: E,
+      skipTransition: L,
+      autoHide: D,
+      show: I,
+      hide: v,
       handleResize: F,
-      onResize: V,
+      onResize: R,
       classes: j,
-      result: Oe
+      result: Be
     }) => [
       renderSlot(e.$slots, "default", {
         shown: h2,
-        show: R,
-        hide: w
+        show: I,
+        hide: v
       }),
       createVNode(p, {
         ref: "popperContent",
         "popper-id": l,
         theme: e.finalTheme,
         shown: h2,
-        mounted: B,
-        "skip-transition": D,
-        "auto-hide": I,
+        mounted: E,
+        "skip-transition": L,
+        "auto-hide": D,
         "handle-resize": F,
         classes: j,
-        result: Oe,
-        onHide: w,
-        onResize: V
+        result: Be,
+        onHide: v,
+        onResize: R
       }, {
         default: withCtx(() => [
           renderSlot(e.$slots, "popper", {
             shown: h2,
-            hide: w
+            hide: v
           })
         ]),
         _: 2
       }, 1032, ["popper-id", "theme", "shown", "mounted", "skip-transition", "auto-hide", "handle-resize", "classes", "result", "onHide", "onResize"])
     ]),
     _: 3
-  }, 8, ["theme", "target-nodes", "popper-node", "class"]);
+  }, 16, ["theme", "target-nodes", "popper-node", "class"]);
 }
-var L = k($t, [["render", _t]]);
-var _e = {
-  ...L,
+var k = M($t, [["render", vt]]);
+var Te = {
+  ...k,
   name: "VDropdown",
   vPopperTheme: "dropdown"
 };
-var we = {
-  ...L,
+var Pe = {
+  ...k,
   name: "VMenu",
   vPopperTheme: "menu"
 };
-var ve = {
-  ...L,
+var Se = {
+  ...k,
   name: "VTooltip",
   vPopperTheme: "tooltip"
 };
-var wt = defineComponent({
+var yt = defineComponent({
   name: "VTooltipDirective",
   components: {
-    Popper: K(),
-    PopperContent: Q
+    Popper: J(),
+    PopperContent: Z
   },
   mixins: [
-    Z
+    ee
   ],
   inheritAttrs: false,
   props: {
@@ -2441,7 +2620,7 @@ var wt = defineComponent({
     },
     html: {
       type: Boolean,
-      default: (e) => b(e.theme, "html")
+      default: (e) => S(e.theme, "html")
     },
     content: {
       type: [String, Number, Function],
@@ -2449,7 +2628,7 @@ var wt = defineComponent({
     },
     loadingContent: {
       type: String,
-      default: (e) => b(e.theme, "loadingContent")
+      default: (e) => S(e.theme, "loadingContent")
     },
     targetNodes: {
       type: Function,
@@ -2505,8 +2684,8 @@ var wt = defineComponent({
     }
   }
 });
-var vt = ["innerHTML"];
-var yt = ["textContent"];
+var _t = ["innerHTML"];
+var Tt = ["textContent"];
 function Pt(e, t, o, i, s, r) {
   const p = resolveComponent("PopperContent"), a = resolveComponent("Popper");
   return openBlock(), createBlock(a, mergeProps({ ref: "popper" }, e.$attrs, {
@@ -2519,13 +2698,13 @@ function Pt(e, t, o, i, s, r) {
     default: withCtx(({
       popperId: l,
       isShown: h2,
-      shouldMountContent: B,
-      skipTransition: D,
-      autoHide: I,
-      hide: R,
-      handleResize: w,
+      shouldMountContent: E,
+      skipTransition: L,
+      autoHide: D,
+      hide: I,
+      handleResize: v,
       onResize: F,
-      classes: V,
+      classes: R,
       result: j
     }) => [
       createVNode(p, {
@@ -2536,23 +2715,23 @@ function Pt(e, t, o, i, s, r) {
         "popper-id": l,
         theme: e.theme,
         shown: h2,
-        mounted: B,
-        "skip-transition": D,
-        "auto-hide": I,
-        "handle-resize": w,
-        classes: V,
+        mounted: E,
+        "skip-transition": L,
+        "auto-hide": D,
+        "handle-resize": v,
+        classes: R,
         result: j,
-        onHide: R,
+        onHide: I,
         onResize: F
       }, {
         default: withCtx(() => [
           e.html ? (openBlock(), createElementBlock("div", {
             key: 0,
             innerHTML: e.finalContent
-          }, null, 8, vt)) : (openBlock(), createElementBlock("div", {
+          }, null, 8, _t)) : (openBlock(), createElementBlock("div", {
             key: 1,
             textContent: toDisplayString(e.finalContent)
-          }, null, 8, yt))
+          }, null, 8, Tt))
         ]),
         _: 2
       }, 1032, ["class", "popper-id", "theme", "shown", "mounted", "skip-transition", "auto-hide", "handle-resize", "classes", "result", "onHide", "onResize"])
@@ -2560,35 +2739,35 @@ function Pt(e, t, o, i, s, r) {
     _: 1
   }, 16, ["theme", "target-nodes", "popper-node", "onApplyShow", "onApplyHide"]);
 }
-var ye = k(wt, [["render", Pt]]);
-var Pe = "v-popper--has-tooltip";
-function Tt(e, t) {
+var be = M(yt, [["render", Pt]]);
+var Ce = "v-popper--has-tooltip";
+function St(e, t) {
   let o = e.placement;
   if (!o && t)
-    for (const i of ge)
+    for (const i of ye)
       t[i] && (o = i);
-  return o || (o = b(e.theme || "tooltip", "placement")), o;
+  return o || (o = S(e.theme || "tooltip", "placement")), o;
 }
-function Te(e, t, o) {
+function ze(e, t, o) {
   let i;
   const s = typeof t;
-  return s === "string" ? i = { content: t } : t && s === "object" ? i = t : i = { content: false }, i.placement = Tt(i, o), i.targetNodes = () => [e], i.referenceNode = () => e, i;
+  return s === "string" ? i = { content: t } : t && s === "object" ? i = t : i = { content: false }, i.placement = St(i, o), i.targetNodes = () => [e], i.referenceNode = () => e, i;
 }
 var q;
-var C;
+var b;
 var bt = 0;
 function Ct() {
   if (q)
     return;
-  C = ref([]), q = createApp({
+  b = ref([]), q = createApp({
     name: "VTooltipDirectiveApp",
     setup() {
       return {
-        directives: C
+        directives: b
       };
     },
     render() {
-      return this.directives.map((t) => h(ye, {
+      return this.directives.map((t) => h(be, {
         ...t.options,
         shown: t.shown || t.options.shown,
         key: t.id
@@ -2601,14 +2780,14 @@ function Ct() {
   const e = document.createElement("div");
   document.body.appendChild(e), q.mount(e);
 }
-function St(e, t, o) {
+function zt(e, t, o) {
   Ct();
-  const i = ref(Te(e, t, o)), s = ref(false), r = {
+  const i = ref(ze(e, t, o)), s = ref(false), r = {
     id: bt++,
     options: i,
     shown: s
   };
-  return C.value.push(r), e.classList && e.classList.add(Pe), e.$_popper = {
+  return b.value.push(r), e.classList && e.classList.add(Ce), e.$_popper = {
     options: i,
     item: r,
     show() {
@@ -2619,112 +2798,116 @@ function St(e, t, o) {
     }
   };
 }
-function be(e) {
+function Ae(e) {
   if (e.$_popper) {
-    const t = C.value.indexOf(e.$_popper.item);
-    t !== -1 && C.value.splice(t, 1), delete e.$_popper, delete e.$_popperOldShown, delete e.$_popperMountTarget;
+    const t = b.value.indexOf(e.$_popper.item);
+    t !== -1 && b.value.splice(t, 1), delete e.$_popper, delete e.$_popperOldShown, delete e.$_popperMountTarget;
   }
-  e.classList && e.classList.remove(Pe);
+  e.classList && e.classList.remove(Ce);
 }
-function he(e, { value: t, modifiers: o }) {
-  const i = Te(e, t, o);
-  if (!i.content || b(i.theme || "tooltip", "disabled"))
-    be(e);
+function fe(e, { value: t, modifiers: o }) {
+  const i = ze(e, t, o);
+  if (!i.content || S(i.theme || "tooltip", "disabled"))
+    Ae(e);
   else {
     let s;
-    e.$_popper ? (s = e.$_popper, s.options.value = i) : s = St(e, t, o), typeof t.shown < "u" && t.shown !== e.$_popperOldShown && (e.$_popperOldShown = t.shown, t.shown ? s.show() : s.hide());
+    e.$_popper ? (s = e.$_popper, s.options.value = i) : s = zt(e, t, o), typeof t.shown < "u" && t.shown !== e.$_popperOldShown && (e.$_popperOldShown = t.shown, t.shown ? s.show() : s.hide());
   }
 }
-var Ce = {
-  beforeMount: he,
-  updated: he,
+var te = {
+  beforeMount: fe,
+  updated: fe,
   beforeUnmount(e) {
-    be(e);
+    Ae(e);
   }
 };
-function le(e) {
-  e.addEventListener("click", Se), e.addEventListener("touchstart", ze, _ ? {
+function ce(e) {
+  e.addEventListener("click", Ne), e.addEventListener("touchstart", He, $ ? {
     passive: true
   } : false);
 }
-function ue(e) {
-  e.removeEventListener("click", Se), e.removeEventListener("touchstart", ze), e.removeEventListener("touchend", Ne), e.removeEventListener("touchcancel", Ae);
+function me(e) {
+  e.removeEventListener("click", Ne), e.removeEventListener("touchstart", He), e.removeEventListener("touchend", Oe), e.removeEventListener("touchcancel", Me);
 }
-function Se(e) {
+function Ne(e) {
   const t = e.currentTarget;
   e.closePopover = !t.$_vclosepopover_touch, e.closeAllPopover = t.$_closePopoverModifiers && !!t.$_closePopoverModifiers.all;
 }
-function ze(e) {
+function He(e) {
   if (e.changedTouches.length === 1) {
     const t = e.currentTarget;
     t.$_vclosepopover_touch = true;
     const o = e.changedTouches[0];
-    t.$_vclosepopover_touchPoint = o, t.addEventListener("touchend", Ne), t.addEventListener("touchcancel", Ae);
+    t.$_vclosepopover_touchPoint = o, t.addEventListener("touchend", Oe), t.addEventListener("touchcancel", Me);
   }
 }
-function Ne(e) {
+function Oe(e) {
   const t = e.currentTarget;
   if (t.$_vclosepopover_touch = false, e.changedTouches.length === 1) {
     const o = e.changedTouches[0], i = t.$_vclosepopover_touchPoint;
     e.closePopover = Math.abs(o.screenY - i.screenY) < 20 && Math.abs(o.screenX - i.screenX) < 20, e.closeAllPopover = t.$_closePopoverModifiers && !!t.$_closePopoverModifiers.all;
   }
 }
-function Ae(e) {
+function Me(e) {
   const t = e.currentTarget;
   t.$_vclosepopover_touch = false;
 }
-var He = {
+var oe = {
   beforeMount(e, { value: t, modifiers: o }) {
-    e.$_closePopoverModifiers = o, (typeof t > "u" || t) && le(e);
+    e.$_closePopoverModifiers = o, (typeof t > "u" || t) && ce(e);
   },
   updated(e, { value: t, oldValue: o, modifiers: i }) {
-    e.$_closePopoverModifiers = i, t !== o && (typeof t > "u" || t ? le(e) : ue(e));
+    e.$_closePopoverModifiers = i, t !== o && (typeof t > "u" || t ? ce(e) : me(e));
   },
   beforeUnmount(e) {
-    ue(e);
+    me(e);
   }
 };
-var Ot = u;
-var Mt = Ce;
-var kt = He;
-var Et = _e;
-var Lt = we;
-var Bt = K;
-var Dt = Q;
-var It = Z;
-var Rt = L;
+var Mt = u;
+var Bt = te;
+var kt = te;
+var Et = oe;
+var Lt = oe;
+var Dt = Te;
+var It = Pe;
 var Ft = J;
-var Vt = ve;
-var jt = ye;
-function zt(e, t = {}) {
-  e.$_vTooltipInstalled || (e.$_vTooltipInstalled = true, fe(u, t), e.directive("tooltip", Ce), e.directive("close-popper", He), e.component("VTooltip", ve), e.component("VDropdown", _e), e.component("VMenu", we));
+var Rt = Z;
+var jt = ee;
+var Vt = k;
+var Wt = Q;
+var Gt = Se;
+var qt = be;
+function At(e, t = {}) {
+  e.$_vTooltipInstalled || (e.$_vTooltipInstalled = true, $e(u, t), e.directive("tooltip", te), e.directive("close-popper", oe), e.component("VTooltip", Se), e.component("VDropdown", Te), e.component("VMenu", Pe));
 }
 var xt = {
   // eslint-disable-next-line no-undef
-  version: "2.0.0-beta.24",
-  install: zt,
+  version: "5.0.3",
+  install: At,
   options: u
 };
 export {
-  Et as Dropdown,
-  se as HIDE_EVENT_MAP,
-  Lt as Menu,
-  Bt as Popper,
-  Dt as PopperContent,
-  It as PopperMethods,
-  Rt as PopperWrapper,
-  ie as SHOW_EVENT_MAP,
-  Ft as ThemeClass,
-  Vt as Tooltip,
-  jt as TooltipDirective,
-  kt as VClosePopper,
-  Mt as VTooltip,
-  St as createTooltip,
+  Dt as Dropdown,
+  pe as HIDE_EVENT_MAP,
+  It as Menu,
+  Ft as Popper,
+  Rt as PopperContent,
+  jt as PopperMethods,
+  Vt as PopperWrapper,
+  re as SHOW_EVENT_MAP,
+  Wt as ThemeClass,
+  Gt as Tooltip,
+  qt as TooltipDirective,
+  Et as VClosePopper,
+  Bt as VTooltip,
+  zt as createTooltip,
   xt as default,
-  be as destroyTooltip,
-  Ht as hideAllPoppers,
-  zt as install,
-  Ot as options,
-  ge as placements
+  Ae as destroyTooltip,
+  Ot as hideAllPoppers,
+  At as install,
+  Mt as options,
+  ye as placements,
+  Lt as vClosePopper,
+  kt as vTooltip
 };
 //# sourceMappingURL=floating-vue.js.map
