@@ -1,27 +1,29 @@
 ---
 post: true
-title: 5款开源的网页端音乐播放器
-date: 2023-12-05
+title: 3款开源的网页端仿掘金轻社区平台
+date: 2024-01-09
 cover: https://fc.sinaimg.cn/large/6364aa43gy1hlbsgc48k5j20k00dc79m.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/iphone-pro-15-3d-mockups-free.gif
 categories:
  - vueJS
 tags:
- - 音乐
- - 播放器
+ - 社区
+ - bbs
 description: 随时随地聆听你的音乐。基于 vue开发，安装使用方便。
 ---
-# 5款开源的网页端音乐播放器
+# 3款开源的网页端仿掘金轻社区平台
 
-## 1.antrancs/maeve
-![antrancs/maeve](https://fc.sinaimg.cn/large/6364aa43gy1hlbpvm15anj20k00adn2s.jpg)
+## 1.mlogclub/bbs-go
+![mlogclub/bbs-go](https://fc.sinaimg.cn/large/6364aa43gy1hlbpvm15anj20k00adn2s.jpg)
 
-Maeve - 支持 Last.fm 的可自定义 Apple Music 网络播放器
+bbs-go是一个使用Go语言搭建的开源社区系统，采用前后端分离技术，Go语言提供api进行数据支撑，用户界面使用Nuxt.js进行渲染，后台界面基于element-ui。
+
+*开源版仅限个人学习使用。可联系作者付费商业版
 
 <ArticleLink via="post" :work="{
-    title: 'antrancs/maeve',
-    view: 'https://maevemusic.app/',
-    github: 'antrancs/maeve',
+    title: 'mlogclub/bbs-go',
+    view: 'https://mlog.club/',
+    github: 'mlogclub/bbs-go',
     via:'',
     linkpan:'',
     coveross: '',
