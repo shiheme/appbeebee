@@ -28,14 +28,14 @@
     "gray-matter": "^4.0.3",
     "prettier": "^3.1.0",
     "typescript": "^5.3.2",
-    "vitepress": "^1.0.0-rc.31",
+    "vitepress": "latest",
     "vitepress-plugin-search": "^1.0.4-alpha.21"
   },
   "dependencies": {
     "blueimp-md5": "^2.19.0",
     "dayjs": "^1.11.10",
     "feed": "^4.2.2",
-    "floating-vue": "^2.0.0-beta.24",
+    "floating-vue": "latest",
     "pinia": "^2.1.7",
     "vue-router": "^4.2.5",
     "vue3-toastify": "^0.2.1"
