@@ -11,4 +11,16 @@ export const head: HeadConfig[] = [
       src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1279518235550313",
     },
   ],
+  [
+    'script',
+    { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-QRQ5599P9G' } 
+  ],
+  [
+    'script',
+    {},
+    `window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QRQ5599P9G');` 
+  ]
 ];
