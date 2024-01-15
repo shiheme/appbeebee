@@ -1993,7 +1993,7 @@ vue-router@^4.2.5:
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-"vue@^2.6.14 || ^3.3.0", vue@^3.0.0, "vue@^3.0.0-0 || ^2.6.0", vue@^3.2.0, vue@^3.2.25, vue@^3.4.5, vue@>=3.2.0, vue@3, vue@3.4.8:
+"vue@^2.6.14 || ^3.2.0", "vue@^2.6.14 || ^3.3.0", vue@^3.0.0, "vue@^3.0.0-0 || ^2.6.0", vue@^3.2.0, vue@^3.2.25, vue@^3.4.5, vue@>=3.2.0, vue@3, vue@3.4.8:
   version "3.4.8"
   resolved "https://registry.npmjs.org/vue/-/vue-3.4.8.tgz"
   integrity sha512-vJffFOe6DqWsAI10v3tDhb1nJrj7CF3CbdQwOznywAsFNoyvrQ1AWQdcIWJpmRpRnw7NFzstzh6fh4w7n1PNdg==
@@ -2008,6 +2008,11 @@ vue3-toastify@^0.2.1:
   version "0.2.1"
   resolved "https://registry.npmjs.org/vue3-toastify/-/vue3-toastify-0.2.1.tgz"
   integrity sha512-u4i5LCu1q5qs4L4Kbjb4u8NipCS8ox1fCHQ6XFS62676xnA6Q/AJRpZEkAurTMp723LeH6eQX6k9+24bKf1T4Q==
+
+vueperslides@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.npmjs.org/vueperslides/-/vueperslides-3.5.1.tgz"
+  integrity sha512-g/Lauv1svlSaERzLNeys0oeLmpDFiXkIa+lxg+lJma6m6wXqJKzKKVIi8Kvc95XPnl42n7PYYJyr0+FMV6WZGw==
 
 which@^2.0.1:
   version "2.0.2"
