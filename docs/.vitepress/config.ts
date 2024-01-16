@@ -11,32 +11,6 @@ export default defineConfig<ThemeConfig>({
     themeConfig: {
         beecodeurl: 'https://www.appbeebee.com/',
         sidebar:[{}],
-        music:[
-            {
-                "id": "song_1",
-                "title": "陷落Falling",
-                "author": "不知名选手Au / 马也_Crabbit",
-                "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0Nzk=",
-                "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/01.jpg",
-                "lrc": ""
-            },
-            {
-                "id": "song_2",
-                "title": "一个人想着一个人 ",
-                "author": "如懿",
-                "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0ODA=",
-                "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/02.jpg",
-                "lrc": ""
-            },
-            {
-                "id": "song_3",
-                "title": "夜车（Cover 曾轶可）",
-                "author": "姜铭杨",
-                "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0ODE=",
-                "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/03.jpg",
-                "lrc": ""
-            }
-        ],
         nav: [
             { text: '公众号', link: 'https://mp.weixin.qq.com/s/iCf-QOnKk2WPjVqL6jJ8WA' },
             { text: '比比原创小程序', link: 'https://beebee.work/' }

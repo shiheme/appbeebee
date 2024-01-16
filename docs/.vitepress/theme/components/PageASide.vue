@@ -119,7 +119,32 @@ const {
   isPause
 } = toRefs(usePlayerStore());
 const songList = ref<Song[]>();
-songList.value = theme.value.music;
+songList.value = [
+            {
+                "id": 1,
+                "title": "陷落Falling",
+                "author": "不知名选手Au / 马也_Crabbit",
+                "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0Nzk=",
+                "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/01.jpg",
+                "lrc": ""
+            },
+            {
+                "id": 2,
+                "title": "一个人想着一个人 ",
+                "author": "如懿",
+                "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0ODA=",
+                "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/02.jpg",
+                "lrc": ""
+            },
+            {
+                "id": 3,
+                "title": "夜车（Cover 曾轶可）",
+                "author": "姜铭杨",
+                "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0ODE=",
+                "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/03.jpg",
+                "lrc": ""
+            }
+        ];
 pushPlayList(true, ...songList.value);
 const props = defineProps<{
   type?: string

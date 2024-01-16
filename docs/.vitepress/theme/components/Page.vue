@@ -9,11 +9,11 @@
             
         </div>
         <div class="list" v-if="index == 1&&listview === 'grid'">
-            <PageASide  />
+            <ClientOnly><PageASide  /></ClientOnly>
         </div>
     </template>
         <div class="list" v-if="posts.length < 2&&listview === 'grid'">
-            <PageASide />
+            <ClientOnly><PageASide /></ClientOnly>
         </div>
     </div>
 </template>

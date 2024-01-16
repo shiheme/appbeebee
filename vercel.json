@@ -9,5 +9,6 @@
           }
         ]
       }
-    ]
+    ],
+    "installCommand": "npx bun@1.0.15 install"
   }
