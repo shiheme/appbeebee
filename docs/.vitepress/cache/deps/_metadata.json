@@ -1,109 +1,103 @@
 {
-  "hash": "7098f00a",
+  "hash": "ec65e381",
   "configHash": "ac99a47c",
-  "lockfileHash": "e39c80f8",
-  "browserHash": "0c634810",
+  "lockfileHash": "ec63103d",
+  "browserHash": "3163c7cc",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "4eb331a4",
+      "fileHash": "e02bf1d0",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "36a311f0",
+      "fileHash": "95e9998a",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "81e1793e",
+      "fileHash": "00299a48",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "dbdf6693",
+      "fileHash": "7d4a949f",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "7840831c",
+      "fileHash": "9b8190ca",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "8f5ec31e",
+      "fileHash": "d1a404ba",
       "needsInterop": false
     },
     "floating-vue": {
       "src": "../../../../node_modules/floating-vue/dist/floating-vue.mjs",
       "file": "floating-vue.js",
-      "fileHash": "c1d7a533",
+      "fileHash": "39ea4216",
       "needsInterop": false
     },
     "pinia": {
       "src": "../../../../node_modules/pinia/dist/pinia.mjs",
       "file": "pinia.js",
-      "fileHash": "b4e9e7a8",
+      "fileHash": "8f1f3b10",
       "needsInterop": false
     },
     "vue3-toastify": {
       "src": "../../../../node_modules/vue3-toastify/dist/index.mjs",
       "file": "vue3-toastify.js",
-      "fileHash": "d50e4542",
+      "fileHash": "ceaec990",
       "needsInterop": false
     },
     "blueimp-md5": {
       "src": "../../../../node_modules/blueimp-md5/js/md5.js",
       "file": "blueimp-md5.js",
-      "fileHash": "3d541032",
+      "fileHash": "81ead701",
       "needsInterop": true
     },
     "dayjs": {
       "src": "../../../../node_modules/dayjs/dayjs.min.js",
       "file": "dayjs.js",
-      "fileHash": "fb4ef4e4",
+      "fileHash": "c5a42c8e",
       "needsInterop": true
     },
     "dayjs/plugin/relativeTime": {
       "src": "../../../../node_modules/dayjs/plugin/relativeTime.js",
       "file": "dayjs_plugin_relativeTime.js",
-      "fileHash": "c4f7991f",
+      "fileHash": "fd891472",
       "needsInterop": true
     },
     "dayjs/locale/zh-cn": {
       "src": "../../../../node_modules/dayjs/locale/zh-cn.js",
       "file": "dayjs_locale_zh-cn.js",
-      "fileHash": "4dc3d1fb",
+      "fileHash": "804df999",
       "needsInterop": true
-    },
-    "vueperslides": {
-      "src": "../../../../node_modules/vueperslides/dist/vueperslides.es.js",
-      "file": "vueperslides.js",
-      "fileHash": "5c126dea",
-      "needsInterop": false
     }
   },
   "chunks": {
     "chunk-QK6QZVAB": {
       "file": "chunk-QK6QZVAB.js"
     },
+    "chunk-YJJBBWE7": {
+      "file": "chunk-YJJBBWE7.js"
+    },
     "chunk-J4VLYDXT": {
       "file": "chunk-J4VLYDXT.js"
-    },
-    "chunk-F5LKDB7A": {
-      "file": "chunk-F5LKDB7A.js"
     },
     "chunk-6NMAXBHK": {
       "file": "chunk-6NMAXBHK.js"
     },
-    "chunk-PXHMLM5Y": {
-      "file": "chunk-PXHMLM5Y.js"
+    "chunk-BBHLLBAD": {
+      "file": "chunk-BBHLLBAD.js"
     },
     "chunk-Y2F7D3TJ": {
       "file": "chunk-Y2F7D3TJ.js"

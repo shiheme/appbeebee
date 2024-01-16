@@ -378,19 +378,18 @@ var ReactiveEffect = class {
     this.scheduler = scheduler;
     this.active = true;
     this.deps = [];
-    this._dirtyLevel = 3;
+    this._dirtyLevel = 2;
     this._trackId = 0;
     this._runnings = 0;
-    this._queryings = 0;
+    this._shouldSchedule = false;
     this._depsLength = 0;
     recordEffectScope(this, scope);
   }
   get dirty() {
     if (this._dirtyLevel === 1) {
-      this._dirtyLevel = 0;
-      this._queryings++;
       pauseTracking();
-      for (const dep of this.deps) {
+      for (let i = 0; i < this._depsLength; i++) {
+        const dep = this.deps[i];
         if (dep.computed) {
           triggerComputed(dep.computed);
           if (this._dirtyLevel >= 2) {
@@ -398,13 +397,15 @@ var ReactiveEffect = class {
           }
         }
       }
+      if (this._dirtyLevel < 2) {
+        this._dirtyLevel = 0;
+      }
       resetTracking();
-      this._queryings--;
     }
     return this._dirtyLevel >= 2;
   }
   set dirty(v) {
-    this._dirtyLevel = v ? 3 : 0;
+    this._dirtyLevel = v ? 2 : 0;
   }
   run() {
     this._dirtyLevel = 0;
@@ -527,21 +528,23 @@ function triggerEffects(dep, dirtyLevel, debuggerEventExtraInfo) {
   var _a;
   pauseScheduling();
   for (const effect2 of dep.keys()) {
-    if (!effect2.allowRecurse && effect2._runnings) {
+    if (dep.get(effect2) !== effect2._trackId) {
       continue;
     }
-    if (effect2._dirtyLevel < dirtyLevel && (!effect2._runnings || dirtyLevel !== 2)) {
+    if (effect2._dirtyLevel < dirtyLevel && !(effect2._runnings && !effect2.allowRecurse)) {
       const lastDirtyLevel = effect2._dirtyLevel;
       effect2._dirtyLevel = dirtyLevel;
-      if (lastDirtyLevel === 0 && (!effect2._queryings || dirtyLevel !== 2)) {
+      if (lastDirtyLevel === 0) {
+        effect2._shouldSchedule = true;
         if (true) {
           (_a = effect2.onTrigger) == null ? void 0 : _a.call(effect2, extend({ effect: effect2 }, debuggerEventExtraInfo));
         }
         effect2.trigger();
-        if (effect2.scheduler) {
-          queueEffectSchedulers.push(effect2.scheduler);
-        }
       }
+    }
+    if (effect2.scheduler && effect2._shouldSchedule && (!effect2._runnings || effect2.allowRecurse)) {
+      effect2._shouldSchedule = false;
+      queueEffectSchedulers.push(effect2.scheduler);
     }
   }
   resetScheduling();
@@ -626,7 +629,7 @@ function trigger(target, type, key, newValue, oldValue, oldTarget) {
     if (dep) {
       triggerEffects(
         dep,
-        3,
+        2,
         true ? {
           target,
           type,
@@ -1229,12 +1232,12 @@ var ComputedRefImpl = class {
   }
   get value() {
     const self2 = toRaw(this);
-    trackRefValue(self2);
     if (!self2._cacheable || self2.effect.dirty) {
       if (hasChanged(self2._value, self2._value = self2.effect.run())) {
         triggerRefValue(self2, 2);
       }
     }
+    trackRefValue(self2);
     return self2._value;
   }
   set value(newValue) {
@@ -1286,7 +1289,7 @@ function trackRefValue(ref2) {
     );
   }
 }
-function triggerRefValue(ref2, dirtyLevel = 3, newVal) {
+function triggerRefValue(ref2, dirtyLevel = 2, newVal) {
   ref2 = toRaw(ref2);
   const dep = ref2.dep;
   if (dep) {
@@ -1335,12 +1338,12 @@ var RefImpl = class {
     if (hasChanged(newVal, this._rawValue)) {
       this._rawValue = newVal;
       this._value = useDirectValue ? newVal : toReactive(newVal);
-      triggerRefValue(this, 3, newVal);
+      triggerRefValue(this, 2, newVal);
     }
   }
 };
 function triggerRef(ref2) {
-  triggerRefValue(ref2, 3, true ? ref2.value : void 0);
+  triggerRefValue(ref2, 2, true ? ref2.value : void 0);
 }
 function unref(ref2) {
   return isRef(ref2) ? ref2.value : ref2;
@@ -2427,9 +2430,11 @@ function renderComponentRoot(instance) {
 var getChildRoot = (vnode) => {
   const rawChildren = vnode.children;
   const dynamicChildren = vnode.dynamicChildren;
-  const childRoot = filterSingleRoot(rawChildren);
+  const childRoot = filterSingleRoot(rawChildren, false);
   if (!childRoot) {
     return [vnode, void 0];
+  } else if (childRoot.patchFlag > 0 && childRoot.patchFlag & 2048) {
+    return getChildRoot(childRoot);
   }
   const index = rawChildren.indexOf(childRoot);
   const dynamicIndex = dynamicChildren ? dynamicChildren.indexOf(childRoot) : -1;
@@ -2445,7 +2450,7 @@ var getChildRoot = (vnode) => {
   };
   return [normalizeVNode(childRoot), setRoot];
 };
-function filterSingleRoot(children) {
+function filterSingleRoot(children, recurse = true) {
   let singleRoot;
   for (let i = 0; i < children.length; i++) {
     const child = children[i];
@@ -2455,6 +2460,9 @@ function filterSingleRoot(children) {
           return;
         } else {
           singleRoot = child;
+          if (recurse && singleRoot.patchFlag > 0 && singleRoot.patchFlag & 2048) {
+            return filterSingleRoot(singleRoot.children);
+          }
         }
       }
     } else {
@@ -2634,6 +2642,10 @@ var SuspenseImpl = {
         rendererInternals
       );
     } else {
+      if (parentSuspense && parentSuspense.deps > 0) {
+        n2.suspense = n1.suspense;
+        return;
+      }
       patchSuspense(
         n1,
         n2,
@@ -4718,58 +4730,6 @@ function useSlots() {
 function useAttrs() {
   return getContext().attrs;
 }
-function useModel(props, name, options = EMPTY_OBJ) {
-  const i = getCurrentInstance();
-  if (!i) {
-    warn$1(`useModel() called without active instance.`);
-    return ref();
-  }
-  if (!i.propsOptions[0][name]) {
-    warn$1(`useModel() called with prop "${name}" which is not declared.`);
-    return ref();
-  }
-  const camelizedName = camelize(name);
-  const hyphenatedName = hyphenate(name);
-  const res = customRef((track2, trigger2) => {
-    let localValue;
-    watchSyncEffect(() => {
-      const propValue = props[name];
-      if (hasChanged(localValue, propValue)) {
-        localValue = propValue;
-        trigger2();
-      }
-    });
-    return {
-      get() {
-        track2();
-        return options.get ? options.get(localValue) : localValue;
-      },
-      set(value) {
-        const rawProps = i.vnode.props;
-        if (!(rawProps && // check if parent has passed v-model
-        (name in rawProps || camelizedName in rawProps || hyphenatedName in rawProps) && (`onUpdate:${name}` in rawProps || `onUpdate:${camelizedName}` in rawProps || `onUpdate:${hyphenatedName}` in rawProps)) && hasChanged(value, localValue)) {
-          localValue = value;
-          trigger2();
-        }
-        i.emit(`update:${name}`, options.set ? options.set(value) : value);
-      }
-    };
-  });
-  const modifierKey = name === "modelValue" ? "modelModifiers" : `${name}Modifiers`;
-  res[Symbol.iterator] = () => {
-    let i2 = 0;
-    return {
-      next() {
-        if (i2 < 2) {
-          return { value: i2++ ? props[modifierKey] || {} : res, done: false };
-        } else {
-          return { done: true };
-        }
-      }
-    };
-  };
-  return res;
-}
 function getContext() {
   const i = getCurrentInstance();
   if (!i) {
@@ -6575,9 +6535,17 @@ function propHasMismatch(el, key, clientValue, vnode) {
     if (isBooleanAttr(key)) {
       actual = el.hasAttribute(key);
       expected = includeBooleanAttr(clientValue);
+    } else if (clientValue == null) {
+      actual = el.hasAttribute(key);
+      expected = false;
     } else {
-      actual = el.hasAttribute(key) ? el.getAttribute(key) : key in el ? el[key] : "";
-      expected = clientValue == null ? "" : String(clientValue);
+      if (el.hasAttribute(key)) {
+        actual = el.getAttribute(key);
+      } else {
+        const serverValue = el[key];
+        actual = isObject(serverValue) || serverValue == null ? "" : String(serverValue);
+      }
+      expected = isObject(clientValue) || clientValue == null ? "" : String(clientValue);
     }
     if (actual !== expected) {
       mismatchType = `attribute`;
@@ -6586,15 +6554,15 @@ function propHasMismatch(el, key, clientValue, vnode) {
   }
   if (mismatchType) {
     const format = (v) => v === false ? `(not rendered)` : `${mismatchKey}="${v}"`;
-    warn$1(
-      `Hydration ${mismatchType} mismatch on`,
-      el,
-      `
+    const preSegment = `Hydration ${mismatchType} mismatch on`;
+    const postSegment = `
   - rendered on server: ${format(actual)}
   - expected on client: ${format(expected)}
   Note: this mismatch is check-only. The DOM will not be rectified in production due to performance overhead.
-  You should fix the source of the mismatch.`
-    );
+  You should fix the source of the mismatch.`;
+    {
+      warn$1(preSegment, el, postSegment);
+    }
     return true;
   }
   return false;
@@ -9315,6 +9283,58 @@ function isClassComponent(value) {
 var computed2 = (getterOrOptions, debugOptions) => {
   return computed(getterOrOptions, debugOptions, isInSSRComponentSetup);
 };
+function useModel(props, name, options = EMPTY_OBJ) {
+  const i = getCurrentInstance();
+  if (!i) {
+    warn$1(`useModel() called without active instance.`);
+    return ref();
+  }
+  if (!i.propsOptions[0][name]) {
+    warn$1(`useModel() called with prop "${name}" which is not declared.`);
+    return ref();
+  }
+  const camelizedName = camelize(name);
+  const hyphenatedName = hyphenate(name);
+  const res = customRef((track2, trigger2) => {
+    let localValue;
+    watchSyncEffect(() => {
+      const propValue = props[name];
+      if (hasChanged(localValue, propValue)) {
+        localValue = propValue;
+        trigger2();
+      }
+    });
+    return {
+      get() {
+        track2();
+        return options.get ? options.get(localValue) : localValue;
+      },
+      set(value) {
+        const rawProps = i.vnode.props;
+        if (!(rawProps && // check if parent has passed v-model
+        (name in rawProps || camelizedName in rawProps || hyphenatedName in rawProps) && (`onUpdate:${name}` in rawProps || `onUpdate:${camelizedName}` in rawProps || `onUpdate:${hyphenatedName}` in rawProps)) && hasChanged(value, localValue)) {
+          localValue = value;
+          trigger2();
+        }
+        i.emit(`update:${name}`, options.set ? options.set(value) : value);
+      }
+    };
+  });
+  const modifierKey = name === "modelValue" ? "modelModifiers" : `${name}Modifiers`;
+  res[Symbol.iterator] = () => {
+    let i2 = 0;
+    return {
+      next() {
+        if (i2 < 2) {
+          return { value: i2++ ? props[modifierKey] || {} : res, done: false };
+        } else {
+          return { done: true };
+        }
+      }
+    };
+  };
+  return res;
+}
 function h(type, propsOrChildren, children) {
   const l = arguments.length;
   if (l === 2) {
@@ -9537,7 +9557,7 @@ function isMemoSame(cached, memo) {
   }
   return true;
 }
-var version = "3.4.8";
+var version = "3.4.14";
 var warn2 = true ? warn$1 : NOOP;
 var ErrorTypeStrings = ErrorTypeStrings$1;
 var devtools = true ? devtools$1 : void 0;
@@ -10017,6 +10037,7 @@ function setVarsOnNode(el, vars) {
 }
 function patchStyle(el, prev, next) {
   const style = el.style;
+  const currentDisplay = style.display;
   const isCssString = isString(next);
   if (next && !isCssString) {
     if (prev && !isString(prev)) {
@@ -10030,7 +10051,6 @@ function patchStyle(el, prev, next) {
       setStyle(style, key, next[key]);
     }
   } else {
-    const currentDisplay = style.display;
     if (isCssString) {
       if (prev !== next) {
         const cssVarText = style[CSS_VAR_TEXT];
@@ -10042,9 +10062,9 @@ function patchStyle(el, prev, next) {
     } else if (prev) {
       el.removeAttribute("style");
     }
-    if (vShowOldKey in el) {
-      style.display = currentDisplay;
-    }
+  }
+  if (vShowOldKey in el) {
+    style.display = currentDisplay;
   }
 }
 var semicolonRE = /[^\\];\s*$/;
@@ -11205,7 +11225,6 @@ export {
   withDefaults,
   useSlots,
   useAttrs,
-  useModel,
   mergeDefaults,
   mergeModels,
   createPropsRestProxy,
@@ -11238,6 +11257,7 @@ export {
   registerRuntimeCompiler,
   isRuntimeOnly,
   computed2 as computed,
+  useModel,
   h,
   initCustomFormatter,
   withMemo,
@@ -11277,21 +11297,21 @@ export {
 
 @vue/shared/dist/shared.esm-bundler.js:
   (**
-  * @vue/shared v3.4.8
+  * @vue/shared v3.4.14
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
 
 @vue/reactivity/dist/reactivity.esm-bundler.js:
   (**
-  * @vue/reactivity v3.4.8
+  * @vue/reactivity v3.4.14
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
 
 @vue/runtime-core/dist/runtime-core.esm-bundler.js:
   (**
-  * @vue/runtime-core v3.4.8
+  * @vue/runtime-core v3.4.14
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -11299,7 +11319,7 @@ export {
 
 @vue/runtime-dom/dist/runtime-dom.esm-bundler.js:
   (**
-  * @vue/runtime-dom v3.4.8
+  * @vue/runtime-dom v3.4.14
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -11307,9 +11327,9 @@ export {
 
 vue/dist/vue.runtime.esm-bundler.js:
   (**
-  * vue v3.4.8
+  * vue v3.4.14
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
 */
-//# sourceMappingURL=chunk-PXHMLM5Y.js.map
+//# sourceMappingURL=chunk-BBHLLBAD.js.map
