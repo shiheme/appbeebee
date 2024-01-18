@@ -1,16 +1,16 @@
 <template>
     <!-- 轮播 -->
-    <vueper-slides class="no-shadow" fixedHeight="200px" :visible-slides="1"
+    <VueperSlides class="no-shadow" fixedHeight="200px" :visible-slides="1"
   :arrows="false"
   :slide-ratio="1 / 4"
   :gap="3">
-        <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image" :link="slide.link" :style="'border-radius:8px'">
-        </vueper-slide>
-    </vueper-slides>
+        <VueperSlide v-for="(slide, i) in slides" :key="i" :image="slide.image" :link="slide.link" :style="'border-radius:8px'">
+        </VueperSlide>
+    </VueperSlides>
 </template>
 
 <script lang="ts" setup>
-import { VueperSlides, VueperSlide } from 'vueperslides'
+import { VueperSlides, VueperSlide } from 'vueperslides'  //https://antoniandre.github.io/vueper-slides/
 import 'vueperslides/dist/vueperslides.css'
 
 const slides = [
