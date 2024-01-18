@@ -2113,6 +2113,11 @@ vue@^3.4.14:
     "@vue/server-renderer" "3.4.14"
     "@vue/shared" "3.4.14"
 
+vueperslides@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/vueperslides/-/vueperslides-3.5.1.tgz#b1a04ffbf3e1ceb48f32cd69b55a7d83def1a8e9"
+  integrity sha512-g/Lauv1svlSaERzLNeys0oeLmpDFiXkIa+lxg+lJma6m6wXqJKzKKVIi8Kvc95XPnl42n7PYYJyr0+FMV6WZGw==
+
 which@^2.0.1:
   version "2.0.2"
   resolved "https://registry.npmjs.org/which/-/which-2.0.2.tgz"

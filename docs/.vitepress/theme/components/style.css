@@ -389,3 +389,14 @@ p.icons img {
 .aside-content {
     min-height: auto!important;
 }
+
+/* .VPNavBar,.VPNavBar .content .content-body {
+    background: #0d263f!important;
+} */
+
+.VPNavBar .divider{
+display: none!important;
+}
+.VPNavBarTitle .title {
+    border-bottom: none!important;
+    }

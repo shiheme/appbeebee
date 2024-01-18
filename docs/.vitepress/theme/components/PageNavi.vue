@@ -207,6 +207,7 @@ const choose = (e: string) => {
 }
 
 .mainnavi.top {
+  margin-top: 32px;
   margin-bottom: 32px;
   /* background-color: var(--vp-c-gray-1); */
   width: 100%;
@@ -263,6 +264,10 @@ const choose = (e: string) => {
 
     .li.h5 {
       display: block;
+
+      background: var(--vp-c-bg-alt);
+      border-radius: 40px;
+      padding: 0 20px;
     }
 
     .li:last-child {
@@ -284,6 +289,10 @@ const choose = (e: string) => {
     .ul {
       .li.pc {
         display: block;
+
+      background: var(--vp-c-bg-alt);
+      border-radius: 40px;
+      padding: 0 20px;
       }
 
       .li.h5 {

@@ -23,7 +23,7 @@ const dismissAll = () =>  toast.clearAll();
 <style scoped>
 .welcome {
     position: relative;
-    width: 288px;
+    /* width: 288px; */
     height: 150px;
 
     .acontain {

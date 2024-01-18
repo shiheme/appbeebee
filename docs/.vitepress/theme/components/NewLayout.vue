@@ -19,13 +19,18 @@
         <template #nav-bar-content-after>
             <!-- 在导航 social后添加 -->
         </template>
+        <template #nav-screen-content-after>
+           
+    </template>
         <template #nav-bar-content-before>
+            
             <!-- 在导航搜索框💰添加 -->
             <ClientOnly>
                 <div v-if="!isPause" class="" style="padding-left: 32px;position: relative;height:40px;margin-right:0px;">
                     <Player />
                 </div>
             </ClientOnly>
+            
         </template>
         <template #nav-bar-title-after>
             <!-- 在标题后添加 -->
@@ -37,6 +42,7 @@
         </template>
         <template #doc-top>
             <ClientOnly>
+                <Slider v-if="frontmatter?.index" :key="md5(page.relativePath)"></Slider>
                 <PageNavi v-if="frontmatter?.index" :key="md5(page.relativePath)" type="top" />
             </ClientOnly>
         </template>
