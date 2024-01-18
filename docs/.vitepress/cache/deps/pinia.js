@@ -1,11 +1,11 @@
 import {
+  setupDevtoolsPlugin
+} from "./chunk-J4VLYDXT.js";
+import {
   del,
   isVue2,
   set
 } from "./chunk-6NMAXBHK.js";
-import {
-  setupDevtoolsPlugin
-} from "./chunk-J4VLYDXT.js";
 import {
   computed,
   effectScope,

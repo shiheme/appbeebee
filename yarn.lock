@@ -2077,11 +2077,6 @@ vue-demi@>=0.14.5, vue-demi@>=0.14.6:
   resolved "https://registry.npmjs.org/vue-demi/-/vue-demi-0.14.6.tgz"
   integrity sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==
 
-vue-easy-slider@^5.3.4:
-  version "5.3.4"
-  resolved "https://registry.yarnpkg.com/vue-easy-slider/-/vue-easy-slider-5.3.4.tgz#2707f76f8521c516e2b3915607c319c7f6e772b4"
-  integrity sha512-PCdc4A2nwK7eH4vZdK4HqZBd8hfEMGN1HsxzNRIaDGDL4xLW3zgN+7a+SBkQbe4mN9Uuf/K9yw2qDDRqYUZgtw==
-
 vue-eslint-parser@^9.3.1:
   version "9.3.2"
   resolved "https://registry.npmjs.org/vue-eslint-parser/-/vue-eslint-parser-9.3.2.tgz"

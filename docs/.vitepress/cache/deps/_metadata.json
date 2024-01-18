@@ -2,117 +2,114 @@
   "hash": "ec65e381",
   "configHash": "ac99a47c",
   "lockfileHash": "ec63103d",
-  "browserHash": "6250ebf6",
+  "browserHash": "bb4ad72e",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "db59653c",
+      "fileHash": "999af6d0",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "b0cb4b19",
+      "fileHash": "af169a06",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "3a3af0b2",
+      "fileHash": "6f1ab199",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "c772d557",
+      "fileHash": "5930260e",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "43a172ef",
+      "fileHash": "886616ee",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "3777a65b",
+      "fileHash": "c6cc5dee",
       "needsInterop": false
     },
     "floating-vue": {
       "src": "../../../../node_modules/floating-vue/dist/floating-vue.mjs",
       "file": "floating-vue.js",
-      "fileHash": "4f176fa1",
+      "fileHash": "0441a9a3",
       "needsInterop": false
     },
     "pinia": {
       "src": "../../../../node_modules/pinia/dist/pinia.mjs",
       "file": "pinia.js",
-      "fileHash": "55ac5911",
+      "fileHash": "652c6e77",
       "needsInterop": false
     },
     "vue3-toastify": {
       "src": "../../../../node_modules/vue3-toastify/dist/index.mjs",
       "file": "vue3-toastify.js",
-      "fileHash": "ad686d8e",
+      "fileHash": "298b1b09",
       "needsInterop": false
     },
     "blueimp-md5": {
       "src": "../../../../node_modules/blueimp-md5/js/md5.js",
       "file": "blueimp-md5.js",
-      "fileHash": "2251d378",
+      "fileHash": "c53fec5c",
       "needsInterop": true
+    },
+    "swiper/vue": {
+      "src": "../../../../node_modules/swiper/swiper-vue.mjs",
+      "file": "swiper_vue.js",
+      "fileHash": "50b6d652",
+      "needsInterop": false
+    },
+    "swiper/modules": {
+      "src": "../../../../node_modules/swiper/modules/index.mjs",
+      "file": "swiper_modules.js",
+      "fileHash": "5e3bfe88",
+      "needsInterop": false
     },
     "dayjs": {
       "src": "../../../../node_modules/dayjs/dayjs.min.js",
       "file": "dayjs.js",
-      "fileHash": "73e2d082",
+      "fileHash": "e3819175",
       "needsInterop": true
     },
     "dayjs/plugin/relativeTime": {
       "src": "../../../../node_modules/dayjs/plugin/relativeTime.js",
       "file": "dayjs_plugin_relativeTime.js",
-      "fileHash": "87f8289f",
+      "fileHash": "2636097e",
       "needsInterop": true
     },
     "dayjs/locale/zh-cn": {
       "src": "../../../../node_modules/dayjs/locale/zh-cn.js",
       "file": "dayjs_locale_zh-cn.js",
-      "fileHash": "a06816fb",
+      "fileHash": "dbddf4d8",
       "needsInterop": true
-    },
-    "vueperslides": {
-      "src": "../../../../node_modules/vueperslides/dist/vueperslides.es.js",
-      "file": "vueperslides.js",
-      "fileHash": "b2407bb9",
-      "needsInterop": false
-    },
-    "vue-easy-slider": {
-      "src": "../../../../node_modules/vue-easy-slider/dist/vue-easy-slider.esm.js",
-      "file": "vue-easy-slider.js",
-      "fileHash": "be6ab1a1",
-      "needsInterop": false
-    },
-    "swiper/vue": {
-      "src": "../../../../node_modules/swiper/swiper-vue.mjs",
-      "file": "swiper_vue.js",
-      "fileHash": "e3e24c96",
-      "needsInterop": false
     }
   },
   "chunks": {
+    "chunk-7TH2B5KN": {
+      "file": "chunk-7TH2B5KN.js"
+    },
     "chunk-QK6QZVAB": {
       "file": "chunk-QK6QZVAB.js"
     },
     "chunk-YJJBBWE7": {
       "file": "chunk-YJJBBWE7.js"
     },
-    "chunk-6NMAXBHK": {
-      "file": "chunk-6NMAXBHK.js"
-    },
     "chunk-J4VLYDXT": {
       "file": "chunk-J4VLYDXT.js"
+    },
+    "chunk-6NMAXBHK": {
+      "file": "chunk-6NMAXBHK.js"
     },
     "chunk-BBHLLBAD": {
       "file": "chunk-BBHLLBAD.js"
