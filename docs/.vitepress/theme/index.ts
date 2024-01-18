@@ -30,10 +30,6 @@ import { createPinia } from 'pinia'  //使用状态管理库。用于音乐播�
 import Vue3Toasity, { type ToastContainerOptions } from 'vue3-toastify';  //使用 toast 库。用于弹框提示反馈等。教程见https://vue3-toastify.js-bridge.com/
 import 'vue3-toastify/dist/index.css';
 
-// import VueperSlides from 'vueperslides'  //https://antoniandre.github.io/vueper-slides/
-// import 'vueperslides/dist/vueperslides.css'
-// import EasySlider from 'vue-easy-slider'
-
 import 'floating-vue/dist/style.css'
 import './components/style.css'
 import './components/snow.css'  //一个 css3雪花特效，用于暗黑模式下显示雪花
