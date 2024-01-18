@@ -118,15 +118,19 @@ watch(
   }
 )
 onMounted(() => {
-  if (!welcomestate.value) {
+  // if (!welcomestate.value) {
     nextTick(() => {
       toast(Welcome, {
-        autoClose: 15000,
+        autoClose: 5000,
         "closeOnClick": false,
         position: toast.POSITION.BOTTOM_RIGHT,
       } as ToastOptions);
-      welcomestate.value = true
+      // welcomestate.value = true
     });
-  }
+  // }
 });
 </script>
+<style>
+.Toastify__toast {
+  overflow: visible !important;
+}</style>

@@ -182,24 +182,31 @@ onMounted(() => {
   margin-bottom: 50px;
 }
 .pageaside {
-  min-height: 315px;
+  /* min-height: 315px; */
   width:100%;
 
   .acontent {
     background-color: var(--vp-c-bg-alt);
     border-radius: 8px;
     border: .5px solid var(--vp-c-gray-soft);
-    min-height: 315px;
+    /* min-height: 315px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width:100%;
+    padding-top: 66%;
+    padding-bottom: 122px;
+    position: relative;
     /* box-shadow: var(--vp-shadow-1); */
   }
 }
 
 .authorarea {
+  position: absolute;
+  top: 50%;
+  left:50%;
+    transform: translate(-50%,-50%);
   border-radius: 12px;
   /* padding: 16px; */
   /* margin-bottom: 20px; */

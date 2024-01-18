@@ -1,8 +1,8 @@
-
-
 /* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
-    font-family: "beebee";font-weight: 400;src: url("/static/font/beebee.woff") format("woff");
+    font-family: "beebee";
+    font-weight: 400;
+    src: url("/static/font/beebee.woff") format("woff");
     font-display: swap;
 }
 
@@ -14,16 +14,18 @@
     /* --vp-c-brand-1: #000000;
     --vp-c-brand-2: #001000;
     --vp-c-brand-3: #002000; */
-    --vp-font-family-base: Fira Code,-apple-system,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica,Arial,sans-serif;
-    --vp-layout-max-width: 1280px;
+    --vp-font-family-base: Fira Code, -apple-system, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica, Arial, sans-serif;
+    --vp-layout-max-width: 1510px;
 }
 
 .Layout {
-    min-height: calc(100vh - 78px); /* reduce copyright */
+    min-height: calc(100vh - 78px);
+    /* reduce copyright */
 }
 
-.VPNavBarTitle .title,.site-footer .title {
-    font-family: "beebee",var(--vp-font-family-base);
+.VPNavBarTitle .title,
+.site-footer .title {
+    font-family: "beebee", var(--vp-font-family-base);
 }
 
 .VPNavBarTitle .title {
@@ -47,9 +49,10 @@
 }
 
 .VPDoc {
-    padding: 32px 24px 24px!important;
+    padding: 32px 24px 24px !important;
     width: 100%;
 }
+
 /* .content a[rel~='noreferrer']:link, a[rel~='noreferrer']:visited {
     color: var(--vp-c-brand);
     font-weight: 500;
@@ -64,14 +67,14 @@
 } */
 .bgimg {
     background-size: cover;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
 
 .postlist.grid {
     display: grid;
-    row-gap: 2rem;
-	column-gap: 2rem;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
 
     /* .list {
         margin-bottom: 30px;
@@ -79,9 +82,10 @@
 
 }
 
-.home .VPDoc.has-aside .content-container {
-    max-width: 100%;
+.VPDoc.has-aside .content-container {
+    max-width: 100% !important;
 }
+
 
 @media (min-width: 550px) {
     .postlist.grid {
@@ -93,7 +97,7 @@
 
 @media (min-width: 768px) {
     .VPDoc {
-        padding: 48px 32px 32px!important;
+        padding: 48px 32px 32px !important;
     }
 
     .VPDoc.has-aside:not(.has-sidebar) .postlist.grid,
@@ -117,30 +121,32 @@
 }
 
 @media (min-width: 960px) {
-    .VPDoc .container > .content {
+    .VPDoc .container>.content {
         padding: 0 32px 32px;
     }
+
     .VPSidebar {
-    min-height: calc(100% - var(--vp-nav-height));
+        min-height: calc(100% - var(--vp-nav-height));
     }
-    
+
     .home .VPDoc:not(.has-sidebar):not(.has-aside) .container {
         /* max-width: 100%; */
         max-width: calc(var(--vp-layout-max-width) - 64px);
     }
+
     .home .VPDoc .content {
         /* max-width: 100%; */
         max-width: 100%;
-        padding-left:0px;
-        padding-right:0px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .home .VPDoc.has-aside:not(.has-sidebar) .container {
-        max-width: calc(var(--vp-layout-max-width) - 64px); 
+        max-width: calc(var(--vp-layout-max-width) - 64px);
     }
 
     .home .VPDoc:not(.has-sidebar) .container .content {
-        max-width:100%; 
+        max-width: 100%;
     }
 
 
@@ -165,11 +171,11 @@
     }
 
     .home .VPDoc.has-aside:not(.has-sidebar) .container {
-        max-width: calc(var(--vp-layout-max-width) - 64px); 
+        max-width: calc(var(--vp-layout-max-width) - 64px);
     }
 
     .home .VPDoc:not(.has-sidebar) .container .content {
-        max-width:100%; 
+        max-width: 100%;
     }
 
     .VPDoc.has-aside:not(.has-sidebar) .postlist.grid {
@@ -204,11 +210,11 @@
     }
 
     .home .VPDoc.has-aside:not(.has-sidebar) .container {
-        max-width: calc(var(--vp-layout-max-width) - 64px); 
+        max-width: calc(var(--vp-layout-max-width) - 64px);
     }
 
     .home .VPDoc:not(.has-sidebar) .container .content {
-        max-width:100%; 
+        max-width: 100%;
     }
 
     .VPDoc.has-aside:not(.has-sidebar) .postlist.grid {
@@ -244,11 +250,11 @@
     }
 
     .home .VPDoc.has-aside:not(.has-sidebar) .container {
-        max-width: calc(var(--vp-layout-max-width) - 64px); 
+        max-width: calc(var(--vp-layout-max-width) - 64px);
     }
 
     .home .VPDoc:not(.has-sidebar) .container .content {
-        max-width:100%; 
+        max-width: 100%;
     }
 
     .VPDoc.has-aside:not(.has-sidebar) .postlist.grid {
@@ -319,30 +325,29 @@
     background-color: var(--vp-badge-info-bg);
 }
 
-.repeatbg{
-    background-image: linear-gradient(
-		135deg,
-		rgba(255, 255, 255, 0.2),
-		rgba(255, 255, 255, 0.2) 25%,
-		rgba(255, 255, 255, 0) 25%,
-		rgba(255, 255, 255, 0) 50%,
-		rgba(255, 255, 255, 0.2) 50%,
-		rgba(255, 255, 255, 0.2) 75%,
-		rgba(255, 255, 255, 0) 75%,
-		rgba(255, 255, 255, 0) 100%
-	);
-	background-size: 30px 30px;
+.repeatbg {
+    background-image: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.2) 25%,
+            rgba(255, 255, 255, 0) 25%,
+            rgba(255, 255, 255, 0) 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            rgba(255, 255, 255, 0) 75%,
+            rgba(255, 255, 255, 0) 100%);
+    background-size: 30px 30px;
 }
 
 .v-popper--theme-tooltip .v-popper__inner {
     font-size: 12px;
-    
-  }
 
-  .v-popper--theme-dropdown .v-popper__inner,
-  .specialpop {
+}
+
+.v-popper--theme-dropdown .v-popper__inner,
+.specialpop {
     background-color: var(--vp-c-bg);
-    color: var(--vp-c-text-1);;
+    color: var(--vp-c-text-1);
+    ;
     border-radius: 6px;
     border: 1px solid var(--vp-c-gutter);
     box-shadow: 0 6px 30px #0000001a;
@@ -360,8 +365,8 @@
     position: sticky;
     padding-top: 0px;
     top: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + var(--vp-doc-top-height, 0px) + 32px);
-    height:auto;
-    overflow-y:hidden;
+    height: auto;
+    overflow-y: hidden;
 }
 
 
@@ -387,16 +392,21 @@ p.icons img {
 }
 
 .aside-content {
-    min-height: auto!important;
+    min-height: auto !important;
 }
 
 /* .VPNavBar,.VPNavBar .content .content-body {
     background: #0d263f!important;
 } */
 
-.VPNavBar .divider{
-display: none!important;
+.VPNavBar .divider {
+    display: none !important;
 }
+
 .VPNavBarTitle .title {
-    border-bottom: none!important;
-    }
+    border-bottom: none !important;
+}
+
+.VPDoc.has-aside .content-container .main img {
+    width: 100%;
+}
