@@ -42,7 +42,7 @@
         </template>
         <template #doc-top>
             <ClientOnly>
-                <Slider v-if="frontmatter?.index" :key="md5(page.relativePath)"></Slider>
+                <PageSlider v-if="frontmatter?.index" :key="md5(page.relativePath)"></PageSlider>
                 <PageNavi v-if="frontmatter?.index" :key="md5(page.relativePath)" type="top" />
             </ClientOnly>
         </template>

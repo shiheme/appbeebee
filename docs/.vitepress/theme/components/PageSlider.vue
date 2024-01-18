@@ -1,21 +1,26 @@
 <template>
     <!-- 轮播 -->
-    <VueperSlides class="no-shadow" fixedHeight="200px" :visible-slides="1"
-  :arrows="false"
-  :slide-ratio="1 / 4"
-  :gap="3">
-        <VueperSlide v-for="(slide, i) in slides" :key="i" :image="slide.image" :link="slide.link" :style="'border-radius:8px'">
-        </VueperSlide>
-    </VueperSlides>
+    <swiper class="mySwiper">
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
+    <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
+    <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
+  </swiper>
 </template>
 
 <script lang="ts" setup>
-import { VueperSlides, VueperSlide } from 'vueperslides'  //https://antoniandre.github.io/vueper-slides/
-import 'vueperslides/dist/vueperslides.css'
+// import { Slider, SliderItem } from 'vue-easy-slider'
+// import Swiper from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+// import Swiper styles
+import 'swiper/css';
+
 
 const slides = [
     {
-        image: 'https://fc.sinaimg.cn/large/6364aa43gy1hlxg58m6w3j21z40m8dis.jpg',
+        backgroundColor: 'https://fc.sinaimg.cn/large/6364aa43gy1hlxg58m6w3j21z40m8dis.jpg',
+        width: '100%', height: '100%',
         link: 'http://localhost:5001/posts/2024/01/freebie-chinese-font.html'
     }
 ]
