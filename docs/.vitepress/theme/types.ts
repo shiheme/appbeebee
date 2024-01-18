@@ -25,6 +25,7 @@ export interface Work{
   title?: string
   view?: string
   viewtit?: string
+  linkpan?: string 
   beecode?: string
   github?: string
   wxwords?: string

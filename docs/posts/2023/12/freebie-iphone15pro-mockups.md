@@ -1,6 +1,6 @@
 ---
 post: true
-title: 5款免费的iPhone15/15pro手机设备渲染模型
+title: 5款免费的iPhone15/15pro手机设备渲染模型，提供备用下载
 date: 2023-12-01
 cover: https://fc.sinaimg.cn/large/6364aa43gy1hlbkg84tp8j20k00dcdjw.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/iphone-pro-15-3d-mockups-free.gif
@@ -12,7 +12,7 @@ tags:
  - 设备
 description: 免费 iPhone15 设备渲染模型，方便将你的 APP UI进行成列展示。
 ---
-# 5款免费的iPhone15/15pro手机设备渲染模型
+# 5款免费的iPhone15/15pro手机设备渲染模型，提供备用下载
 
 ## 1.Faysal Khan/iPhone 15 Pro Mockup for Adobe XD for Free
 ![Faysal Khan/iPhone 15 Pro Mockup for Adobe XD for Free](https://fc.sinaimg.cn/large/6364aa43gy1hlbkg84tp8j20k00dcdjw.jpg)
@@ -25,7 +25,7 @@ description: 免费 iPhone15 设备渲染模型，方便将你的 APP UI进行�
     github: '',
     via:'https://www.behance.net/gallery/179858489/iPhone-15-Pro-Mockup-for-Adobe-XD-for-Free',
     coveross: '',
-    linkpan:'链接: https://pan.baidu.com/s/1xiic-0OxqPvMbkQVeshcQw?pwd=xit6 提取码: xit6',
+    linkpan:'https://pan.baidu.com/s/1xiic-0OxqPvMbkQVeshcQw?pwd=xit6',
     beecode: '',
     viewtit: '官方下载',
     wxwords: '',
@@ -44,7 +44,7 @@ Gregory Riaguzov/iPhone Pro 15 3D Mockups Free](https://fc.sinaimg.cn/large/6364
     github: '',
     via: 'https://dribbble.com/shots/22988005-iPhone-Pro-15-3D-Mockups-Free',
     coveross: '',
-    linkpan:'链接: https://pan.baidu.com/s/10YRIAwGPsh_oydpJ-vcgEw?pwd=rrhr 提取码: rrhr',
+    linkpan:'https://pan.baidu.com/s/10YRIAwGPsh_oydpJ-vcgEw?pwd=rrhr',
     beecode: '',
     viewtit: '官方下载',
     wxwords: '',
@@ -62,7 +62,7 @@ Uiscore/iPhone 15 Pro Free Mockup](https://fc.sinaimg.cn/large/6364aa43gy1hlbm7m
     github: '',
     via: 'https://dribbble.com/shots/22550033-iPhone-15-Pro-Free-Mockup',
     coveross: '',
-    linkpan:'链接: https://pan.baidu.com/s/1iICFFr9hwolY_yN3gwPMrA?pwd=dj71 提取码: dj71',
+    linkpan:'https://pan.baidu.com/s/1iICFFr9hwolY_yN3gwPMrA?pwd=dj71',
     beecode: '',
     viewtit: '官方下载',
     wxwords: '',
@@ -78,7 +78,7 @@ Uiscore/iPhone 15 Pro Free Mockup](https://fc.sinaimg.cn/large/6364aa43gy1hlbm7m
     view: 'https://www.behance.net/gallery/179914841/iPhone-15-15-Pro-Free-Mockups',
     github: '',
     via: 'https://www.behance.net/gallery/179914841/iPhone-15-15-Pro-Free-Mockups',
-    linkpan:'链接: https://pan.baidu.com/s/1LG2-bxkl7vaaRIrEKVYPNw?pwd=mndk 提取码: mndk',
+    linkpan:'https://pan.baidu.com/s/1LG2-bxkl7vaaRIrEKVYPNw?pwd=mndk',
     coveross: '',
     beecode: '',
     viewtit: '官方下载',
@@ -95,7 +95,7 @@ Uiscore/iPhone 15 Pro Free Mockup](https://fc.sinaimg.cn/large/6364aa43gy1hlbm7m
     view: 'https://drive.google.com/file/d/1gymG2FU74V8vV_ttrcljoJ7Q6fTR212k/view?usp=sharing',
     github: '',
     via: 'https://www.behance.net/gallery/179912187/iPhone-15-Pro-Mockup-free',
-    linkpan:'链接: https://pan.baidu.com/s/1DKCrHkj_chSBBP0TmtyROw?pwd=c2g1 提取码: c2g1',
+    linkpan:'https://pan.baidu.com/s/1DKCrHkj_chSBBP0TmtyROw?pwd=c2g1',
     coveross: '',
     beecode: '',
     viewtit: '官方下载',
