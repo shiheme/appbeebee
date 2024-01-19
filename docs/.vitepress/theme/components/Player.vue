@@ -62,7 +62,7 @@ const adjustedTop = ref(0)
 //     adjustedLeft.value = x - unref(left.value)
 //     adjustedTop.value = y - unref(top.value)
 //   },
-// })
+// })   // H5端拖拽体验差故此隐藏，建议拖拽时增加一个屏幕容器不让滚动
 const isdrag = ref(true)
 const reback = () => {
 	adjustedLeft.value = 0

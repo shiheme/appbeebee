@@ -9,13 +9,12 @@
         fill="currentColor"></path>
     </svg>
     <ul class="ul">
-      <li class="li"><label class="label">作者</label><span class=""><a class="a" :href="theme?.articlecc?.author">{{
+      <li class="li"><label class="label">作者</label><span class="span"><a class="a" :href="theme?.articlecc?.authorLink">{{
         frontmatter?.author ? frontmatter?.author : theme?.articlecc?.author }}</a></span></li>
-      <li class="li"><label class="label">标题</label><span class="">{{ frontmatter?.title }}</span></li>
-      <li class="li"><label class="label">时间</label><span class="">{{ formatTime(frontmatter?.date) }}</span></li>
-      <li class="li"><label class="label">链接</label><span class=""><a class="a"
-            :href="withBase(`/${page?.relativePath}`)">{{ articleLink }}</a></span></li>
-      <li class="li" v-if="theme?.articlecc?.licenseLink"><label class="span label">版权</label><span class=""><a class="a"
+      <li class="li"><label class="label">标题</label><span class="span">{{ frontmatter?.title }}</span></li>
+      <li class="li"><label class="label">时间</label><span class="span">{{ formatTime(frontmatter?.date) }}</span></li>
+      <li class="li link" v-tooltip="'点击复制'" @click="handleCopy(articleLink)"><label class="label">链接</label><span class="span">{{ articleLink }}</span></li>
+      <li class="li" v-if="theme?.articlecc?.licenseLink"><label class="span label">版权</label><span class="span"><a class="a"
             target="_blank" :href="theme?.articlecc?.licenseLink">{{ theme?.articlecc?.license }}</a></span></li>
     </ul>
   </div>
@@ -23,8 +22,7 @@
 
 <script lang="ts" setup>
 import { withBase, useData } from 'vitepress';
-import { formatTime } from '../functions'
-
+import { formatTime,handleCopy } from '../functions'
 
 const { theme, page, frontmatter } = useData();
 const articleLink = decodeURI(window.location.href);
@@ -60,14 +58,23 @@ const articleLink = decodeURI(window.location.href);
 
       .label {
         margin-right: 8px;
+        font-weight: 600;
       }
 
       .a {
-        
+        color: var(--vp-c-brand);
       }
 
       .a:hover {
         color: var(--vp-c-brand);
+        text-decoration: underline;
+      }
+    }
+
+    .li.link {
+      .span {
+        color: var(--vp-c-brand);
+        cursor: pointer;
       }
     }
   }

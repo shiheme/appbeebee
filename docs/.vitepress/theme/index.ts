@@ -22,9 +22,10 @@ import PageNavi from './components/PageNavi.vue'
 import PageASide from './components/PageASide.vue'
 import PageCtrol from './components/PageCtrol.vue'
 import PageGZH from './components/PageGZH.vue'
+import PageSlider from './components/PageSlider.vue'
 import Player from './components/Player.vue'
 import Tools from './components/Tools.vue'
-import PageSlider from './components/PageSlider.vue'
+import Welcome from './components/Welcome.vue'
 import FloatingVue from 'floating-vue'  //使用 tooltip库。用于hover提示、悬浮框等。教程见https://floating-vue.starpad.dev/
 import { createPinia } from 'pinia'  //使用状态管理库。用于音乐播放器的状态监听
 import Vue3Toasity, { type ToastContainerOptions } from 'vue3-toastify';  //使用 toast 库。用于弹框提示反馈等。教程见https://vue3-toastify.js-bridge.com/
@@ -59,11 +60,12 @@ export default {
         app.component('PageNavi', PageNavi)
         app.component('PageGZH', PageGZH)
         app.component('PageCtrol', PageCtrol)
+        app.component('PageSlider', PageSlider)
         app.component('ArticleList', ArticleList)
         app.component('ArticlePage', ArticlePage)
         app.component('Player', Player)
         app.component('Tools', Tools)
-        app.component('PageSlider', PageSlider)
+        app.component('Welcome', Welcome)
         app.use(pinia)
         app.use(FloatingVue, {
             themes: {

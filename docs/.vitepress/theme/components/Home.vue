@@ -9,12 +9,13 @@
 <script lang="ts" setup>
 import { computed, ref, onMounted, nextTick, watch } from 'vue'
 import { useBrowserLocation, useStorage } from '@vueuse/core'
-import { useRouter } from 'vitepress'
+import { useData,useRouter } from 'vitepress'
 import { data as themeposts } from '../posts.data'
 import { formatSearch } from '../../theme/functions'
 import { toast, type ToastOptions } from 'vue3-toastify';
 import Welcome from "../../theme/components/Welcome.vue";
 import Page from "../../theme/components/Page.vue";
+const { theme, frontmatter } = useData();
 const welcomestate = useStorage('weclome', false, sessionStorage)
 const router = useRouter()
 const location = useBrowserLocation()
@@ -28,7 +29,6 @@ const selectYear = computed(() => (activeYear.value))
 const selectMonth = computed(() => (activeMonth.value))
 const bread = ref('全部内容')
 const breadrxt = computed(() => (bread.value))
-// const themeposts = computed(() => usePostsData() || [])
 const posts = computed(() => {
   if (selectCategory.value) {
     return themeposts.filter((article: any) =>
@@ -118,16 +118,18 @@ watch(
   }
 )
 onMounted(() => {
-  // if (!welcomestate.value) {
+  if ((theme.value?.website?.welcomeusestate&&!welcomestate.value) || !theme.value?.website?.welcomeusestate) {
     nextTick(() => {
       toast(Welcome, {
-        autoClose: 5000,
+        autoClose: theme.value?.website?.welcome?.autoClose?theme.value.website.welcome.autoClose:false,
         "closeOnClick": false,
         position: toast.POSITION.BOTTOM_RIGHT,
       } as ToastOptions);
-      // welcomestate.value = true
+      if(theme.value?.website?.welcomeusestate&&!welcomestate.value) {
+      welcomestate.value = true
+    }
     });
-  // }
+  }
 });
 </script>
 <style>

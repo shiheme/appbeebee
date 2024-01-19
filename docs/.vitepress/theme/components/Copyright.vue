@@ -1,4 +1,5 @@
 <template>
+    <!-- 页面底部版权信息。全站通用显示 -->
     <div class="site-footer">
         <div class="btmgroup">
             <div class="msgcard">
@@ -16,9 +17,6 @@
             </div>
 
         </div>
-
-        <!-- 页面底部版权信息。全站通用显示 -->
-
     </div>
 </template>
 <script lang="ts" setup>

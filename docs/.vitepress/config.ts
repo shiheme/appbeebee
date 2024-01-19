@@ -15,6 +15,32 @@ export default defineConfig<ThemeConfig>({
             { text: '公众号', link: 'https://mp.weixin.qq.com/s/iCf-QOnKk2WPjVqL6jJ8WA' },
             { text: '比比原创小程序', link: 'https://beebee.work/' }
         ],
+        music:[
+            {
+                "id": 1,
+                "title": "陷落Falling",
+                "author": "不知名选手Au / 马也_Crabbit",
+                "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0Nzk=",
+                "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/01.jpg",
+                "lrc": ""
+            },
+            {
+                "id": 2,
+                "title": "一个人想着一个人 ",
+                "author": "如懿",
+                "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0ODA=",
+                "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/02.jpg",
+                "lrc": ""
+            },
+            {
+                "id": 3,
+                "title": "夜车（Cover 曾轶可）",
+                "author": "姜铭杨",
+                "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0ODE=",
+                "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/03.jpg",
+                "lrc": ""
+            }
+        ],
         search: {
             provider: 'local',
             options: {
@@ -62,9 +88,14 @@ export default defineConfig<ThemeConfig>({
             licenseLink: 'http://creativecommons.org/licenses/by-sa/4.0/'
         },
         website: {
-            showFooter: true,
-            icpRecordCode: '鄂ICP备2022014994号-1',
-            publicSecurityRecordCode: '鄂公网安备42282202000143号',
+            showWelcome: true, //是否显示首页底部弹框，内容请在组件.vitepress/theme/components/Welcome.vue编写
+            welcomeusestate: false, //底部弹框是否使用sessionStorage缓存(即不关闭页面仅显示一次)
+            welcome: {
+                autoClose:false, //多长时间自动关闭，false为不关闭
+            },
+            showFooter: true, //是否显示全局底部信息
+            icpRecordCode: '鄂ICP备2022014994号-1',  //网站备案号
+            publicSecurityRecordCode: '鄂公网安备42282202000143号', //公安备案号
             link:'https://appbeebee.com/',
             copyright: `Copyright © 2019-${new Date().getFullYear()} Charles7c`
         },
