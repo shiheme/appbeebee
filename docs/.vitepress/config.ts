@@ -110,7 +110,7 @@ export default defineConfig<ThemeConfig>({
             }
         },
         website: {
-            showWelcome: false, //是否显示首页底部弹框，内容请在组件.vitepress/theme/components/Welcome.vue编写
+            showWelcome: true, //是否显示首页底部弹框，内容请在组件.vitepress/theme/components/Welcome.vue编写
             welcomeusestate: true, //底部弹框是否使用sessionStorage缓存(即不关闭页面仅显示一次)
             welcome: {
                 autoClose: 6000, //多长时间自动关闭，false为不关闭
