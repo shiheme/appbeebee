@@ -3,18 +3,23 @@
     <div class="postlist"
         :class="{ grid: listview === 'grid', list: listview === 'list', hasaside: frontmatter.aside, hassidebar: frontmatter.sidebar || theme?.sidebar?.length }">
         <template v-for="(article, index) in posts" :key="index">
+            <div class="list" v-if="theme.website?.showUserCard &&Number(theme.website?.cardPosition)-2 < 0 && index ===0 && listview === 'grid'">
+                <ClientOnly>
+                    <PageASide />
+                </ClientOnly>
+            </div>
             <div class="list">
                 <ClientOnly>
                     <ArticleList :article="article" />
                 </ClientOnly>
             </div>
-            <div class="list" v-if="index == 1 && listview === 'grid'">
+            <div class="list" v-if="theme.website?.showUserCard &&index == Number(theme.website?.cardPosition)-2 && listview === 'grid'">
                 <ClientOnly>
                     <PageASide />
                 </ClientOnly>
             </div>
         </template>
-        <div class="list" v-if="posts.length < 2 && listview === 'grid'">
+        <div class="list" v-if="theme.website?.showUserCard &&posts.length < Number(theme.website?.cardPosition)-1 && listview === 'grid'">
             <ClientOnly>
                 <PageASide />
             </ClientOnly>

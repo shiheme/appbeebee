@@ -1,7 +1,7 @@
 <template>
     <!-- 氛围组：烟花 https://github.com/Doener48/firework -->
-    <div class="message" style="position: sticky;z-index: 100;top:calc(500px);bottom:-70px;margin-top: 40px;margin-bottom: -60px;">
-        <span class="span">🧨烟花许愿🧨｜②⓪②④新年</span>
+    <div class="message" v-if="theme?.website?.showFirework" style="position: sticky;z-index: 100;top:calc(500px);bottom:-70px;margin-top: 40px;margin-bottom: -60px;">
+        <span class="span">{{ theme?.website?.fireworkTitle }}</span>
         <div class="messageleft">
             <input id="messageInput" placeholder="输入文字" :value="newyearwords" type="text" />
             <div class="voicectl" v-tooltip="'炮竹声开启'" @click="changebackvoice">
@@ -31,10 +31,9 @@
 import { onMounted, watch, ref, computed } from 'vue'
 import { useData, useRouter } from 'vitepress'
 import { getRandomInt } from '../functions'
-const { isDark } = useData();
-const newyearwordslist = ['恭贺新禧', '万事如意', '新年快乐', '恭喜发财', '岁岁平安', '吉祥如意', '心想事成', '万事顺遂', '一帆风顺', '二龙腾飞', '三羊开泰', '四季平安', '五福临门', '六六大顺', '七星高照', '八方来财', '九九同心', '十全十美', '荣华富贵', '金玉满堂', '龙凤呈祥', '喜气洋洋', '鸿运当头', '财源广进', '笑口常开', '幸福安康', '日进斗金', '生意兴隆', '步步高升', '年年有余', '迎春接福', '喜气盈门', '花团锦簇', '前程似锦', '福满人间', '春回大地', '辞旧迎新', '万象更新', '吉祥如意', '万事大吉', '马到成功', '功成名就', '鱼跃龙门', '一飞冲天', '瑞气盈门', '福寿康宁', '时来运转', '鸿运高照', '三阳开泰', '否极泰来', '鸿运亨通', '一帆风顺', '出入平安', '顺风顺水', '龙凤呈祥', '花好月圆', '张灯结彩', '欢天喜地', '合家欢乐', '幸福美满', '和气致祥', '招财进宝', '开门大吉', '迎春接福', '福泽满门', '花开富贵', '竹报平安', '大吉大利', '恭喜发财']
+const { isDark,theme } = useData();
+const newyearwordslist = theme.value?.website?.fireworkWords?theme.value.website.fireworkWords:[]
 const newyearwords = ref(newyearwordslist[getRandomInt(newyearwordslist.length)])
-// import dat from 'dat.gui'
 const backvoice = ref(false)
 const backvoice2 = computed(() => backvoice.value)
 const changebackvoice = () => {
@@ -593,8 +592,10 @@ watch(
     }
 )
 onMounted(() => {
+    if(theme.value?.website?.showFirework){
     soundManager.preload()
     startcanvas()
+}
 })
 
 </script>

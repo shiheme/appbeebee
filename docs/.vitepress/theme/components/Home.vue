@@ -51,6 +51,12 @@ const posts = computed(() => {
   }
 })
 const per_page = ref(23);
+if(theme.value?.website?.showUserCard){
+  per_page.value = Number(theme.value?.website?.perpage) - 1
+} else {
+  per_page.value = Number(theme.value?.website?.perpage)
+}
+
 const currentpage = ref(1) //当前第几页
 const getposts = computed(() => {
   return posts.value.slice(per_page.value * (currentpage.value - 1), per_page.value * currentpage.value) //获取当前第几页的的文章集合

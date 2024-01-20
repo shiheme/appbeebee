@@ -53,6 +53,7 @@
         </div>
         <div class="social">
           <ul class="ul">
+            <template v-if="theme.website?.cardMusic">
             <li class="li" v-if="isPause" @click="togglePlay">
 
               <div class="group">
@@ -70,6 +71,8 @@
                 </svg>停止音乐
               </div>
             </li>
+          </template>
+          <template v-if="theme.website?.cardCoffee">
             <li class="li" @click="coffeepay" style="position: relative;">
               <div v-if="pay" class="specialpop"
                 style="position: absolute; left:50%;top:0;transform: translate3d(-50%, -100px, 0px);">
@@ -77,7 +80,7 @@
                 <div class="v-popper__wrapper">
                   <div class="v-popper__inner">
                     <div style="width:100px;height:100px;border-radius: 4px;overflow: hidden;background-color: #ffffff;">
-                      <img src="/static/img/qrcode.png" />
+                      <img v-if="theme?.website?.coffeeQrcode" :src="theme.website?.coffeeQrcode" />
                     </div>
                   </div>
                   <div class="v-popper__arrow-container" style="top: 14px;">
@@ -99,6 +102,7 @@
                 </svg>微信扫码
               </div>
             </li>
+          </template>
           </ul>
         </div>
       </div>

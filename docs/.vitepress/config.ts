@@ -10,8 +10,8 @@ export default defineConfig<ThemeConfig>({
     description: 'github开源作品，开源小程序作品，vueJS项目作品，vue3+ts+vite构建项目教学',
     ignoreDeadLinks: true,
     themeConfig: {
-        beecodeurl: 'https://www.appbeebee.com/',
-        sidebar: [{}],
+        beecodeurl: 'https://www.appbeebee.com/', //这里是内页ArticleLink组件用到的跳转第三方网址，一般用不到，仅仅用于二次开发
+        sidebar: [{}], //这里如果删掉，左侧栏的内容全部不显示。页面布局会变成通栏
         nav: [
             { text: '公众号', link: 'https://mp.weixin.qq.com/s/iCf-QOnKk2WPjVqL6jJ8WA' },
             { text: '比比原创小程序', link: 'https://beebee.work/' }
@@ -50,7 +50,7 @@ export default defineConfig<ThemeConfig>({
                 "lrc": ""
             }
         ],
-        // banner: [ //主页轮播
+        // banner: [ //主页轮播，不需要就注释掉
         //     {
         //         link: '/posts/2024/01/freebie-chinese-font.html',
         //         image: 'https://fc.sinaimg.cn/large/6364aa43gy1hlxg58m6w3j21z40m8dis.jpg',
@@ -103,18 +103,30 @@ export default defineConfig<ThemeConfig>({
         returnToTopLabel: '返回顶部',
         article: {
             cc:{
-                author: '小鱼哥',
+                author: '小鱼哥', //此信息将显示在文章底部和博主卡片中
                 authorLink: 'https://mp.weixin.qq.com/s/iCf-QOnKk2WPjVqL6jJ8WA',
                 license: '署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)',
                 licenseLink: 'http://creativecommons.org/licenses/by-sa/4.0/'
             }
         },
         website: {
-            showWelcome: false, //是否显示首页底部弹框，内容请在组件.vitepress/theme/components/Welcome.vue编写
+            perpage: 12, //列表页每页显示数量
+            showWelcome: false, //是否显示首页底部右下角弹框，（调试时弹框不显示的话先关闭浏览器再运行，因为有可能开启了缓存）内容请在组件.vitepress/theme/components/Welcome.vue编写
             welcomeusestate: true, //底部弹框是否使用sessionStorage缓存(即不关闭页面仅显示一次)
             welcome: {
                 autoClose: 6000, //多长时间自动关闭，false为不关闭
             },
+            showSnow: true, //是否开启雪花。开启后仅在暗黑模式下显示
+            showUserCard: true, //是否显示列表中的博主名片
+            cardPosition: 3, //显示在第几个位置
+            cardMusic: true, //是否显示播放音乐，音乐列表在上面 music中配置
+            cardCoffee: true, //是否显示打赏咖啡，
+            coffeeQrcode: '/static/img/qrcode.png', //打赏咖啡二维码图片地址。如果是跳转网页地址需自行修改代码
+            showLantern: true, //是否显示灯笼挂件
+            lanternText: ['新','年'], //灯笼上的字,数组形式
+            showFirework: true, //是否显示侧栏烟花特效
+            fireworkTitle: '🧨烟花许愿🧨｜②⓪②④新年', //烟花许愿标题
+            fireworkWords: ['恭贺新禧', '万事如意', '新年快乐', '恭喜发财', '岁岁平安', '吉祥如意', '心想事成', '万事顺遂', '一帆风顺', '二龙腾飞', '三羊开泰', '四季平安', '五福临门', '六六大顺', '七星高照', '八方来财', '九九同心', '十全十美', '荣华富贵', '金玉满堂', '龙凤呈祥', '喜气洋洋', '鸿运当头', '财源广进', '笑口常开', '幸福安康', '日进斗金', '生意兴隆', '步步高升', '年年有余', '迎春接福', '喜气盈门', '花团锦簇', '前程似锦', '福满人间', '春回大地', '辞旧迎新', '万象更新', '吉祥如意', '万事大吉', '马到成功', '功成名就', '鱼跃龙门', '一飞冲天', '瑞气盈门', '福寿康宁', '时来运转', '鸿运高照', '三阳开泰', '否极泰来', '鸿运亨通', '一帆风顺', '出入平安', '顺风顺水', '龙凤呈祥', '花好月圆', '张灯结彩', '欢天喜地', '合家欢乐', '幸福美满', '和气致祥', '招财进宝', '开门大吉', '迎春接福', '福泽满门', '花开富贵', '竹报平安', '大吉大利', '恭喜发财'], //烟花许愿关键词
             showFooter: true, //是否显示全局底部信息
             icpRecordCode: '鄂ICP备2022014994号-1',  //网站备案号
             publicSecurityRecordCode: '鄂公网安备42282202000143号', //公安备案号

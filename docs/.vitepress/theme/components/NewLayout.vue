@@ -12,9 +12,9 @@
         <template #layout-top>
             <ClientOnly><!-- 在布局下方添加 -->
                 
-                <!-- <div class="snow" v-if="isDark">
+                <div class="snow" v-if="theme.website?.showSnow&&isDark">
                     <div v-for="index in 80" :key="index" class="dot"></div>
-                </div> -->
+                </div>
                 <Lantern/>
             </ClientOnly>
         </template>

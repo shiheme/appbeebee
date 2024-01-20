@@ -1,119 +1,37 @@
 <template>
     <!-- 氛围组：灯笼 https://github.com/Doener48/firework -->
-  <div class="dengbox" style="pointer-events: none;z-index: 1000;">
-    <div class="deng-box2">
-      <div class="deng">
-        <div class="xian" />
+  <div v-if="theme?.website?.showLantern" class="dengbox" style="pointer-events: none;z-index: 1000;">
+    <div :style="{
+		left: 150+(20*index)+'px'
+	}" class="deng-box" :class="'deng-box'+index" v-for="(item, index) in theme?.website?.lanternText" :key="index">
+      <div class="deng" :class="index%2===0?'deng3':'deng5'">
+        <div class="xian"></div>
         <div class="deng-a">
           <div class="deng-b">
-            <div class="deng-t">年</div>
+            <div class="deng-t">{{ item }}</div>
           </div>
         </div>
         <div class="shui shui-a">
-          <div class="shui-c" />
-          <div class="shui-b" />
+          <div class="shui-c"></div>
+          <div class="shui-b"></div>
         </div>
       </div>
     </div>
-    <div class="deng-box3">
-      <div class="deng">
-        <div class="xian" />
-        <div class="deng-a">
-          <div class="deng-b">
-            <div class="deng-t">新</div>
-          </div>
-        </div>
-        <div class="shui shui-a">
-          <div class="shui-c" />
-          <div class="shui-b" />
-        </div>
-      </div>
-    </div>
-    <!-- <div class="deng-box1">
-      <div class="deng">
-        <div class="xian" />
-        <div class="deng-a">
-          <div class="deng-b">
-            <div class="deng-t">乐</div>
-          </div>
-        </div>
-        <div class="shui shui-a">
-          <div class="shui-c" />
-          <div class="shui-b" />
-        </div>
-      </div>
-    </div>
-    <div class="deng-box">
-      <div class="deng">
-        <div class="xian" />
-        <div class="deng-a">
-          <div class="deng-b">
-            <div class="deng-t">快</div>
-          </div>
-        </div>
-        <div class="shui shui-a">
-          <div class="shui-c" />
-          <div class="shui-b" />
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 <script lang="ts" setup>
-
+import { useData } from 'vitepress'
+const { theme } = useData();
 
 </script>
 <style scoped>
 .deng-box {
 	  position: fixed;
 	  top: -15px;
-	  right: 150px;
 	  z-index: 9999;
 	  pointer-events: none;
 	  transform: scale(.5);transform-origin: top left;
 	}
-	
-	.deng-box1 {
-	  position: fixed;
-	  top: -15px;
-	  right: 10px;
-	  z-index: 9999;
-	  pointer-events: none;
-	  transform: scale(.5);transform-origin: top left;
-	}
-	
-	.deng-box2 {
-	  position: fixed;
-	  top: -15px;
-	  left: 170px;
-	  z-index: 9999;
-	  pointer-events: none;
-	  transform: scale(.4);transform-origin: top left;
-	}
-	
-	.deng-box3 {
-	  position: fixed;
-	  top: -15px;
-	  left: 150px;
-	  z-index: 9999;
-	  pointer-events: none;
-	  transform: scale(.4);transform-origin: top left;
-	}
-	
-	.deng-box1 .deng,
-	.deng-box3 .deng {
-	  position: relative;
-	  width: 120px;
-	  height: 90px;
-	  margin: 50px;
-	  background: #d8000f;
-	  background: rgba(216, 0, 15, .8);
-	  border-radius: 50% 50%;
-	  -webkit-transform-origin: 50% -100px;
-	  -webkit-animation: swing 5s infinite ease-in-out;
-	  box-shadow: -5px 5px 30px 4px #fc903d
-	}
-	
 	.deng {
 	  position: relative;
 	  width: 120px;
@@ -122,9 +40,16 @@
 	  background: #d8000f;
 	  background: rgba(216, 0, 15, .8);
 	  border-radius: 50% 50%;
-	  -webkit-transform-origin: 50% -100px;
-	  -webkit-animation: swing 3s infinite ease-in-out;
+	  transform-origin: 50% -100px;
 	  box-shadow: -5px 5px 50px 4px #fa6c00
+	}
+
+	.deng3 {
+		animation: swing 3s infinite ease-in-out;
+	}
+
+	.deng5 {
+		animation: swing 5s infinite ease-in-out;
 	}
 	
 	.deng-a {
@@ -161,8 +86,8 @@
 	  width: 5px;
 	  height: 20px;
 	  margin: -5px 0 0 59px;
-	  -webkit-animation: swing 4s infinite ease-in-out;
-	  -webkit-transform-origin: 50% -45px;
+	  animation: swing 4s infinite ease-in-out;
+	  transform-origin: 50% -45px;
 	  background: orange;
 	  border-radius: 0 0 5px 5px
 	}
@@ -224,12 +149,6 @@
 	  font-weight: 700;
 	  line-height: 85px;
 	  text-align: center
-	}
-	
-	.night .deng-box,
-	.night .deng-box1,
-	.night .deng-t {
-	  background: 0 0 !important
 	}
 	
 	@-moz-keyframes swing {
