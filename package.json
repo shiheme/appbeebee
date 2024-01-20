@@ -28,7 +28,7 @@
     "gray-matter": "^4.0.3",
     "prettier": "^3.1.0",
     "typescript": "^5.3.2",
-    "vitepress": "^1.0.0-rc.37"
+    "vitepress": "^1.0.0-rc.39"
   },
   "dependencies": {
     "blueimp-md5": "^2.19.0",
