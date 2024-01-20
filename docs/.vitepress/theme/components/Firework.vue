@@ -113,7 +113,7 @@ const MyMath = (function MyMathFactory(Math) {
 })(Math);
 
 const soundManager = {
-    baseURL: '/static/voice/',
+    baseURL: '',
     ctx: new (window.AudioContext || window.webkitAudioContext),
     sources: {
         lift: {
@@ -121,9 +121,9 @@ const soundManager = {
             playbackRateMin: 0.85,
             playbackRateMax: 0.95,
             fileNames: [
-                'lift1.mp3',
-                'lift2.mp3',
-                'lift3.mp3'
+                'https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE4NTk=', //lift1.mp3
+                'https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE4NjA=', //lift2.mp3
+                'https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE4NjE='  //lift3.mp3
             ]
         },
         burst: {
@@ -131,8 +131,8 @@ const soundManager = {
             playbackRateMin: 0.8,
             playbackRateMax: 0.9,
             fileNames: [
-                'burst1.mp3',
-                'burst2.mp3'
+                'https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE4NTU=', //burst1.mp3
+                'https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE4NTY=' //burst2.mp3
             ]
         },
         burstSmall: {
@@ -140,21 +140,21 @@ const soundManager = {
             playbackRateMin: 0.8,
             playbackRateMax: 1,
             fileNames: [
-                'burst-sm-1.mp3',
-                'burst-sm-2.mp3'
+                'https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE4NTM=', //burst-sm-1.mp3
+                'https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE4NTQ=' //burst-sm-2.mp3
             ]
         },
         crackle: {
             volume: 0.2,
             playbackRateMin: 1,
             playbackRateMax: 1,
-            fileNames: ['crackle1.mp3']
+            fileNames: ['https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE4NTg='] //crackle1.mp3
         },
         crackleSmall: {
             volume: 0.3,
             playbackRateMin: 1,
             playbackRateMax: 1,
-            fileNames: ['crackle-sm-1.mp3']
+            fileNames: ['https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE4NTc='] //crackle-sm-1.mp3
         }
     },
 
