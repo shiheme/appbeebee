@@ -46,12 +46,10 @@ const props = defineProps<{
   flex-direction: column;
   margin-bottom: 1rem;
 
-
   .main {
     display: flex;
     flex-direction: row;
     margin-top: 10px;
-
 
     .cover {
       width: 30%;
@@ -141,7 +139,7 @@ const props = defineProps<{
 
   .cover {
     /* height: 12rem; */
-    padding-top:66%;
+    padding-top: 66%;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -200,13 +198,6 @@ const props = defineProps<{
       display: none;
     }
   }
-
-  /* .meta {
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 8px;
-    margin-top: auto;
-  } */
 }
 
 .articlelist.grid:hover {

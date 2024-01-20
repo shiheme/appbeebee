@@ -7,6 +7,7 @@ const { copy, isSupported } = useClipboard();
 
 import { toast, type ToastOptions } from 'vue3-toastify';
 
+// 文字格式转换
 export function formatSearch(se: any) {
     if (typeof se !== "undefined") {
         se = se.substr(1);
@@ -32,16 +33,18 @@ export function formatTime(data: any, type = 'YYYY-MM-DD') {
 }
 dayjs.extend(rTime)
 
+// 人性化时间格式
 export const relativeTime = (value:any) => {
     return dayjs(value).fromNow()
 }
 
+// 随机一文
 export function randomOne(post: Post[]) {
-
     const data: any = post[getRandomInt(post.length)]
     return data
 }
 
+// 获取所有 tag
 export function initTags(post: Post[]) {
     const data: any = {}
     for (let index = 0; index < post.length; index++) {
@@ -61,6 +64,7 @@ export function initTags(post: Post[]) {
     return data
 }
 
+// 获取所有分类
 export function initCats(post: Post[]) {
     const data: any = {}
     for (let index = 0; index < post.length; index++) {
@@ -80,6 +84,7 @@ export function initCats(post: Post[]) {
     return data
 }
 
+// 根据tag获取相关文章
 export function relatebyTags(post: Post[], article: any) {
     const data: any = {
         relate: []
@@ -100,7 +105,7 @@ export function relatebyTags(post: Post[], article: any) {
     return uniqueArr
 }
 
-
+// 获取所有存档
 export function initArchives(post: Post[]) {
     let data = {} as any
     for (let index = 0; index < post.length; index++) {
@@ -120,6 +125,7 @@ export function initArchives(post: Post[]) {
     return data
 }
 
+//
 const pattern
     = /[a-zA-Z0-9_\u0392-\u03C9\u00C0-\u00FF\u0600-\u06FF\u0400-\u04FF]+|[\u4E00-\u9FFF\u3400-\u4DBF\uF900-\uFAFF\u3040-\u309F\uAC00-\uD7AF]+/g
 
@@ -140,11 +146,11 @@ export function countWord(data: string) {
     return count
 }
 
-export const generateId = (): number => Math.floor(Math.random() * 10000)
-
+// 通用随机获取方法
 export const getRandomInt = (max: number) =>
     Math.floor(Math.random() * Math.floor(max))
 
+// 通过 token方式获取 github api
 export const getGithub = async (name: any) => {
     const data = await (await fetch(`https://api.github.com/repos/${name}`, {
         headers: {
@@ -170,6 +176,7 @@ export const getGithub = async (name: any) => {
     }
 }
 
+// 通用复制提示方式
 export function handleCopy(text: string) {
     if (!isSupported) {
         toast("您的浏览器不支持Clipboard API", {

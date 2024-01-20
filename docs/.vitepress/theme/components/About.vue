@@ -33,9 +33,10 @@
 .about {
     background-color: var(--vp-c-bg-alt);
     border-radius: 8px;
-    padding:40px;
+    padding: 40px;
     font-size: 14px;
     text-align: center;
+
     .list {
         font-size: 12px;
         margin-top: 24px;
@@ -43,16 +44,18 @@
         flex-direction: column;
         align-self: center;
         justify-content: center;
+
         .h4 {
- margin: 10px;
- font-size: 12px;
+            margin: 10px;
+            font-size: 12px;
         }
+
         .ul {
             display: flex;
             flex-direction: column;
             padding: 0;
             margin: 0 auto;
-            
+
             .li {
                 display: flex;
                 flex-direction: row;

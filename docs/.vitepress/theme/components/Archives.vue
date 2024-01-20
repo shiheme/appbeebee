@@ -35,10 +35,8 @@ const data = computed(() => initArchives(themeposts))
 }
 
 .archives {
-
     display: flex;
     flex-direction: column;
-
     line-height: 24px;
 }
 
@@ -50,16 +48,6 @@ const data = computed(() => initArchives(themeposts))
 }
 
 .month {
-    /* padding: 4px 16px;
-    margin: 6px 8px;
-    font-size: 12px;
-    line-height: 25px;
-    background-color: var(--vp-c-bg-alt);
-    transition: 0.4s;
-    border-radius: 2px;
-    color: var(--vp-c-text-1);
-    cursor: pointer; */
-
     margin: 5px;
     padding: 0 8px;
     display: inline-block;

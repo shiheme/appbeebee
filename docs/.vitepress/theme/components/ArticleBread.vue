@@ -21,7 +21,6 @@ const dataSource = computed(() => (props.article))
 
 <style scoped>
 .articlebread {
-
   font-size: 14px;
 
   .a:hover {

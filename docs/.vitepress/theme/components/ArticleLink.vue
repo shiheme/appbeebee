@@ -1,27 +1,32 @@
 <template>
-  <!-- 文章涉及的资源下载等。显示在页面右侧和文章内调用 -->
+  <!-- 文章涉及的资源下载等。文章内调用 -->
   <div class="articlelink">
     <div class="title"><span class="span"><svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path
             d="M7.94101 18C7.64391 16.7274 6.30412 15.6857 5.75395 14.9992C4.65645 13.6297 4 11.8915 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 11.8925 19.3428 13.6315 18.2443 15.0014C17.6944 15.687 16.3558 16.7276 16.059 18H7.94101ZM16 20V21C16 22.1046 15.1046 23 14 23H10C8.89543 23 8 22.1046 8 21V20H16ZM13 10.0048V6L8.5 12.0048H11V16.0048L15.5 10.0048H13Z"
             fill="currentColor"></path>
-        </svg>{{ work?.title?work.title:'资源信息'}}</span></div>
-    <div class="view" v-if="work?.view && !work?.qrcode"><a class="a vp-external-link-icon" :href="work?.view" target="_blank"><span>{{ work.viewtit ?
-      work.viewtit : '官网 / 效果' }}</span></a>
+        </svg>{{ work?.title ? work.title : '资源信息' }}</span></div>
+    <div class="view" v-if="work?.view && !work?.qrcode"><a class="a vp-external-link-icon" :href="work?.view"
+        target="_blank"><span>{{ work.viewtit ?
+          work.viewtit : '官网 / 效果' }}</span></a>
     </div>
     <VDropdown placement="top" :distance="10" v-if="work?.view && work?.qrcode">
       <div class="view" v-tooltip="''" v-if="work?.view"><button class="a">
-        <span>{{ work.viewtit ?
-          work.viewtit : '预览效果' }}</span>
-          <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 17V16H13V13H16V15H18V17H17V19H15V21H13V18H15V17H16ZM21 21H17V19H19V17H21V21ZM3 3H11V11H3V3ZM5 5V9H9V5H5ZM13 3H21V11H13V3ZM15 5V9H19V5H15ZM3 13H11V21H3V13ZM5 15V19H9V15H5ZM18 13H21V15H18V13ZM6 6H8V8H6V6ZM6 16H8V18H6V16ZM16 6H18V8H16V6Z" fill="currentColor"></path></svg>
+          <span>{{ work.viewtit ?
+            work.viewtit : '预览效果' }}</span>
+          <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M16 17V16H13V13H16V15H18V17H17V19H15V21H13V18H15V17H16ZM21 21H17V19H19V17H21V21ZM3 3H11V11H3V3ZM5 5V9H9V5H5ZM13 3H21V11H13V3ZM15 5V9H19V5H15ZM3 13H11V21H3V13ZM5 15V19H9V15H5ZM18 13H21V15H18V13ZM6 6H8V8H6V6ZM6 16H8V18H6V16ZM16 6H18V8H16V6Z"
+              fill="currentColor"></path>
+          </svg>
         </button>
-        </div>
+      </div>
       <template #popper>
         <img class="img qrcodeimg" :src="work?.qrcode" alt="" />
       </template>
     </VDropdown>
-    <div class="tobeebee" v-if="work?.beecode||work?.linkpan"><a class="a vp-external-link-icon" :href="work?.beecode?theme.beecodeurl + work?.beecode+'.htm':work?.linkpan"
-        target="_blank"><span>备用下载</span></a>
+    <div class="tobeebee" v-if="work?.beecode || work?.linkpan"><a class="a vp-external-link-icon"
+        :href="work?.beecode ? theme.beecodeurl + work?.beecode + '.htm' : work?.linkpan" target="_blank"><span>备用下载</span></a>
     </div>
     <div class="entry" v-if="work?.via">
       <div class="githublink">
@@ -77,9 +82,7 @@
         </ul>
       </div>
     </div>
-
     <div class="other" v-tooltip="'点击复制关键词'" v-if="work?.wxwords" @click="handleCopy(work.wxwords)">
-
       <span class="span">* 公众号回复【{{ work?.wxwords }}】获取下载链接</span>
       <span class="span">* 侧栏扫码关注公众号</span>
     </div>
@@ -118,7 +121,6 @@ onMounted(() => {
     });
   }
 });
-
 </script>
 
 <style scoped>
@@ -192,8 +194,9 @@ onMounted(() => {
     align-items: center;
     transition: .5s;
   }
+
   .a::after {
-    color: rgba(235, 235, 245, 0.38)!important;
+    color: rgba(235, 235, 245, 0.38) !important;
   }
 
   .a:hover {
@@ -215,17 +218,17 @@ onMounted(() => {
     display: none;
   }
 
-  
+
 }
 
 .qrcodeimg {
-    width:144px;
-    height:144px;
-    border-radius: 50%;
-    padding:10px;
-    margin: 10px;
-    background-color: #ffffff;
-  }
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px;
+  background-color: #ffffff;
+}
 
 .tobeebee {
   width: 100%;
@@ -295,14 +298,11 @@ onMounted(() => {
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical !important
       }
-
-
     }
 
     .a:hover {
       background-color: var(--vp-c-bg-alt);
     }
-
 
     .a:hover {
       background-color: var();
@@ -338,5 +338,4 @@ onMounted(() => {
     }
   }
 
-}
-</style>
+}</style>

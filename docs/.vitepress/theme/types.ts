@@ -1,3 +1,4 @@
+//这里存放 ts要求的内容格式
 import type { DefaultTheme } from 'vitepress'
 
 export interface ThemeConfig extends DefaultTheme.Config{
@@ -11,7 +12,7 @@ export interface ThemeConfig extends DefaultTheme.Config{
   darkModeSwitchLabel?:string
   sidebarMenuLabel?:string
   returnToTopLabel?:string
-  articlecc?: object
+  article?: object
   website?: object
   logo:any
 }

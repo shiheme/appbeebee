@@ -65,4 +65,5 @@ const webTitle = site.value.title
 .strong {
     color: var(--vp-c-text-1);
     font-weight: 700;
-}</style>
+}
+</style>

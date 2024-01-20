@@ -9,36 +9,40 @@
                 </div>
             </ClientOnly>
         </template>
-        <template #layout-bottom>
+        <template #layout-top>
             <ClientOnly><!-- 在布局下方添加 -->
-                <div class="snow" v-if="isDark">
+                
+                <!-- <div class="snow" v-if="isDark">
                     <div v-for="index in 80" :key="index" class="dot"></div>
-                </div>
+                </div> -->
+                <Lantern/>
             </ClientOnly>
         </template>
         <template #nav-bar-content-after>
             <!-- 在导航 social后添加 -->
         </template>
         <template #nav-screen-content-after>
-           
-    </template>
+
+        </template>
         <template #nav-bar-content-before>
-            
+
             <!-- 在导航搜索框💰添加 -->
             <ClientOnly>
                 <div v-if="!isPause" class="" style="padding-left: 32px;position: relative;height:40px;margin-right:0px;">
                     <Player />
                 </div>
             </ClientOnly>
-            
+
         </template>
         <template #nav-bar-title-after>
             <!-- 在标题后添加 -->
         </template>
         <template #sidebar-nav-before>
             <ClientOnly>
+                
                 <PageNavi />
-            </ClientOnly>
+                <Firework v-if="screenWidth>960"></Firework>
+                </ClientOnly>
         </template>
         <template #doc-top>
             <ClientOnly>
@@ -72,7 +76,7 @@
     </Layout>
 </template>
 <script lang="ts" setup>
-import { computed, toRefs } from 'vue';
+import { computed, toRefs,onMounted,ref } from 'vue';
 import { useData, useRouter } from 'vitepress';
 import md5 from 'blueimp-md5';
 import { usePlayerStore } from '../../store/player';
@@ -83,6 +87,14 @@ const { isPause } = toRefs(usePlayerStore());
 const { page, theme, frontmatter, isDark } = useData();
 const route = useRouter()
 const { Layout } = DefaultTheme
+const screenWidth = ref(document.body.clientWidth)
+onMounted(() => {
+// window.onresize = () => {
+//             return (() => {
+//                 screenWidth.value = document.body.clientWidth
+//             })()
+//         }
+    })
 </script>
 
 <style scoped>

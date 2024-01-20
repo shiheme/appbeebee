@@ -1,5 +1,5 @@
 //此播放器代码参考：https://juejin.cn/post/7172081641836249118
-import { defineStore, storeToRefs } from 'pinia';
+import { defineStore } from 'pinia';
 import type { Song } from '../theme/types';
 import {getRandomInt} from '../theme/functions'
 import { toast, type ToastOptions } from 'vue3-toastify';

@@ -1,42 +1,46 @@
 <template>
 	<!-- 音乐播放器。由PageAside点击播放显示在头部，可拖拽 -->
-		<div ref="el" class="player" :class="{ back: !isdrag }" :style="{
-			background: 'var(--vp-c-bg-alt)',
-			opacity: isPause ? 0 : 1,
-			'pointer-events': isPause ? 'none' : 'auto',
-			transform:'translate('+adjustedLeft+'px,'+adjustedTop+'px)'
+	<div ref="el" class="player" :class="{ back: !isdrag }" :style="{
+		background: 'var(--vp-c-bg-alt)',
+		opacity: isPause ? 0 : 1,
+		'pointer-events': isPause ? 'none' : 'auto',
+		transform: 'translate(' + adjustedLeft + 'px,' + adjustedTop + 'px)'
 
+	}">
+		<div class="state repeatbg" :style="{
+			transform: 'translateX(' + (currentLine) + '%)'
 		}">
-			<div class="state repeatbg" :style="{
-				transform: 'translateX(' + (currentLine) + '%)'
-			}">
+		</div>
+		<div class="box">
+			<div class="progress">
+				<div class="playing" :class="{ on: !isPause }">
+					<span class="playing__bar playing__bar1" />
+					<span class="playing__bar playing__bar2" />
+					<span class="playing__bar playing__bar3" />
+				</div>
+
+				<div class="name">
+					{{ song.title }}
+				</div>
+				<div class="time" v-if="currentTime">
+					{{ ' - ' + formatTime((duration - currentTime) * 1000, ('mm:ss')) }}
+				</div>
 			</div>
-			<div class="box">
-				<div class="progress">
-					<div class="playing" :class="{ on: !isPause }">
-						<span class="playing__bar playing__bar1" />
-						<span class="playing__bar playing__bar2" />
-						<span class="playing__bar playing__bar3" />
-					</div>
 
-					<div class="name">
-						{{ song.title }}
-					</div>
-					<div class="time" v-if="currentTime">
-						{{ ' - ' + formatTime((duration - currentTime) * 1000, ('mm:ss')) }}
-					</div>
-				</div>
-
-				<div class="btns" @click.stop="togglePlay">
-					<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z" fill="currentColor"></path></svg>
-				</div>
+			<div class="btns" @click.stop="togglePlay">
+				<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<path
+						d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
+						fill="currentColor"></path>
+				</svg>
 			</div>
 		</div>
+	</div>
 </template>
 
 <script lang="ts" setup>
-import { computed, toRefs, ref, reactive, onMounted,unref } from 'vue'
-import { useDraggable,useElementBounding } from '@vueuse/core'
+import { computed, toRefs, ref } from 'vue'
+import { useElementBounding } from '@vueuse/core'
 import { formatTime } from '../functions'
 import { usePlayerStore } from '../../store/player';
 
@@ -265,12 +269,11 @@ const reback = () => {
 
 
 @media (max-width: 550px) {
-    .player {
-        position: fixed;
-		left:auto;
-		right:32px;
-		bottom:32px;
-		top:auto;
-    }
-}
-</style>
+	.player {
+		position: fixed;
+		left: auto;
+		right: 32px;
+		bottom: 32px;
+		top: auto;
+	}
+}</style>

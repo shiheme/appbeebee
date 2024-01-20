@@ -1,9 +1,10 @@
+//订阅配置文件
 import path from 'path'
 import { writeFileSync } from 'fs'
 import { Feed } from 'feed'
 import { createContentLoader, type SiteConfig } from 'vitepress'
 
-const baseUrl = `https://enshimama.com/vitepress`
+const baseUrl = `https://appbeebee.com`
 
 export async function genFeed(config: SiteConfig) {
   const feed = new Feed({
@@ -15,7 +16,7 @@ export async function genFeed(config: SiteConfig) {
     image: `${baseUrl}/logo.png`,
     favicon: `${baseUrl}/favicon.ico`,
     copyright:
-      'Copyright © 2023 APP比比'
+      'Copyright © 2023-'+ new Date().getFullYear() + ' APP比比'
   })
 
   const posts = await createContentLoader('posts/*/*/*.md', {
@@ -35,7 +36,7 @@ export async function genFeed(config: SiteConfig) {
       id: `${baseUrl}${url}`,
       link: `${baseUrl}${url}`,
       description: excerpt,
-      content: `<img src="${frontmatter.cover}" alt="" />` + html,
+      content: `<img src="${frontmatter.cover}" alt="" /><p><h3><a href="${baseUrl}${url}">文章涉及下载地址访问原站：APP比比</a></h3></p>` + html + '`<p><h3><a href="${baseUrl}${url}">文章涉及下载地址访问原站：APP比比</a></h3></p>`',
       image: frontmatter.cover,
       date: frontmatter.date
     })

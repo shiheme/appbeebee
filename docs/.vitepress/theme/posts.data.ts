@@ -1,3 +1,4 @@
+// vitepress官方建议的获取文章方法。本身具有缓存机制
 import { createContentLoader } from 'vitepress'
 import type { Post } from './types'
 
@@ -5,8 +6,6 @@ declare const data: Post[]
 export { data }
 
 export default createContentLoader('posts/*/*/*.md', {
-  includeSrc: true, // include raw markdown source?
-  render: true,     // include rendered full page HTML?
   excerpt: true, 
   transform(rawData): Post[] {
     return rawData.map(({ url, frontmatter }) => {

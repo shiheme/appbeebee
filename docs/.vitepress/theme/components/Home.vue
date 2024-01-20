@@ -15,7 +15,7 @@ import { formatSearch } from '../../theme/functions'
 import { toast, type ToastOptions } from 'vue3-toastify';
 import Welcome from "../../theme/components/Welcome.vue";
 import Page from "../../theme/components/Page.vue";
-const { theme, frontmatter } = useData();
+const { theme } = useData();
 const welcomestate = useStorage('weclome', false, sessionStorage)
 const router = useRouter()
 const location = useBrowserLocation()
@@ -118,7 +118,7 @@ watch(
   }
 )
 onMounted(() => {
-  if ((theme.value?.website?.welcomeusestate&&!welcomestate.value) || !theme.value?.website?.welcomeusestate) {
+  if (theme.value?.website?.showWelcome&&((theme.value?.website?.welcomeusestate&&!welcomestate.value) || !theme.value?.website?.welcomeusestate)) {
     nextTick(() => {
       toast(Welcome, {
         autoClose: theme.value?.website?.welcome?.autoClose?theme.value.website.welcome.autoClose:false,

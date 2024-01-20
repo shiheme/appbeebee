@@ -1,19 +1,23 @@
 <template>
     <!-- 首页文章列表区域，对不同浏览器宽度做适配 -->
     <div class="postlist"
-        :class="{ grid: listview === 'grid', list: listview === 'list', hasaside: frontmatter.aside, hassidebar: frontmatter.sidebar||theme?.sidebar?.length }">
+        :class="{ grid: listview === 'grid', list: listview === 'list', hasaside: frontmatter.aside, hassidebar: frontmatter.sidebar || theme?.sidebar?.length }">
         <template v-for="(article, index) in posts" :key="index">
             <div class="list">
-            
-            <ClientOnly><ArticleList :article="article" /></ClientOnly>
-            
-        </div>
-        <div class="list" v-if="index == 1&&listview === 'grid'">
-            <ClientOnly><PageASide  /></ClientOnly>
-        </div>
-    </template>
-        <div class="list" v-if="posts.length < 2&&listview === 'grid'">
-            <ClientOnly><PageASide /></ClientOnly>
+                <ClientOnly>
+                    <ArticleList :article="article" />
+                </ClientOnly>
+            </div>
+            <div class="list" v-if="index == 1 && listview === 'grid'">
+                <ClientOnly>
+                    <PageASide />
+                </ClientOnly>
+            </div>
+        </template>
+        <div class="list" v-if="posts.length < 2 && listview === 'grid'">
+            <ClientOnly>
+                <PageASide />
+            </ClientOnly>
         </div>
     </div>
 </template>
@@ -22,7 +26,6 @@
 import { computed, toRefs } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { useStorage } from '@vueuse/core'
-import ArticlePage from './ArticlePage.vue';
 const { theme, frontmatter } = useData();
 const listview = useStorage('listview', 'grid')
 const props = defineProps({
@@ -31,7 +34,6 @@ const props = defineProps({
 </script>
 
 <style scoped>
-
 .postlist {
     border-bottom: 1px dashed var(--vp-c-divider-light);
     padding: 14px 0 14px 0;

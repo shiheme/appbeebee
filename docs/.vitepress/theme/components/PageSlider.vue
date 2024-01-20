@@ -1,39 +1,35 @@
 <template>
-    <!-- 轮播 -->
-    <swiper class="mySwiper" :navigation="true" :modules="modules">
-    <swiper-slide>
-        <a class="a" :href="withBase('/posts/2024/01/freebie-chinese-font.html')"><img class="image" src="https://fc.sinaimg.cn/large/6364aa43gy1hlxg58m6w3j21z40m8dis.jpg" /></a>
-    </swiper-slide>
-  </swiper>
+    <!-- 这是一个非常简易的轮播 -->
+    <swiper class="mySwiper" :navigation="true" :modules="modules" v-if="list.length">
+        <swiper-slide v-for="(item, index) in list" :key="index">
+            <a class="a" :href="item?.link"><img class="image" :src="item?.image" :alt="item?.title" /></a>
+        </swiper-slide>
+    </swiper>
 </template>
 
 <script lang="ts" setup>
-import { withBase } from 'vitepress'
-import { Swiper, SwiperSlide } from 'swiper/vue';  //https://swiperjs.com/
+import { ref } from 'vue'
+import { useData } from 'vitepress'
+import { Swiper, SwiperSlide } from 'swiper/vue';  //轮播插件。更多高级配置教程见https://swiperjs.com/
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+const { theme } = useData();
 const modules = [Navigation]
+const list = ref(theme.value?.banner ? theme.value.banner : [])
 </script>
 
 <style scoped>
 .mySwiper {
-    height:200px;
+    height: 200px;
     border-radius: 8px;
+    margin-bottom: 32px;
 }
+
 .image {
     display: block;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    /* background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    position: relative; */
-    /* .a {
-        position: absolute;
-        width:100%;
-        height:100%;
-    } */
 }
 </style>

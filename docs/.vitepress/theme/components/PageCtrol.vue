@@ -3,7 +3,6 @@
   <div class="pagectrol">
     <div class="ctrol-left">
       <span class="a filter">
-        <!-- <svg class="svg left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 18H14V16H10V18ZM3 6V8H21V6H3ZM6 13H18V11H6V13Z" fill="currentColor"></path></svg> -->
         <span><strong>{{ bread }}</strong>{{ ' 共' + count + '篇' }}</span>
       </span>
       <a class="a random" :href="withBase(`${randomdata?.relativePath}`)">
@@ -137,4 +136,5 @@ const randomdata = computed(() => randomOne(themeposts))
       }
     }
   }
-}</style>
+}
+</style>

@@ -1,7 +1,8 @@
 <template>
     <!-- 订阅内容更新 -->
     <div class="feed">
-        <div class="main" v-tooltip="'点击复制订阅地址'" @click="handleCopy(`${location.origin}${site?.base ? site.base : '/'}feed.rss`)">
+        <div class="main" v-tooltip="'点击复制订阅地址'"
+            @click="handleCopy(`${location.origin}${site?.base ? site.base : '/'}feed.rss`)">
             <div class="label">订阅地址</div>
             <div class="ads">
                 {{ `${location.origin}${site?.base ? site.base : '/'}feed.rss` }}
@@ -94,4 +95,5 @@ const location = useBrowserLocation()
         border: 5px solid var(--vp-c-bg-alt);
         box-shadow: var(--vp-shadow-1);
     }
-}</style>
+}
+</style>
