@@ -6,8 +6,9 @@
         </h2>
         <p class="p">比比出品<br/>2024年上新</p>
         <div class="div">
-            <button class="button" @click="($event) => { closeToast && closeToast($event) }">免费领取</button>
-            <img class="image" src="/static/img/ccc1.png" alt="" />
+            <!-- <button class="button" @click="($event) => { closeToast && closeToast($event) }">免费领取</button> -->
+            <a class="button" href="https://baidu.com" target="_blank">免费领取</a>
+            <a class="a" href="https://baidu.com" target="_blank"><img class="image" src="/static/img/redcovers.png" alt="" /></a>
         </div>
             
     </div>
@@ -57,14 +58,17 @@ const props = defineProps({
             color: #ffffff;
             width:100px;
             height:36px;
+            line-height: 36px;
+            text-align: center;
             border-radius: 8px;
+            display: block;
         }
 
         .image {
-            width:140px;
+            width:160px;
             position: absolute;
             right:-10px;
-            bottom:-0px;
+            bottom:-70px;
         }
     }
 }

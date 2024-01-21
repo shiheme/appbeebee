@@ -130,8 +130,8 @@ export default defineConfig<ThemeConfig>({
         },
         website: {
             perpage: 12, //列表页每页显示数量
-            showWelcome: false, //是否显示首页底部右下角弹框，（调试时弹框不显示的话先关闭浏览器再运行，因为有可能开启了缓存）内容请在组件.vitepress/theme/components/Welcome.vue编写
-            welcomeusestate: true, //底部弹框是否使用sessionStorage缓存(即不关闭页面仅显示一次)
+            showWelcome: true, //是否显示首页底部右下角弹框，（调试时弹框不显示的话先关闭浏览器再运行，因为有可能开启了缓存）内容请在组件.vitepress/theme/components/Welcome.vue编写
+            welcomeusestate: false, //底部弹框是否使用sessionStorage缓存(即不关闭页面仅显示一次)
             welcome: {
                 autoClose: 6000, //多长时间自动关闭，false为不关闭
             },
