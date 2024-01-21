@@ -39,7 +39,7 @@ import {
   version,
   watch,
   watchEffect
-} from "./chunk-BBHLLBAD.js";
+} from "./chunk-3YS4HNIT.js";
 
 // node_modules/@vueuse/shared/index.mjs
 function computedEager(fn, options) {
@@ -8935,4 +8935,4 @@ export {
   useWindowScroll,
   useWindowSize
 };
-//# sourceMappingURL=chunk-YJJBBWE7.js.map
+//# sourceMappingURL=chunk-ZGAN5V72.js.map

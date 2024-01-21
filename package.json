@@ -31,10 +31,12 @@
     "vitepress": "^1.0.0-rc.39"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.33",
     "blueimp-md5": "^2.19.0",
     "dayjs": "^1.11.10",
     "feed": "^4.2.2",
     "floating-vue": "^5.0.3",
+    "markdown-it-custom-attrs": "^1.0.2",
     "pinia": "^2.1.7",
     "swiper": "^11.0.5",
     "vue-router": "^4.2.5",

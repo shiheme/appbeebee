@@ -3,7 +3,16 @@ import { defineConfig } from 'vitepress'
 import { genFeed } from './theme/genFeed'
 import { head } from './theme/head';
 import type { ThemeConfig } from './theme/types';
+import mdItCustomAttrs  from 'markdown-it-custom-attrs'
 export default defineConfig<ThemeConfig>({
+    markdown:{
+        config: (md) => {
+            // use more markdown-it plugins!
+            md.use(mdItCustomAttrs, 'image', {
+                'data-fancybox': "gallery"
+            })
+            }
+    },
     title: 'APP比比',
     base: '/',
     head,
@@ -51,6 +60,11 @@ export default defineConfig<ThemeConfig>({
             }
         ],
         // banner: [ //主页轮播，不需要就注释掉
+        //     {
+        //         link: '/posts/2024/01/freebie-chinese-font.html',
+        //         image: 'https://fc.sinaimg.cn/large/6364aa43gy1hlxg58m6w3j21z40m8dis.jpg',
+        //         title: ''
+        //     },
         //     {
         //         link: '/posts/2024/01/freebie-chinese-font.html',
         //         image: 'https://fc.sinaimg.cn/large/6364aa43gy1hlxg58m6w3j21z40m8dis.jpg',

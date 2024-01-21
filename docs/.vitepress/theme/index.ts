@@ -2,7 +2,6 @@ import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import Firework from './components/Firework.vue'
 import Lantern from './components/Lantern.vue'
-
 import NewLayout from './components/NewLayout.vue'
 import Archives from './components/Archives.vue'
 import About from './components/About.vue'
@@ -22,6 +21,7 @@ import PageASide from './components/PageASide.vue'
 import PageCtrol from './components/PageCtrol.vue'
 import PageGZH from './components/PageGZH.vue'
 import PageSlider from './components/PageSlider.vue'
+import ArticleCarousel from './components/ArticleCarousel.vue'
 import Player from './components/Player.vue'
 import Tools from './components/Tools.vue'
 import Welcome from './components/Welcome.vue'
@@ -55,6 +55,7 @@ export default {
         app.component('ArticleLink', ArticleLink)
         app.component('ArticleRelate', ArticleRelate)
         app.component('ArticleCC', ArticleCC)
+        app.component('ArticleCarousel', ArticleCarousel)
         app.component('PageASide', PageASide)
         app.component('PageNavi', PageNavi)
         app.component('PageGZH', PageGZH)
@@ -78,8 +79,5 @@ export default {
             "theme": "colored",
             "closeOnClick": false,
           } as ToastContainerOptions);
-
-
-          
     }
 }
