@@ -40,5 +40,20 @@ export const head: HeadConfig[] = [
     "link",
     { rel: "stylesheet", href: "/static/css/fancybox.css" },
   ],
-  ["script", { src: "/static/js/fancybox.umd.js" }]
+  ["script", { src: "/static/js/fancybox.umd.js" }],
+  [
+    "link",
+    { rel: "stylesheet", href: "/static/css/carousel.css" },
+  ],
+  ["script", { src: "/static/js/carousel.umd.js" }],
+  [
+    "link",
+    { rel: "stylesheet", href: "/static/css/carousel.thumbs.css" },
+  ],
+  ["script", { src: "/static/js/carousel.thumbs.esm.js" }],
+  [
+    'script',
+    {},
+    `const container = document.getElementById("myCarousel");const options = { infinite: false };new Carousel(container, options);`
+  ]
 ];

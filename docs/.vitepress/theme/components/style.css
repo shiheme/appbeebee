@@ -38,6 +38,7 @@
     border-radius: 12px;
     border: 5px solid var(--vp-c-bg-alt);
     box-shadow: var(--vp-shadow-1);
+    cursor: zoom-in;
 }
 
 .VPDoc {

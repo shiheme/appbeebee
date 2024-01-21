@@ -31,7 +31,6 @@
     "vitepress": "^1.0.0-rc.39"
   },
   "dependencies": {
-    "@fancyapps/ui": "^5.0.33",
     "blueimp-md5": "^2.19.0",
     "dayjs": "^1.11.10",
     "feed": "^4.2.2",

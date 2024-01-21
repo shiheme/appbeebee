@@ -1,39 +1,42 @@
 <template>
     <!-- 通用 carousel组件 -->
     <div class="customcomp">
-        <div class="f-carousel" id="myCarousel">
-            <div class="f-carousel__slide" data-fancybox="gallery" :data-src="item.image" :data-thumb-src="item.image"
-                v-for="(item, index) in list" :key="index"><img class="image" :src="item.image" :alt="item.title" /></div>
-        </div>
+        <swiper :style="{
+            '--swiper-navigation-color': '#ffffff',
+            '--swiper-pagination-color': 'var(--vp-c-brand)',
+        }" :loop="true" :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
+            class="mySwiper2">
+            <swiper-slide v-for="(item, index) in list" :key="index"><img data-fancybox="gallery" class="image"
+                    :src="item.image" :alt="item.title" /></swiper-slide>
+        </swiper>
+        <swiper @swiper="setThumbsSwiper" :loop="true" :spaceBetween="10" :slidesPerView="8" :freeMode="true"
+            :watchSlidesProgress="true" :modules="modules" class="mySwiper">
+            <swiper-slide v-for="(item, index) in list" :key="index"><img class="thumb" :src="item.image"
+                    :alt="item.title" /></swiper-slide>
+        </swiper>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { onMounted,nextTick } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 
-import { Carousel } from '@fancyapps/ui';
-import '@fancyapps/ui/dist/carousel/carousel.css';
+import { Swiper, SwiperSlide } from 'swiper/vue';
 
-import { Thumbs } from '@fancyapps/ui/dist/carousel/carousel.thumbs.esm.js';
-import '@fancyapps/ui/dist/carousel/carousel.thumbs.css';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+
+const thumbsSwiper = ref(null);
+const setThumbsSwiper = (swiper) => {
+    thumbsSwiper.value = swiper;
+};
+const modules = [FreeMode, Navigation, Thumbs]
 const props = defineProps<{
-  list?: any
+    list?: any
 }>();
-onMounted(() => {
-    nextTick(() => {
-        new Carousel(
-            document.getElementById('myCarousel'),
-            {
-                Dots: false,
-                transition: 'slide',
-                Thumbs: {
-                type: 'classic',
-                },
-            },
-            { Thumbs }
-        );
-    });
-});
 
 </script>
 
@@ -41,33 +44,51 @@ onMounted(() => {
 .customcomp {
     margin-bottom: 32px;
 }
-.f-carousel__thumbs {
-    --f-thumb-width: 96px;
-    --f-thumb-height: 72px;
-    --f-thumb-outline: 2px!important;
-    --f-thumb-outline-color: var(--vp-c-brand);
-    --f-thumb-opacity: 1;
-    --f-thumb-hover-opacity: 1;
-    --f-thumb-selected-opacity: 1;
-    --f-thumb-border-radius: 2px;
-    --f-thumb-offset: 0px;
-    --f-button-next-pos: 0;
-    --f-button-prev-pos: 0;
-}
-.f-carousel {
-    --f-thumb-outline:10px!important;
-    /* --f-carousel-slide-height: 60%; */
-    --f-carousel-spacing: 10px;
-    border-radius: 8px;
-    
-}
-.f-carousel__slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.image {
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+
+.mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+
+    .thumb {
+        cursor: pointer;
+    }
+}
+
+.mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+
+    .thumb {
+        border-radius: 5px;
+        border-width: 2px;
+        border-color: var(--vp-c-brand);
+    }
+}
+
+.swiper-slide .image {
     display: block;
     width: 100%;
     height: 100%;

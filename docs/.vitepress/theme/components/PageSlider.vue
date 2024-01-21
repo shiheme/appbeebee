@@ -1,6 +1,9 @@
 <template>
     <!-- 这是一个非常简易的轮播 -->
-    <swiper class="mySwiper" :loop="true" :navigation="true" :modules="modules" v-if="list.length">
+    <swiper :style="{
+        '--swiper-navigation-color': '#ffffff',
+        '--swiper-pagination-color': 'var(--vp-c-brand)',
+    }" class="mySwiper" :loop="true" :spaceBetween="10" :navigation="true" :modules="modules" v-if="list.length">
         <swiper-slide v-for="(item, index) in list" :key="index">
             <a class="a" :href="item?.link"><img class="image" :src="item?.image" :alt="item?.title" /></a>
         </swiper-slide>
