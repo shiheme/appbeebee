@@ -7,8 +7,8 @@
         <p class="p">比比出品<br/>2024年上新</p>
         <div class="div">
             <!-- <button class="button" @click="($event) => { closeToast && closeToast($event) }">免费领取</button> -->
-            <a class="button" href="https://baidu.com" target="_blank">免费领取</a>
-            <a class="a" href="https://baidu.com" target="_blank"><img class="image" src="/static/img/redcovers.png" alt="" /></a>
+            <a class="button" href="https://mp.weixin.qq.com/s/TDtZuwuYhrxjWoNGNWTbQQ" target="_blank">免费领取</a>
+            <a class="a" href="https://mp.weixin.qq.com/s/TDtZuwuYhrxjWoNGNWTbQQ" target="_blank"><img class="image" src="/static/img/redcovers.png" alt="" /></a>
         </div>
             
     </div>

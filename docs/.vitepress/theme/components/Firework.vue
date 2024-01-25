@@ -1,7 +1,11 @@
 <template>
     <!-- 氛围组：烟花 https://github.com/Doener48/firework -->
-    <div class="message" v-if="theme?.website?.showFirework" style="position: sticky;z-index: 100;top:calc(500px);bottom:-70px;margin-top: 40px;margin-bottom: -60px;">
+    <div class="message" v-if="theme?.website?.showFirework"
+    :style="{
+        top:windowHeight - 144 +'px'
+    }">
         <span class="span">{{ theme?.website?.fireworkTitle }}</span>
+        <div class="msgwrap">
         <div class="messageleft">
             <input id="messageInput" placeholder="输入文字" :value="newyearwords" type="text" />
             <div class="voicectl" v-tooltip="'炮竹声开启'" @click="changebackvoice">
@@ -24,6 +28,7 @@
 
         <button id="shootBtn" class="button">发射</button>
     </div>
+    </div>
     <canvas id="mainCanvas"></canvas>
     <canvas id="letterCanvas" style="display: none"></canvas>
 </template>
@@ -36,6 +41,8 @@ const newyearwordslist = theme.value?.website?.fireworkWords?theme.value.website
 const newyearwords = ref(newyearwordslist[getRandomInt(newyearwordslist.length)])
 const backvoice = ref(false)
 const backvoice2 = computed(() => backvoice.value)
+
+const windowHeight = ref(window.innerHeight)
 const changebackvoice = () => {
     if (backvoice2.value) {
         backvoice.value = false
@@ -610,12 +617,12 @@ onMounted(() => {
 }
 
 .message {
-    position: fixed;
-    bottom: 20px;
-    width: 208px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
+    position: sticky;z-index: 100;bottom:0px;margin-top: 40px;margin-bottom: -40px;
+    bottom: 0px;
+    width: 100%;
+    height:40px;
+    
+    /* margin-bottom: 2rem; */
 
     .span {
         position: absolute;
@@ -629,8 +636,17 @@ onMounted(() => {
     }
 }
 
+.msgwrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .messageleft {
     position: relative;
+    overflow: hidden;
+    background-color: var(--vp-c-bg-elv);
+    border-radius: 0.25rem;
 
     .voicectl {
         position: absolute;
@@ -657,19 +673,22 @@ onMounted(() => {
     }
 }
 
-#messageInput,
-#shootBtn {
+#messageInput {
     background-color: var(--vp-c-bg-elv);
-    border-width: 1px;
     padding: 0.5rem;
-    border-radius: 0.25rem;
 
 }
 
 .button {
+    background-color: var(--vp-c-bg-elv);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
     box-shadow: 0 2px #00000004;
     animation: jump 0s;
     color: var(--vp-c-brand);
+    margin-left: 8px;
+    flex-shrink: 0;
+    width: 43px;
 }
 
 .button:hover {

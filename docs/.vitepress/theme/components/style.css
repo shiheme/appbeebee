@@ -95,6 +95,7 @@
 
     .VPSidebar {
         min-height: calc(100% - var(--vp-nav-height));
+        padding-bottom:32px!important;
     }
 
     .home .VPDoc:not(.has-sidebar):not(.has-aside) .container {
