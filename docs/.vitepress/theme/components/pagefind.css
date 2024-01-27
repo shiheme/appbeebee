@@ -345,6 +345,13 @@ display: flex;
     opacity: .4;
 }
 
+.search-dialog div[command-item] .title mark, .search-dialog div[command-item] .des mark {
+    background-color: var(--vp-local-search-highlight-bg);
+    color: var(--vp-local-search-highlight-text);
+    border-radius: 2px;
+    padding: 0 2px;
+}
+
 @media (min-width: 768px) {
     .VPNav .blog-search .nav-search-btn-wait {
         display: flex;
