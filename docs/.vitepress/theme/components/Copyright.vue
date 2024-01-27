@@ -18,13 +18,30 @@
 
         </div>
     </div>
+    <p id="result"></p> <!-- 用户复制操作时进行添加预制文本 -->
 </template>
 <script lang="ts" setup>
+import { onMounted } from 'vue'
 import { useData } from 'vitepress'
 
-const { site, theme } = useData()
-const website = theme.value.website
-const webTitle = site.value.title
+const { site, theme, frontmatter } = useData()
+const website = theme.value?.website?theme.value.website:'https://appbeebee.com/'
+const webTitle = site.value?.title?site.value.title:'比比工房'
+const webAuthor = theme.value?.article?.cc?.author?theme.value.article.cc.author:'小鱼哥'
+
+onMounted(() => {
+    document.addEventListener('copy', function (event) {
+        let clipboardData = event.clipboardData || window?.clipboardData;
+        if (!clipboardData) { return; }
+        let text = window?.getSelection().toString();
+        let join = "\n\n作者：" + webAuthor + "\n链接：" + decodeURI(window.location.href) + "\n来源：" + webTitle + "\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n";
+        if (text) {
+            event.preventDefault();
+            clipboardData.setData('text/plain', text + join);
+            document.querySelector('#result').innerText = text + join;
+        }
+    });
+});
 </script>
 
 <style>
