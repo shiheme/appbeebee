@@ -4,7 +4,9 @@ import { genFeed } from './theme/genFeed'
 import { head } from './theme/head';
 import type { ThemeConfig } from './theme/types';
 import mdItCustomAttrs  from 'markdown-it-custom-attrs'
+import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
 export default defineConfig<ThemeConfig>({
+    lang: 'zh-cn',
     markdown:{
         config: (md) => {
             // use more markdown-it plugins!
@@ -129,6 +131,7 @@ export default defineConfig<ThemeConfig>({
             }
         },
         website: {
+            copyadd: false, //用户复制页面内容时自动添加版权声明
             perpage: 12, //列表页每页显示数量
             showWelcome: true, //是否显示首页底部右下角弹框，（调试时弹框不显示的话先关闭浏览器再运行，因为有可能开启了缓存）内容请在组件.vitepress/theme/components/Welcome.vue编写
             welcomeusestate: false, //底部弹框是否使用sessionStorage缓存(即不关闭页面仅显示一次)
@@ -161,7 +164,29 @@ export default defineConfig<ThemeConfig>({
         server: {
             port: 5000,
             host: '0.0.0.0'
-        }
+        },
+        plugins:[pagefindPlugin({
+            customSearchQuery: chineseSearchOptimize,
+            btnPlaceholder: '搜索文档',
+            placeholder: '搜索文档',
+            emptyText: '空空如也',
+            heading: '共 {{searchResult}} 条结果',
+            forceLanguage : 'zh-cn'
+          })]
     },
     buildEnd: genFeed
 })
+
+// button: {
+//     buttonText: '搜索文档',
+//     buttonAriaLabel: '搜索文档'
+// },
+// modal: {
+//     noResultsText: '无法找到相关结果',
+//     resetButtonTitle: '清除查询条件',
+//     footer: {
+//         selectText: '选择',
+//         navigateText: '切换',
+//         closeText: '关闭'
+//     }
+// }

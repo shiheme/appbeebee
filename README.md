@@ -6,6 +6,18 @@
 
 在线体验：[https://appbeebee.com](https://appbeebee.com)
 
+## 版本更新
+
+### v1.1.0 2024-01-27
+- 修复烟花兼容
+- 搜索使用pagefind插件
+- 复制页面内容时添加版权尾巴
+
+### v1.0.0 2024-01-20
+
+- 开源版本发布
+- 文章介绍：https://www.appbeebee.com/posts/2024/01/open-source-vitepress-blog-theme-appbeebee.html
+
 ## 完成改造的功能
 1. 基于路由实现标签、分类、存档、分页功能。方便用户通过页面域名进行分页或者相关内容的查看；
 2. 存档实现年和年+月的形式；

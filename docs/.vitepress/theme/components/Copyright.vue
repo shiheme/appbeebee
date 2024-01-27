@@ -18,7 +18,7 @@
 
         </div>
     </div>
-    <p id="result"></p> <!-- 用户复制操作时进行添加预制文本 -->
+    <p id="result" v-if="website?.copyadd"><!-- 用户复制操作时进行添加预制文本 --></p> 
 </template>
 <script lang="ts" setup>
 import { onMounted } from 'vue'
@@ -30,7 +30,8 @@ const webTitle = site.value?.title?site.value.title:'比比工房'
 const webAuthor = theme.value?.article?.cc?.author?theme.value.article.cc.author:'小鱼哥'
 
 onMounted(() => {
-    document.addEventListener('copy', function (event) {
+    if(website?.copyadd){
+        document.addEventListener('copy', function (event) {
         let clipboardData = event.clipboardData || window?.clipboardData;
         if (!clipboardData) { return; }
         let text = window?.getSelection().toString();
@@ -41,6 +42,8 @@ onMounted(() => {
             document.querySelector('#result').innerText = text + join;
         }
     });
+    }
+    
 });
 </script>
 

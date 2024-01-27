@@ -1,16 +1,25 @@
 {
-  "name": "appbeebee.com",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@shiheme/appbeebee",
+  "version": "1.1.0",
+  "description": "基于 vitepress 打造的适合图文资源分享的博客主题",
+  "author": "小鱼哥",
+  "license": "MIT",
+  "homepage": "https://appbeebee.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiheme/appbeebee"
+  },
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev docs --open --host 0.0.0.0",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "vitepress",
+    "theme",
+    "APP比比"
+  ],
   "type": "module",
   "devDependencies": {
     "@types/node": "^20.10.3",
@@ -38,6 +47,7 @@
     "markdown-it-custom-attrs": "^1.0.2",
     "pinia": "^2.1.7",
     "swiper": "^11.0.5",
+    "vitepress-plugin-pagefind": "^0.2.10",
     "vue-router": "^4.2.5",
     "vue3-toastify": "^0.2.1"
   }

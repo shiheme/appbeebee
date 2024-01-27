@@ -6,3 +6,17 @@ aside: false
 ---
 
 <About />
+
+## 版本更新
+
+### v1.1.0 2024-01-27
+- 修复烟花兼容
+- 搜索使用pagefind插件
+- 复制页面内容时添加版权尾巴
+- vitepress更新至1.0.0-rc.40
+
+### v1.0.0 2024-01-20
+
+- 开源版本发布
+- 文章介绍：https://www.appbeebee.com/posts/2024/01/open-source-vitepress-blog-theme-appbeebee.html
+

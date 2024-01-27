@@ -1,124 +1,106 @@
 {
-  "hash": "bf575dcd",
-  "configHash": "ac99a47c",
-  "lockfileHash": "56d1ec86",
-  "browserHash": "3176f3d0",
+  "hash": "09897898",
+  "configHash": "08e4457e",
+  "lockfileHash": "4b5a8d92",
+  "browserHash": "25684a59",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "6da01143",
+      "fileHash": "bd1a4877",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "fb4b1437",
+      "fileHash": "7ccf16bd",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "2859ac54",
+      "fileHash": "cd7df64a",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "7b1c8284",
+      "fileHash": "952ac923",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "23c16ded",
+      "fileHash": "ed9b28e0",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "3e9aefe1",
+      "fileHash": "974cf278",
       "needsInterop": false
     },
     "pinia": {
       "src": "../../../../node_modules/pinia/dist/pinia.mjs",
       "file": "pinia.js",
-      "fileHash": "e24f97f9",
+      "fileHash": "5eb255a3",
       "needsInterop": false
     },
     "floating-vue": {
       "src": "../../../../node_modules/floating-vue/dist/floating-vue.mjs",
       "file": "floating-vue.js",
-      "fileHash": "887d7c2e",
+      "fileHash": "e5447ec5",
       "needsInterop": false
     },
     "vue3-toastify": {
       "src": "../../../../node_modules/vue3-toastify/dist/index.mjs",
       "file": "vue3-toastify.js",
-      "fileHash": "3d5ef547",
+      "fileHash": "2cb3af95",
       "needsInterop": false
     },
     "blueimp-md5": {
       "src": "../../../../node_modules/blueimp-md5/js/md5.js",
       "file": "blueimp-md5.js",
-      "fileHash": "d8dcc135",
-      "needsInterop": true
-    },
-    "@fancyapps/ui/dist/carousel/carousel.esm.js": {
-      "src": "../../../../node_modules/@fancyapps/ui/dist/carousel/carousel.esm.js",
-      "file": "@fancyapps_ui_dist_carousel_carousel__esm__js.js",
-      "fileHash": "c1ec39a3",
-      "needsInterop": false
-    },
-    "dayjs": {
-      "src": "../../../../node_modules/dayjs/dayjs.min.js",
-      "file": "dayjs.js",
-      "fileHash": "0b2b476a",
-      "needsInterop": true
-    },
-    "dayjs/plugin/relativeTime": {
-      "src": "../../../../node_modules/dayjs/plugin/relativeTime.js",
-      "file": "dayjs_plugin_relativeTime.js",
-      "fileHash": "6b55a16d",
-      "needsInterop": true
-    },
-    "dayjs/locale/zh-cn": {
-      "src": "../../../../node_modules/dayjs/locale/zh-cn.js",
-      "file": "dayjs_locale_zh-cn.js",
-      "fileHash": "e19d1417",
+      "fileHash": "daf0e7f2",
       "needsInterop": true
     },
     "swiper/vue": {
       "src": "../../../../node_modules/swiper/swiper-vue.mjs",
       "file": "swiper_vue.js",
-      "fileHash": "de9d5154",
+      "fileHash": "93a35d6e",
       "needsInterop": false
     },
     "swiper/modules": {
       "src": "../../../../node_modules/swiper/modules/index.mjs",
       "file": "swiper_modules.js",
-      "fileHash": "25a50df1",
+      "fileHash": "327d25ce",
       "needsInterop": false
     },
-    "@fancyapps/ui": {
-      "src": "../../../../node_modules/@fancyapps/ui/dist/index.esm.js",
-      "file": "@fancyapps_ui.js",
-      "fileHash": "a2c005de",
-      "needsInterop": false
+    "dayjs": {
+      "src": "../../../../node_modules/dayjs/dayjs.min.js",
+      "file": "dayjs.js",
+      "fileHash": "f450a253",
+      "needsInterop": true
     },
-    "@fancyapps/ui/dist/carousel/carousel.thumbs.esm.js": {
-      "src": "../../../../node_modules/@fancyapps/ui/dist/carousel/carousel.thumbs.esm.js",
-      "file": "@fancyapps_ui_dist_carousel_carousel__thumbs__esm__js.js",
-      "fileHash": "7622f208",
-      "needsInterop": false
+    "dayjs/plugin/relativeTime": {
+      "src": "../../../../node_modules/dayjs/plugin/relativeTime.js",
+      "file": "dayjs_plugin_relativeTime.js",
+      "fileHash": "b4af4f49",
+      "needsInterop": true
+    },
+    "dayjs/locale/zh-cn": {
+      "src": "../../../../node_modules/dayjs/locale/zh-cn.js",
+      "file": "dayjs_locale_zh-cn.js",
+      "fileHash": "5b751f51",
+      "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-QK6QZVAB": {
-      "file": "chunk-QK6QZVAB.js"
-    },
     "chunk-7TH2B5KN": {
       "file": "chunk-7TH2B5KN.js"
+    },
+    "chunk-QK6QZVAB": {
+      "file": "chunk-QK6QZVAB.js"
     },
     "chunk-ZGAN5V72": {
       "file": "chunk-ZGAN5V72.js"

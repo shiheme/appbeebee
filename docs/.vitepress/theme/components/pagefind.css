@@ -1,0 +1,376 @@
+.VPNav .blog-search .nav-search-btn-wait {
+    /* cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    box-sizing: border-box; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 48px;
+    height: 55px;
+    background: transparent;
+    transition: border-color .25s;
+}
+
+.VPNav .blog-search .nav-search-btn-wait:hover {
+    background: transparent
+}
+
+.VPNav .blog-search .nav-search-btn-wait:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color
+}
+
+.VPNav .blog-search .nav-search-btn-wait:focus:not(:focus-visible) {
+    outline: none!important
+}
+
+.VPNav .blog-search .nav-search-btn-wait svg {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    color: var(--vp-c-text-1);
+    fill: currentColor;
+    transition: color .5s;
+}
+
+.VPNav .blog-search .nav-search-btn-wait .search-tip{
+    /* color: #909399;
+    font-size: 12px;
+    padding-left: 10px; */
+
+    display: none;
+    margin-top: 2px;
+    padding: 0 16px 0 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--vp-c-text-2);
+    transition: color .5s;
+}
+
+.VPNav .blog-search .nav-search-btn-wait .metaKey {
+    /* margin-left: 10px;
+    font-size: 12px; */
+
+    margin: 2px 0 0;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 4px;
+    padding-left: 6px;
+    min-width: 0;
+    width: auto;
+    height: 22px;
+    line-height: 22px;
+    font-family: var(--vp-font-family-base);
+    font-size: 12px;
+    font-weight: 500;
+    transition: color .5s,border-color .5s;
+    padding-right: 6px;
+}
+
+.algolia [command-input] {
+    /* font-family: var(--font-sans);
+    width: 100%;
+    font-size: 18px;
+    padding: 12px;
+    outline: none;
+    background: var(--bg);
+    color: var(--gray12);
+    border-bottom: 1px solid var(--gray6);
+    border-radius: 4px;
+    caret-color: var(--vcp-c-brand);
+    margin: 0;
+    border: 1px solid var(--vcp-c-brand); */
+
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    cursor: text;
+    padding: 6px 12px;
+    font-size: inherit;
+    width: 100%;
+    color: inherit;
+}
+
+.algolia [command-input]:focus-within {
+    border-color: var(--vp-c-brand-1)
+}
+
+.algolia [command-dialog-header] {
+    /* padding: 12px; */
+
+    padding: 0px;
+}
+
+.algolia [command-dialog-body] {
+    /* padding: 0 12px 12px; */
+
+    padding: 0px;
+}
+
+.algolia [command-dialog-wrapper] {
+    /* position: relative;
+    background: var(--gray2);
+    border-radius: 6px;
+    box-shadow: none;
+    flex-direction: column;
+    margin: 20vh auto auto;
+    max-width: 560px; */
+
+    position: relative;
+    padding: 12px;
+    margin: 64px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: var(--vp-local-search-bg);
+    max-width:min(100vw - 60px,900px);
+    width: min(100vw - 60px,900px);
+    height: min-content;
+    max-height: min(100vh - 128px,900px);
+    border-radius: 6px;
+}
+
+.algolia [command-dialog-mask] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--vp-backdrop-bg-color);
+    transition: opacity .5s;
+}
+
+.algolia [command-dialog-footer] {
+    /* border-top: 1px solid var(--gray6);
+    align-items: center;
+    background: var(--gray4);
+    color: var(--gray11);
+    border-radius: 0 0 8px 8px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-shrink: 0;
+    height: 44px;
+    justify-content: space-between;
+    padding: 0 12px;
+    position: relative;
+    user-select: none;
+    width: 100%;
+    z-index: 300;
+    font-size: 12px;
+
+    align-items: center;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 -1px 0 0 #e0e3e8, 0 -3px 6px 0 rgba(69, 98, 155, 0.12);
+    display: flex;
+    flex-direction: row-reverse;
+    flex-shrink: 0;
+    height: 44px;
+    justify-content: space-between;
+    padding: 0 12px;
+    position: relative;
+    user-select: none;
+    width: 100%;
+    z-index: 300; */
+
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    height:22px;
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.algolia .command-palette-logo {
+    display: none;
+}
+
+.algolia .command-palette-commands {
+    /* color: var(--docsearch-muted-color);
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0; */
+
+    font-size: .8rem;
+    opacity: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    line-height: 14px;
+}
+
+.algolia .command-palette-commands-key {
+    /* align-items: center;
+    background: var(--gray3);
+    border-radius: 2px;
+    display: flex;
+    height: 18px;
+    justify-content: center;
+    margin-right: 0.4em;
+    padding: 0 0 1px;
+    color: var(--gray11);
+    border: 0;
+    width: 20px; */
+
+    background: rgba(128,128,128,.1);
+    border-radius: 4px;
+    padding: 3px 6px;
+    min-width: 24px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid rgba(128,128,128,.15);
+    box-shadow: 0 2px 2px #0000001a;
+    width: auto;
+    height: auto;
+    margin-right: 0;
+}
+.algolia .command-palette-commands li {
+display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.algolia .command-palette-commands li:not(:last-of-type) {
+    /* margin-right: 0.8em; */
+    margin-right: 0;
+}
+
+.algolia [command-group-heading] {
+    /* color: var(--vcp-c-brand);
+    font-size: 0.85em;
+    font-weight: 600;
+    line-height: 32px;
+    margin: 0 -4px;
+    padding: 8px 4px 0;
+    top: 0;
+    z-index: 10;
+    width: 100%; */
+
+    margin: 0;
+    padding: 0;
+    color: var(--vp-c-brand-1);
+}
+
+.algolia [command-group-items] {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.algolia [command-item] {
+    position: relative;
+    content-visibility: auto;
+    cursor: pointer;
+    height: 56px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0px 16px;
+    color: var(--gray12);
+    user-select: none;
+    will-change: background, color;
+    transition: all 150ms ease;
+    transition-property: none;
+    border-radius: 4px;
+    margin-top: 4px;
+    background-color: var(--lowContrast);
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    transition: none;
+    line-height: 1rem;
+    border: solid 2px var(--vp-local-search-result-border);
+    outline: none;
+    background-color: transparent;
+    padding:0;
+    height: auto;
+
+}
+
+.search-dialog div[command-item] > div.link {
+    /* width: 100%; */
+
+    margin: 12px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.algolia [command-item][aria-selected='true'], .algolia [command-item]:hover {
+    /* background: var(--vcp-c-brand);
+    color: #fff; */
+
+    --vp-local-search-result-bg: var(--vp-local-search-result-selected-bg);
+    border-color: var(--vp-local-search-result-selected-border);
+    background-color: transparent;
+    color: var(--vp-c-brand-1)!important;
+}
+
+.search-dialog div[command-item] .title {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+.search-dialog div[command-item] .des {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    opacity: .8;
+}
+
+.search-dialog div[command-item] .date {
+    min-width: 80px;
+    font-size: 12px;
+    opacity: .4;
+}
+
+@media (min-width: 768px) {
+    .VPNav .blog-search .nav-search-btn-wait {
+        display: flex;
+        justify-content: flex-start;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        padding: 0 10px 0 12px;
+        width: auto;
+        height: 40px;
+        background-color: var(--vp-c-bg-alt);
+    }
+
+    .VPNav .blog-search .nav-search-btn-wait:hover {
+        border-color: var(--vp-c-brand-1);
+        background: var(--vp-c-bg-alt)
+    }
+
+    .VPNav .blog-search .nav-search-btn-wait .search-tip {
+        display: inline-block;
+    }
+
+    .VPNav .blog-search .nav-search-btn-wait svg {
+        top: 1px;
+        margin-right: 8px;
+        width: 14px;
+        height: 14px;
+        color: var(--vp-c-text-2);
+    }
+}
