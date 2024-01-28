@@ -99,7 +99,7 @@ router.onBeforeRouteChange = (to) => {
 watch(
   location,
   () => {
-    console.log('location', location)
+    // console.log('location', location)
     if (location.value.href) {
       const url = new URL(location.value.href!)
       activeTag.value = url.searchParams.get('tag') || ''

@@ -52,7 +52,7 @@ const props = defineProps<{
 }>();
 const dataSource = computed(() => (props.article))
 
-console.log('dddd',dataSource.value)
+// console.log('dddd',dataSource.value)
 
 if (dataSource.value?.frontmatter?.date) {
   if ((new Date().getTime() - new Date(dataSource.value?.frontmatter?.date).getTime()) / (24 * 60 * 60 * 1000) < 365) {
