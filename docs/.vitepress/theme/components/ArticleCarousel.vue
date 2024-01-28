@@ -75,7 +75,11 @@ const props = defineProps<{
 .mySwiper .swiper-slide {
     width: 25%;
     height: 100%;
-    opacity: 0.4;
+
+    .thumb {
+        border-radius: 5px;
+        border-width: 2px;
+    }
 }
 
 .mySwiper .swiper-slide-thumb-active {

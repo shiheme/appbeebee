@@ -1,6 +1,6 @@
 ---
 index: true
 title: 首页
-aside: false
+aside: true
 sidebar: true
 ---

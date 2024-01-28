@@ -23,10 +23,11 @@
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 20px;
-  margin-top: 32px;
+  margin-top: 16px;
   text-align: center;
   font-size: 0.7rem;
   background-color: var(--vp-c-bg-alt);
+  border: .5px solid var(--vp-c-gray-soft);
 
   .title {
     font-size: 0.875rem;

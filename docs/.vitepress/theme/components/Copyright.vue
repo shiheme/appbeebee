@@ -8,9 +8,10 @@
                 </div> -->
                 <div class="copyright" v-if="website?.showFooter">
                     Copyright © {{ new Date().getFullYear() === 2023 ? '' : '2023-' }}{{ new Date().getFullYear() }} <a
-                        class="title strong" :href="website?.link">{{ webTitle }}</a> | 使用 vitepress 构建本站<br />
+                        class="title strong" :href="website?.link">{{ webTitle }}</a>
+                        <p class="source">由<a class="strong" href="https://vitepress.dev/" target="_blank">vitepress</a>构建。主题源代码可在<a class="strong" href="https://github.com/shiheme/appbeebee" target="_blank">GitHub</a>上获取。</p>
                     <a class="beian strong" target="_blank" v-if="website?.icpRecordCode"
-                        href="https://beian.miit.gov.cn/">{{ website.icpRecordCode }}</a> <a class="beian strong"
+                        href="https://beian.miit.gov.cn/">{{ website.icpRecordCode }}</a><template v-if="website?.publicSecurityRecordCode"> | </template><a class="beian strong"
                         target="_blank" v-if="website?.publicSecurityRecordCode"
                         href="https://beian.mps.gov.cn/#/query/webSearch">{{ website.publicSecurityRecordCode }}</a>
                 </div>
@@ -25,7 +26,7 @@ import { onMounted } from 'vue'
 import { useData } from 'vitepress'
 
 const { site, theme, frontmatter } = useData()
-const website = theme.value?.website?theme.value.website:'https://appbeebee.com/'
+const website = theme.value?.website?theme.value.website:{}
 const webTitle = site.value?.title?site.value.title:'比比工房'
 const webAuthor = theme.value?.article?.cc?.author?theme.value.article.cc.author:'小鱼哥'
 
@@ -85,5 +86,22 @@ onMounted(() => {
 .strong {
     color: var(--vp-c-text-1);
     font-weight: 700;
+}
+
+.source {
+    /* border: 1px solid var(--vp-input-border-color); */
+    background-color: var(--vp-c-bg-alt);
+    border-radius: 4px;
+    padding: 2px;
+
+    .strong {
+background-color: var(--vp-c-bg-alt);
+color: var(--vp-c-brand);
+padding: 0 3px;
+    }
+    .strong:hover {
+color: var(--vp-c-brand);
+text-decoration: underline;
+    }
 }
 </style>

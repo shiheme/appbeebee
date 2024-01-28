@@ -5,7 +5,9 @@
       <p class="code">404</p>
       <p>糟糕！页面不见了～</p>
     </div>
-    <div class="acontent">
+    <div class="acontent" :style="{
+      'padding-bottom': type !== 'articlelist' ? '220px' : '122px'
+    }">
       <div class="authorarea" :class="{ happy: !isPause }">
         <div class="author">
           <div class="avator" :class="{ pay: pay }" v-tooltip="talkword">
@@ -49,61 +51,77 @@
             </div>
 
           </div>
-          <div class="nickname"><a :href="theme?.article?.cc?.authorLink" target="_blank">博主：{{ theme?.article?.cc?.author }}</a></div>
+          <div class="nickname"><a :href="theme?.article?.cc?.authorLink" target="_blank">博主：{{ theme?.article?.cc?.author
+          }}</a></div>
         </div>
         <div class="social">
           <ul class="ul">
             <template v-if="theme.website?.cardMusic">
-            <li class="li" v-if="isPause" @click="togglePlay">
+              <li class="li" v-if="isPause" @click="togglePlay">
 
-              <div class="group">
-                <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    d="M19.376 12.4161L8.77735 19.4818C8.54759 19.635 8.23715 19.5729 8.08397 19.3432C8.02922 19.261 8 19.1645 8 19.0658V4.93433C8 4.65818 8.22386 4.43433 8.5 4.43433C8.59871 4.43433 8.69522 4.46355 8.77735 4.5183L19.376 11.584C19.6057 11.7372 19.6678 12.0477 19.5146 12.2774C19.478 12.3323 19.4309 12.3795 19.376 12.4161Z"
-                    fill="currentColor"></path>
-                </svg>播放音乐<span class="VPBadge warning strong mini">新年歌</span>
-              </div>
-            </li>
-            <li class="li" v-else @click="togglePlay">
-              <div class="group">
-                <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path d="M6 5H8V19H6V5ZM16 5H18V19H16V5Z" fill="currentColor"></path>
-                </svg>停止音乐
-              </div>
-            </li>
-          </template>
-          <template v-if="theme.website?.cardCoffee">
-            <li class="li" @click="coffeepay" style="position: relative;">
-              <div v-if="pay" class="specialpop"
-                style="position: absolute; left:50%;top:0;transform: translate3d(-50%, -100px, 0px);">
-                <div class="v-popper__backdrop"></div>
-                <div class="v-popper__wrapper">
-                  <div class="v-popper__inner">
-                    <div style="width:100px;height:100px;border-radius: 4px;overflow: hidden;background-color: #ffffff;">
-                      <img v-if="theme?.website?.coffeeQrcode" :src="theme.website?.coffeeQrcode" />
+                <div class="group">
+                  <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M19.376 12.4161L8.77735 19.4818C8.54759 19.635 8.23715 19.5729 8.08397 19.3432C8.02922 19.261 8 19.1645 8 19.0658V4.93433C8 4.65818 8.22386 4.43433 8.5 4.43433C8.59871 4.43433 8.69522 4.46355 8.77735 4.5183L19.376 11.584C19.6057 11.7372 19.6678 12.0477 19.5146 12.2774C19.478 12.3323 19.4309 12.3795 19.376 12.4161Z"
+                      fill="currentColor"></path>
+                  </svg>播放音乐<span class="VPBadge warning strong mini">新年歌</span>
+                </div>
+              </li>
+              <li class="li" v-else @click="togglePlay">
+                <div class="group">
+                  <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M6 5H8V19H6V5ZM16 5H18V19H16V5Z" fill="currentColor"></path>
+                  </svg>停止音乐
+                </div>
+              </li>
+            </template>
+            <template v-if="theme.website?.cardCoffee">
+              <li class="li" @click="coffeepay" style="position: relative;">
+                <div v-if="pay" class="specialpop"
+                  style="position: absolute; left:50%;top:0;transform: translate3d(-50%, -100px, 0px);">
+                  <div class="v-popper__backdrop"></div>
+                  <div class="v-popper__wrapper">
+                    <div class="v-popper__inner">
+                      <div
+                        style="width:100px;height:100px;border-radius: 4px;overflow: hidden;background-color: #ffffff;">
+                        <img v-if="theme?.website?.coffeeQrcode" :src="theme.website?.coffeeQrcode" />
+                      </div>
+                    </div>
+                    <div class="v-popper__arrow-container" style="top: 14px;">
+                      <div class="v-popper__arrow-outer"></div>
+                      <div class="v-popper__arrow-inner"></div>
                     </div>
                   </div>
-                  <div class="v-popper__arrow-container" style="top: 14px;">
-                    <div class="v-popper__arrow-outer"></div>
-                    <div class="v-popper__arrow-inner"></div>
-                  </div>
                 </div>
-              </div>
-              <div class="group" v-if="!pay"><svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    d="M14 2H6.20495C5.6091 2 5.09608 2.42057 4.97923 3.00485L4.1802 7H2V9H4.10875L5.48105 20.8933C5.55383 21.524 6.08789 22 6.72281 22H17.2772C17.9121 22 18.4462 21.524 18.5189 20.8933L19.8912 9H22V7H19.8198L19.0208 3.00485C18.9039 2.42057 18.3909 2 17.795 2H16V0H14V2ZM17.7802 7H6.2198L6.8198 4H17.1802L17.7802 7ZM6.12202 9H17.878L16.6088 20H7.39125L6.12202 9Z">
-                  </path>
-                </svg>打赏咖啡</div>
-              <div class="group" v-else>
-                <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
-                    fill="currentColor"></path>
-                </svg>微信扫码
-              </div>
-            </li>
-          </template>
+                <div class="group" v-if="!pay"><svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M14 2H6.20495C5.6091 2 5.09608 2.42057 4.97923 3.00485L4.1802 7H2V9H4.10875L5.48105 20.8933C5.55383 21.524 6.08789 22 6.72281 22H17.2772C17.9121 22 18.4462 21.524 18.5189 20.8933L19.8912 9H22V7H19.8198L19.0208 3.00485C18.9039 2.42057 18.3909 2 17.795 2H16V0H14V2ZM17.7802 7H6.2198L6.8198 4H17.1802L17.7802 7ZM6.12202 9H17.878L16.6088 20H7.39125L6.12202 9Z">
+                    </path>
+                  </svg>打赏咖啡</div>
+                <div class="group" v-else>
+                  <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
+                      fill="currentColor"></path>
+                  </svg>微信扫码
+                </div>
+              </li>
+            </template>
           </ul>
+        </div>
+        <div class="total" v-if="type !== 'articlelist'">
+          <div class="cell views">
+            <strong class="strong">1000</strong>
+            <span class="span">访问</span>
+          </div>
+          <div class="cell posts">
+            <strong class="strong">{{ totalArticles.length }}</strong>
+            <span class="span">内容</span>
+          </div>
+          <div class="cell publish">
+            <strong class="strong">+{{ monthArticles.length }}</strong>
+            <span class="span">月发布</span>
+          </div>
         </div>
       </div>
     </div>
@@ -115,6 +133,7 @@ import { ref, onMounted, computed, toRefs } from 'vue'
 import { useData } from 'vitepress';
 import { usePlayerStore } from '../../store/player';
 import type { Song } from '../../theme/types';
+import { data as themeposts } from '../posts.data'
 const { theme, frontmatter } = useData();
 const { pushPlayList } = usePlayerStore();
 const {
@@ -136,6 +155,21 @@ const coffeepay = () => {
   pay.value = !pay.value
 }
 
+const totalArticles = computed(() => {
+  return themeposts.filter((article: any) =>
+    article?.frontmatter?.publish !== false
+  )
+})
+const nowMonth = new Date().getMonth()
+const nowYear = new Date().getFullYear()
+const monthArticles = computed(() => {
+  return totalArticles.value.filter((article: any) => {
+    const pubDate = new Date(article?.frontmatter?.date)
+    return pubDate?.getMonth() === nowMonth && pubDate.getFullYear() === nowYear
+  })
+})
+
+
 onMounted(() => {
   // 当鼠标移动进行监听
   window.addEventListener("mousemove", function (event: any) {
@@ -149,6 +183,31 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 16px;
+  margin-bottom: 16px;
+  border-top: 1px solid var(--vp-c-gray-soft);
+
+  .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .strong {
+      font-size: 1.1rem;
+      font-family: "Share Tech Mono", monospace;
+    }
+
+    .span {
+      font-size: 0.618rem;
+    }
+  }
+}
+
 .notfoundarea {
   font-size: 0.875rem;
   text-align: center;
@@ -518,5 +577,4 @@ onMounted(() => {
 .authorarea:hover .eyes:nth-of-type(2n+1)>.pupil,
 .authorarea.happy .eyes:nth-of-type(2n+1)>.pupil {
   transform: rotate(-45deg) !important;
-}
-</style>
+}</style>

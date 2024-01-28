@@ -8,9 +8,19 @@
 
 :root {
     --vp-font-family-base: Fira Code, -apple-system, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica, Arial, sans-serif;
-    --vp-layout-max-width: 1440px;   /*官方默认 1440px*/
+    --vp-layout-max-width: 1480px;   /*官方默认 1440px*/
     --swiper-theme-color: var(--vp-c-brand);
+    --fancybox-accent-color: var(--vp-c-brand-1);
+    --bgfilter: rgba(255,255,255,.9);
 }
+
+.dark {
+    --bgfilter: rgba(27,27,31,.9);
+}
+
+[aria-label="red"] {
+    color: #f00 !important;
+  }
 
 .Layout {
     min-height: calc(100vh - 78px);
@@ -55,14 +65,16 @@
 
 .postlist.grid {
     display: grid;
-    row-gap: 1.8rem;
-    column-gap: 1.8rem;
+    row-gap: 1.1rem;
+    column-gap: 1.1rem;
 }
 
 .VPDoc.has-aside .content-container {
     max-width: 100% !important;
 }
-
+.fireworkwrap {
+    display: none;
+}
 
 @media (min-width: 550px) {
     .postlist.grid {
@@ -90,6 +102,14 @@
 }
 
 @media (min-width: 960px) {
+    .VPNavBar:not(.top) .content-body {
+        position: relative;
+        background-color: var(--bgfilter)!important;
+        backdrop-filter:blur(8px);
+    }
+    .fireworkwrap {
+        display: block;
+    }
     .VPDoc .container>.content {
         padding: 0 32px 32px;
     }
@@ -146,7 +166,7 @@
     }
 
     .VPDoc.has-aside.has-sidebar .postlist.grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .VPDoc.has-sidebar:not(.has-aside) .postlist.grid {
@@ -154,7 +174,7 @@
     }
 
     .VPDoc:not(.has-sidebar):not(.has-aside) .postlist.grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
 
@@ -172,20 +192,20 @@
     }
 
     .VPDoc.has-aside:not(.has-sidebar) .postlist.grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .VPDoc.has-aside.has-sidebar .postlist.grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
 
     .VPDoc.has-sidebar:not(.has-aside) .postlist.grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .VPDoc:not(.has-sidebar):not(.has-aside) .postlist.grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }
 
@@ -203,20 +223,20 @@
     }
 
     .VPDoc.has-aside:not(.has-sidebar) .postlist.grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .VPDoc.has-aside.has-sidebar .postlist.grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
 
     .VPDoc.has-sidebar:not(.has-aside) .postlist.grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .VPDoc:not(.has-sidebar):not(.has-aside) .postlist.grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }
 

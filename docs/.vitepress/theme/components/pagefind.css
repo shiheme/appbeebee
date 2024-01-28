@@ -138,13 +138,14 @@
 }
 
 .algolia [command-dialog-mask] {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background: var(--vp-backdrop-bg-color);
     transition: opacity .5s;
+    z-index: 100000;
 }
 
 .algolia [command-dialog-footer] {

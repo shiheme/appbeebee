@@ -12,6 +12,7 @@ tags:
 - menu
 - 动画
 description: 使用 vueJS实现简单的工具提示、弹出菜单、下拉菜单。。。
+search: false
 ---
 # 基于vue3实现tooltip、dropdowns、menus常用提示组件
 ## floating-vue

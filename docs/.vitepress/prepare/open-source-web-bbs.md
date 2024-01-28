@@ -10,6 +10,7 @@ tags:
  - 社区
  - bbs
 description: 随时随地聆听你的音乐。基于 vue开发，安装使用方便。
+search: false
 ---
 # 3款开源的网页端仿掘金轻社区平台
 

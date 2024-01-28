@@ -52,6 +52,8 @@ const props = defineProps<{
 }>();
 const dataSource = computed(() => (props.article))
 
+console.log('dddd',dataSource.value)
+
 if (dataSource.value?.frontmatter?.date) {
   if ((new Date().getTime() - new Date(dataSource.value?.frontmatter?.date).getTime()) / (24 * 60 * 60 * 1000) < 365) {
     dataformat.value = 1 //判断发布日期距离现在365天以内则显示人性化时间

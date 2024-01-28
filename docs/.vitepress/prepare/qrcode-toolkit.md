@@ -10,6 +10,7 @@ tags:
 - qrcode
 - Stable Diffusion
 description: 你可以通过它生成二维码，也可以上传图片和二维码进行融合。同时提供了 SD 插件版进行人工智能二次优化
+search: false
 ---
 # 搭建你自己的二维码生成工具，支持人工智能 SD二次优化
 ## qrcode-toolkit

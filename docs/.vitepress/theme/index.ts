@@ -1,4 +1,3 @@
-import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import Firework from './components/Firework.vue'
 import Lantern from './components/Lantern.vue'
@@ -24,6 +23,7 @@ import PageSlider from './components/PageSlider.vue'
 import ArticleCarousel from './components/ArticleCarousel.vue'
 import Player from './components/Player.vue'
 import Tools from './components/Tools.vue'
+import Links from './components/Links.vue'
 import Welcome from './components/Welcome.vue'
 import { createPinia } from 'pinia'  //使用状态管理库。用于音乐播放器的状态监听
 import FloatingVue from 'floating-vue'  //使用 tooltip库。用于hover提示、悬浮框等。教程见https://floating-vue.starpad.dev/
@@ -39,8 +39,7 @@ const pinia = createPinia()
 export default {
     ...DefaultTheme,
     Layout: NewLayout,  //
-    enhanceApp:(ctx: EnhanceAppContext) => {
-        const { app } = ctx
+    enhanceApp:({app}) => {
         // 注册全局组件
         app.component('Firework', Firework)
         app.component('Lantern', Lantern)
@@ -65,6 +64,7 @@ export default {
         app.component('ArticlePage', ArticlePage)
         app.component('Player', Player)
         app.component('Tools', Tools)
+        app.component('Links', Links)
         app.component('Welcome', Welcome)
         app.use(pinia)
         app.use(FloatingVue, {

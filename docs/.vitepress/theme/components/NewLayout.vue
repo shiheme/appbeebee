@@ -6,6 +6,7 @@
             <ClientOnly>
                 <div class="page404">
                     <PageASide type="page404" />
+                    
                 </div>
             </ClientOnly>
         </template>
@@ -41,13 +42,14 @@
             <ClientOnly>
                 
                 <PageNavi />
-                <Firework v-if="screenWidth>960"></Firework>
+                <div class="fireworkwrap">
+                    <Firework></Firework>
+                </div>
                 </ClientOnly>
         </template>
         <template #doc-top>
             <ClientOnly>
-                <PageSlider v-if="frontmatter?.index" :key="md5(page.relativePath)"></PageSlider>
-                <PageNavi v-if="frontmatter?.index" :key="md5(page.relativePath)" type="top" />
+                <!-- <PageSlider v-if="frontmatter?.index" :key="md5(page.relativePath)"></PageSlider> -->
             </ClientOnly>
         </template>
         <template #doc-before>
@@ -59,9 +61,11 @@
         </template>
         <template #aside-bottom>
             <ClientOnly>
-                <PageGZH v-if="(frontmatter?.post)" />
+                
                 <!-- <ArticleLink v-if="(frontmatter?.post)" :key="md5(page.relativePath)" /> -->
                 <PageASide v-if="(frontmatter.index)" />
+                <PageGZH />
+                <!-- <Links v-if="(frontmatter.index)" /> -->
             </ClientOnly>
         </template>
         <template #doc-footer-before>
@@ -78,26 +82,20 @@
 <script lang="ts" setup>
 import { computed, toRefs,onMounted,ref } from 'vue';
 import { useData, useRouter } from 'vitepress';
-import md5 from 'blueimp-md5';
 import { usePlayerStore } from '../../store/player';
+import md5 from 'blueimp-md5';
 import DefaultTheme from 'vitepress/theme'
 import Copyright from './Copyright.vue'
 import Player from './Player.vue';
+
 const { isPause } = toRefs(usePlayerStore());
 const { page, theme, frontmatter, isDark } = useData();
-const route = useRouter()
 const { Layout } = DefaultTheme
-const screenWidth = ref(document.body.clientWidth)
-onMounted(() => {
-// window.onresize = () => {
-//             return (() => {
-//                 screenWidth.value = document.body.clientWidth
-//             })()
-//         }
-    })
+
 </script>
 
 <style scoped>
+
 .snowbanner {
     position: absolute;
     width: 100%;
@@ -141,3 +139,4 @@ onMounted(() => {
     margin: 50px auto;
 }
 </style>
+

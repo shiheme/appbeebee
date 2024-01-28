@@ -1,5 +1,6 @@
 import type { Post } from './types'
 import dayjs from 'dayjs'
+import duration from 'dayjs/plugin/duration'
 import rTime from 'dayjs/plugin/relativeTime'
 import 'dayjs/locale/zh-cn';
 import { useClipboard } from '@vueuse/core'
@@ -36,6 +37,12 @@ dayjs.extend(rTime)
 // 人性化时间格式
 export const relativeTime = (value:any) => {
     return dayjs(value).fromNow()
+}
+
+dayjs.extend(duration)
+// 人性化时间格式
+export const durationTime = (value:any) => {
+    return dayjs.duration(value)
 }
 
 // 随机一文

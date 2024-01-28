@@ -14,6 +14,7 @@ tags:
  - 模型
  - 渲染
 description: 免费 iPhone15 设备渲染模型，方便你展示你的应用作品
+search: false
 ---
 # iPhone Pro 15 3D模型 Figma源文件
 

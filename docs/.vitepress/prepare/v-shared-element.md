@@ -11,6 +11,7 @@ tags:
 - Animation
 - 动画
 description: 共享元素能够快速实现不同页面元素间的无缝衔接，例如放大打开已应用共享元素的图片，而不是应用左右切换的打开方式，避免用户浏览过程中的失焦，实现更贴近原生的交互体验。
+search: false
 ---
 # V-shared-element | vue.js实现Web端/H5端共享元素内容切换
 ## v-shared-element
