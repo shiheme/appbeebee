@@ -64,7 +64,7 @@ const modules = [Navigation]
 const list = ref(theme.value?.banner ? theme.value.banner : [])
 
 const lanternText = ref(['新', '年'])
-const defaultDate = '2024/02/09'
+const defaultDate = '2024/02/09 20:00'
 
 function getUntilDate() {
     const param = new URL(location.href).searchParams.get('until') || defaultDate
@@ -267,13 +267,13 @@ const until = getUntilDate()
 
         .title {
             font-weight: 700;
-            font-size: 3.75rem;
+            font-size: 2.08rem;
             line-height: 1.1;
             letter-spacing: -.05em;
         }
 
         .desc {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             line-height: 1.75rem;
             opacity: .8;
         }
