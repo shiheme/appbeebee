@@ -1,5 +1,5 @@
 <template>
-	<!-- 书签导航页 -->
+	<!-- 友情链接页 -->
 	<div class="wrap" :class="{ hasaside: frontmatter.aside, hassidebar: frontmatter.sidebar || theme?.sidebar?.length }">
 		<div class="tools" v-for="(item, name) in data">
 			<h2 class="h2" :id="item.title" tabindex="-1">

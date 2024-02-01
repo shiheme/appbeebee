@@ -111,7 +111,7 @@
         </div>
         <div class="total" v-if="type !== 'articlelist'">
           <div class="cell views">
-            <strong class="strong">1000</strong>
+            <strong class="strong">9999+</strong>
             <span class="span">访问</span>
           </div>
           <div class="cell posts">

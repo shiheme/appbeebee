@@ -7,6 +7,9 @@
 }
 
 :root {
+    --vp-c-brand: #0057ff;
+    --vp-c-brand-1: #0057ff;
+    --vp-c-brand-2: #0057ff;
     --vp-font-family-base: Fira Code, -apple-system, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica, Arial, sans-serif;
     --vp-layout-max-width: 1480px;   /*官方默认 1440px*/
     --swiper-theme-color: var(--vp-c-brand);
