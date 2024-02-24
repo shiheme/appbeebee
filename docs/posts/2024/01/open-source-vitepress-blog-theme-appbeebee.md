@@ -2,8 +2,8 @@
 post: true
 title: APP比比博客开源源码-基于vitepress的资源下载博客主题，速度杠杠快
 date: 2024-01-21
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hm1ie2tg0ej20k00dcwkd.jpg
-coveross: https://fc.sinaimg.cn/large/6364aa43gy1hm1ieg9mrhj21400qodza.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm1ie2tg0ej20k00dcwkd.jpg
+coveross: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm1ieg9mrhj21400qodza.jpg
 categories:
  - vueJS
 tags:
@@ -97,39 +97,39 @@ npm install
 import { ref } from 'vue'
 const list = ref([
 {
-    image:'https://fc.sinaimg.cn/large/6364aa43gy1hm0fdr08pnj22c01bqb29.jpg',
+    image:'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm0fdr08pnj22c01bqb29.jpg',
     title:'文章列表九宫格样式'
 },
 {
-    image:'https://fc.sinaimg.cn/large/6364aa43gy1hm0fdr03guj22c01bqb29.jpg',
+    image:'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm0fdr03guj22c01bqb29.jpg',
     title:'播放音乐+存档按年和年/月的形式'
 },
     {
-    image:'https://fc.sinaimg.cn/large/6364aa43gy1hm0fdq92lmj22c01bq1a2.jpg',
+    image:'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm0fdq92lmj22c01bq1a2.jpg',
     title:'内页'
 },
 {
-    image:'https://fc.sinaimg.cn/large/6364aa43gy1hm0fdqk4umj22c01bqk52.jpg',
+    image:'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm0fdqk4umj22c01bqk52.jpg',
     title:'工具导航'
 },
 {
-    image:'https://fc.sinaimg.cn/large/6364aa43gy1hm0fdqppztj22c01bqqqb.jpg',
+    image:'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm0fdqppztj22c01bqqqb.jpg',
     title:'文章列表简约样式'
 },
 {
-    image:'https://fc.sinaimg.cn/large/6364aa43gy1hm0fdqrdlzj22c01bq4hn.jpg',
+    image:'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm0fdqrdlzj22c01bq4hn.jpg',
     title:'Feed订阅'
 },
 {
-    image:'https://fc.sinaimg.cn/large/6364aa43gy1hm0fdqyuaij22c01bqkee.jpg',
+    image:'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm0fdqyuaij22c01bqkee.jpg',
     title:'文章页内置资源汇总组件，方便点击查看出处'
 },
 {
-    image:'https://fc.sinaimg.cn/large/6364aa43gy1hm0fdqzlnrj22c01bq4qp.jpg',
+    image:'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm0fdqzlnrj22c01bq4qp.jpg',
     title:'分页'
 },
 {
-    image:'https://fc.sinaimg.cn/large/6364aa43gy1hm0fdr2dlbj22c01bqb29.jpg',
+    image:'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm0fdr2dlbj22c01bqb29.jpg',
     title:'暗黑模式+标签点击切换'
 }]);
 

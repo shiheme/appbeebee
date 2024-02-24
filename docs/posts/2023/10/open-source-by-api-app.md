@@ -2,7 +2,7 @@
 post: true
 title: 3款开源的基于api接口实现的内容展示应用
 date: 2023-10-10
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hld5rp4yccj20k00dcgqx.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld5rp4yccj20k00dcgqx.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/iphone-pro-15-3d-mockups-free.gif
 categories:
  - vueJS
@@ -14,7 +14,7 @@ description: 暂无
 # 3款开源的基于api接口实现的内容展示应用
 
 ## 1.Mayandev/morec
-![Mayandev/morec](https://fc.sinaimg.cn/large/6364aa43gy1hld5p9k3btj20k00dcjyx.jpg)
+![Mayandev/morec](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld5p9k3btj20k00dcjyx.jpg)
 
 这是一个非常精美的 Flutter 版电影客户端，利用豆瓣现有的 Api，打造了一个完整的电影展示 App。细节十分完善，是一个经过完整设计的产品而非 Demo。
 
@@ -43,7 +43,7 @@ description: 暂无
     }" />
 
 ## 2.Mayandev/YesPlayMusic
-![Mayandev/YesPlayMusic](https://fc.sinaimg.cn/large/6364aa43gy1hld5pmb7qkj20k00dc463.jpg)
+![Mayandev/YesPlayMusic](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld5pmb7qkj20k00dc463.jpg)
 
 高颜值的第三方网易云播放器
 
@@ -71,7 +71,7 @@ description: 暂无
     }" />
 
 ## 3.Mayandev/ikea-low-price
-![Mayandev/ikea-low-price](https://fc.sinaimg.cn/large/6364aa43gy1hld5rp4yccj20k00dcgqx.jpg)
+![Mayandev/ikea-low-price](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld5rp4yccj20k00dcgqx.jpg)
 
 一个宜家低价清单，数据每周自动同步。
 <ArticleLink via="post" :work="{

@@ -2,8 +2,8 @@
 post: true
 title: shadcn-ui｜开源的漂亮的2023最受欢迎的 UI组件(带设计稿)
 date: 2024-01-28
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hm9c134t1vj20k00dcdkh.jpg
-coveross: https://fc.sinaimg.cn/large/6364aa43gy1hm9c1361hbj21400qowsj.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm9c134t1vj20k00dcdkh.jpg
+coveross: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm9c1361hbj21400qowsj.jpg
 categories:
  - UI组件
 tags:
@@ -14,7 +14,7 @@ description:  设计精美的组件，您可以将其复制并粘贴到您的应
 # shadcn-ui｜开源的漂亮的2023最受欢迎的 UI组件(带设计稿)
 
 ## shadcn-ui/ui
-![shadcn-ui/ui](https://fc.sinaimg.cn/large/6364aa43gy1hm9c135yz4g20k00dcmzs.jpg)
+![shadcn-ui/ui](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm9c135yz4g20k00dcmzs.jpg)
 
 Shadcn UI 由 vercel 的工程师Shadcn创建，建立在 Tailwind CSS 和 Radix UI 之上，目前支持 Next.js、Gatsby、Remix、Astro、Laravel 和 Vite，并且拥有与其他项目快速集成的能力，在Github 上拥有了 47k star
 
@@ -40,7 +40,7 @@ Shadcn UI 由 vercel 的工程师Shadcn创建，建立在 Tailwind CSS 和 Radix
     }" />
 
 ## sketch设计稿
-![shadcn-ui/ui](https://fc.sinaimg.cn/large/6364aa43gy1hm9c1361hbj21400qowsj.jpg)
+![shadcn-ui/ui](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm9c1361hbj21400qowsj.jpg)
 
 <ArticleLink via="post" :work="{
     title: 'shadcn-ui/ui',

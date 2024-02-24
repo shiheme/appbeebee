@@ -2,7 +2,7 @@
 post: true
 title: Floating-vue | 基于vue3实现tooltip、dropdowns、menus常用提示组件
 date: 2023-12-11
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hl0jy2rb8hg20k00dc7ha.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hl0jy2rb8hg20k00dc7ha.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/floating-vue.gif
 categories:
  - vueJS

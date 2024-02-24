@@ -21,10 +21,33 @@
 </template>
 
 <script lang="ts" setup>
+import { computed, ref, onMounted, nextTick, watch } from 'vue'
+import md5 from 'blueimp-md5';
 import { withBase, useData } from 'vitepress';
 import { formatTime,handleCopy } from '../functions'
+import { findViewsById } from "../../models/views";
+import type { View } from '../../theme/types';
 const { theme, page, frontmatter } = useData();
-const articleLink = decodeURI(window.location.href);
+// const articleLink = decodeURI(window.location.href);
+const articleLink = page.value.relativePath;
+
+console.log('page',page)
+// const currentId = md5(frontmatter?.date)
+
+
+// const updateviews =async ()=> {
+//   await findViewsById(currentId);
+// }
+
+// onMounted(() => {
+//   nextTick(() => {
+//     try {
+//       updateviews()
+//     } catch (e) {
+//       console.log("gen cover failed: ", e);
+//     }
+//   });
+// });
 </script>
 
 <style scoped>

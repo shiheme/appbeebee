@@ -2,7 +2,7 @@
 post: true
 title: 5款开源的应用端音乐播放器
 date: 2023-11-03
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hlbuqft7z1j20k00dcn4k.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbuqft7z1j20k00dcn4k.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/iphone-pro-15-3d-mockups-free.gif
 categories:
  - vueJS
@@ -15,7 +15,7 @@ description: 本地搭建一个音乐播放器，对接网络音乐API
 # 5款开源的应用端音乐播放器
 
 ## 1.ciderapp/Cider
-![ciderapp/Cider](https://fc.sinaimg.cn/large/6364aa43gy1hlbpvzd1guj20k009jwhf.jpg)
+![ciderapp/Cider](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbpvzd1guj20k009jwhf.jpg)
 
 Cider 是一种基于 Vue.js 构建的全新跨平台 Apple Music 体验，从头开始编写时就考虑到了性能。
 
@@ -30,7 +30,7 @@ Cider 是一种基于 Vue.js 构建的全新跨平台 Apple Music 体验，从�
     }" />
 
 ## 2.staniel359/muffon
-![staniel359/muffon](https://fc.sinaimg.cn/large/6364aa43gy1hlbq7s4yhpj20k00bgdm1.jpg)
+![staniel359/muffon](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbq7s4yhpj20k00bgdm1.jpg)
 
 muffon是一款跨平台的桌面音乐流媒体客户端，可帮助您以高级方式聆听、发现和组织音乐。
 
@@ -64,7 +64,7 @@ muffon是一款跨平台的桌面音乐流媒体客户端，可帮助您以高�
     }" />
 
 ## 3.Moosync/Moosync
-![Moosync/Moosync](https://fc.sinaimg.cn/large/6364aa43gy1hlbqjozpcij20k00artbu.jpg)
+![Moosync/Moosync](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbqjozpcij20k00artbu.jpg)
 
 Moosync 是一款可定制的桌面音乐播放器，界面简洁
 
@@ -90,7 +90,7 @@ Moosync 是一款可定制的桌面音乐播放器，界面简洁
     }" />
 
 ## 4.Geoxor/Amethyst
-![Geoxor/Amethyst](https://fc.sinaimg.cn/large/6364aa43gy1hlbs5c976xj20k00begqr.jpg)
+![Geoxor/Amethyst](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbs5c976xj20k00begqr.jpg)
 
 Amethyst 是一个基于 Electron 的跨平台音频播放器，同时还为最终用户提供有用的工具和可定制性。
 
@@ -105,7 +105,7 @@ Amethyst 是一个基于 Electron 的跨平台音频播放器，同时还为最�
     }" />
 
 ## 5.FLB-Music/FLB-Music-Player
-![FLB-Music/FLB-Music-Player](https://fc.sinaimg.cn/large/6364aa43gy1hlbuqft7z1j20k00dcn4k.jpg)
+![FLB-Music/FLB-Music-Player](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbuqft7z1j20k00dcn4k.jpg)
 
 一个美丽的🌹和功能丰富的💎跨平台音乐播放器和下载器
 

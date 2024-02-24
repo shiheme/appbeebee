@@ -2,7 +2,7 @@
 post: true
 title: 5款开源的Todo List计划安排工具
 date: 2023-10-02
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hlbtty8arjj20k00da7az.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbtty8arjj20k00da7az.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/iphone-pro-15-3d-mockups-free.gif
 categories:
  - vueJS
@@ -14,7 +14,7 @@ description: 暂无。
 # 5款开源的Todo List计划安排工具
 
 ## 1.WinTenDev/rminder
-![WinTenDev/rminder](https://fc.sinaimg.cn/large/6364aa43gy1hlbtty8arjj20k00da7az.jpg)
+![WinTenDev/rminder](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbtty8arjj20k00da7az.jpg)
 
 这是一款开源的浏览器插件。这款插件应用将通知您喝水、纠正姿势、眨眼和伸展。因为我们在浏览时经常忘记做所有这些事情，这会影响您的健康。您可以自定义通知的时间间隔和通知的文本，您也可以关闭通知。
 
@@ -31,7 +31,7 @@ description: 暂无。
     }" />
 
 ## 2.Hanziness/FocusTide
-![Hanziness/FocusTide](https://fc.sinaimg.cn/large/6364aa43gy1hlbukfkg18j20k00dc0vs.jpg)
+![Hanziness/FocusTide](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbukfkg18j20k00dc0vs.jpg)
 
 免费、现代且开源的计时器应用程序，就在您的浏览器中。以前称为番茄钟。只需打开网页即可享受！您甚至可以自行托管它！
 
@@ -57,7 +57,7 @@ description: 暂无。
     }" />
     
 ## 3.manuelernestog/weektodo
-![manuelernestog/weektodo](https://fc.sinaimg.cn/large/6364aa43gy1hlbvd9mjmqj20k00dc421.jpg)
+![manuelernestog/weektodo](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbvd9mjmqj20k00dc421.jpg)
 
 WeekToDo 是一款免费的极简每周计划应用程序，专注于隐私。使用待办事项列表和日历安排您的任务和项目。适用于 Windows、Mac、Linux 或网页端。
 
@@ -83,7 +83,7 @@ WeekToDo 是一款免费的极简每周计划应用程序，专注于隐私。�
     }" />
 
 ## 4.go-vikunja/frontend
-![go-vikunja/frontend](https://fc.sinaimg.cn/large/6364aa43gy1hlbvliw5x5j20k00dcjva.jpg)
+![go-vikunja/frontend](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbvliw5x5j20k00dcjva.jpg)
 
 用于组织您的生活的待办事项应用程序
 
@@ -100,7 +100,7 @@ WeekToDo 是一款免费的极简每周计划应用程序，专注于隐私。�
     }" />
 
 ## 5.alihandgrmnclr/Vue-TodoApp
-![alihandgrmnclr/Vue-TodoApp](https://fc.sinaimg.cn/large/6364aa43gy1hlbvp6pwudj20k00dcgs1.jpg)
+![alihandgrmnclr/Vue-TodoApp](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbvp6pwudj20k00dcgs1.jpg)
 
 这是一个实时待办事项应用程序。您可以添加、编辑和删除您的待办事项。
 

@@ -2,8 +2,8 @@
 post: true
 title: 4款开源的漂亮的现代化的基于AI绘画面板生成源码工具
 date: 2024-01-16
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hlxggxpax9j21400qohba.jpg
-coveross: https://fc.sinaimg.cn/large/6364aa43gy1hlv3g13jpmj21400qo4km.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxggxpax9j21400qohba.jpg
+coveross: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlv3g13jpmj21400qo4km.jpg
 categories:
  - AIGC
 tags:
@@ -14,7 +14,7 @@ description:  可以让用户通过绘制软件图像并利用AI将其变为真�
 # 4款开源的漂亮的现代化的基于AI绘画面板生成源码工具
 
 ## 1.tldraw/tldraw
-![tldraw/tldraw](https://fc.sinaimg.cn/large/6364aa43gy1hlv3giyk96j21400mik2b.jpg)
+![tldraw/tldraw](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlv3giyk96j21400mik2b.jpg)
 
 tldraw 是一个用于在 React 中创建无限画布体验的库。部署后允许多人协同绘制作品。同时结合makereal模型，可以让用户通过绘制软件图像并利用AI将其变为真实可用的代码。
 
@@ -44,7 +44,7 @@ tldraw 是一个用于在 React 中创建无限画布体验的库。部署后允
 
 
 ## 2.SawyerHood/draw-a-ui
-![SawyerHood/draw-a-ui](https://fc.sinaimg.cn/large/6364aa43gy1hlv3gw3lhng20go09e1kx.jpg)
+![SawyerHood/draw-a-ui](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlv3gw3lhng20go09e1kx.jpg)
 
 这是一个 Next.js 应用程序。上面提到的tldraw/make-real模型便是基于此项目 fork而来。
 
@@ -63,7 +63,7 @@ tldraw 是一个用于在 React 中创建无限画布体验的库。部署后允
     }" />
 
 ## 3.didi/LogicFlow
-![didi/LogicFlow](https://fc.sinaimg.cn/large/6364aa43gy1hlv3hdqj2vg21i20ugkjl.jpg)
+![didi/LogicFlow](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlv3hdqj2vg21i20ugkjl.jpg)
 
 LogicFlow是一个流程图编辑框架，提供了一系列流程图交互和编辑所必需的功能，以及简单灵活的节点定制、插件等扩展机制，使我们能够快速满足业务系统中类流程图的需求。
 
@@ -90,7 +90,7 @@ LogicFlow是一个流程图编辑框架，提供了一系列流程图交互和�
 
 
 ## 4.excalidraw/excalidraw
-![excalidraw/excalidraw](https://fc.sinaimg.cn/large/6364aa43gy1hlv3g13jpmj21400qo4km.jpg)
+![excalidraw/excalidraw](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlv3g13jpmj21400qo4km.jpg)
 
 Excalidraw 是一款轻量的手绘风格电子白板在线应用，无论是 Windows / macOS / linux，甚至是手机，打开浏览器就能使用，能简单地画出美观漂亮的流程图、示意图和开发架构图等常用图片，也可以作为会议画板使用，不仅是一款优秀的画图应用，也是一款自由便捷的电子白板应用。
 

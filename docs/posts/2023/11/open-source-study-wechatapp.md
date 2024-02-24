@@ -2,7 +2,7 @@
 post: true
 title: 1款开源的漂亮的学习/课程/考试类小程序
 date: 2023-11-22
-cover: https://fc.sinaimg.cn/large/6364aa43ly1hlda9aqsh6j20k00dcjwn.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43ly1hlda9aqsh6j20k00dcjwn.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/iphone-pro-15-3d-mockups-free.gif
 categories:
  - 小程序
@@ -15,7 +15,7 @@ description: 暂无。
 # 1款开源的漂亮的学习/课程/考试类小程序
 
 ## 1.arleyGuoLei/wechat-app-words-pk
-![arleyGuoLei/wechat-app-words-pk](https://fc.sinaimg.cn/large/6364aa43ly1hlda9aqsh6j20k00dcjwn.jpg)
+![arleyGuoLei/wechat-app-words-pk](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43ly1hlda9aqsh6j20k00dcjwn.jpg)
 
 单词天天斗 (毕业设计/实战小程序/微信小程序完整项目)
 
@@ -32,7 +32,7 @@ description: 暂无。
 <ArticleLink via="post" :work="{
     title: 'arleyGuoLei/wechat-app-words-pk',
     view: 'https://github.com/arleyGuoLei/wechat-app-words-pk/',
-    qrcode: 'https://fc.sinaimg.cn/large/6364aa43ly1hlda9ofr1ij209k09kmzr.jpg',
+    qrcode: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43ly1hlda9ofr1ij209k09kmzr.jpg',
     github: 'arleyGuoLei/wechat-app-words-pk',
     coveross: '',
     beecode: '', //备用下载的文章 id

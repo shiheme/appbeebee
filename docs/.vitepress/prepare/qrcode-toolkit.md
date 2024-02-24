@@ -2,7 +2,7 @@
 post: true
 title: qrcode-toolkit | 搭建你自己的二维码生成工具，支持人工智能 SD二次优化
 date: 2023-12-13
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hl7gz18qwgj20k00dcn5c.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hl7gz18qwgj20k00dcn5c.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/qrcode-toolkit.png
 categories:
  - AIGC

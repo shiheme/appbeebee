@@ -7,6 +7,7 @@ export const head: HeadConfig[] = [
   ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/logo.png' }], //全局控制图片放大样式
   ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' }],
   ['meta', { property: 'og:image', content: '/logo.png' }],
+  ['meta', { name: 'referrer', content: 'no-referrer' }],
   [
     'script',
     {},

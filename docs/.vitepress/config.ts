@@ -65,12 +65,12 @@ export default defineConfig<ThemeConfig>({
         banner: [ //主页轮播，不需要就注释掉
             {
                 link: '/posts/2024/01/freebie-chinese-font.html',
-                image: 'https://fc.sinaimg.cn/large/6364aa43gy1hlxg58m6w3j21z40m8dis.jpg',
+                image: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxg58m6w3j21z40m8dis.jpg',
                 title: ''
             },
             {
                 link: '/posts/2024/01/freebie-chinese-font.html',
-                image: 'https://fc.sinaimg.cn/large/6364aa43gy1hlxg58m6w3j21z40m8dis.jpg',
+                image: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxg58m6w3j21z40m8dis.jpg',
                 title: ''
             }
         ],
@@ -168,7 +168,7 @@ export default defineConfig<ThemeConfig>({
             cardPosition: 3, //显示在第几个位置
             cardMusic: true, //是否显示播放音乐，音乐列表在上面 music中配置
             cardCoffee: true, //是否显示打赏咖啡，
-            coffeeQrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hm0f859sm6j208c08cabm.jpg', //打赏咖啡二维码图片地址。如果是跳转网页地址需自行修改代码
+            coffeeQrcode: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hm0f859sm6j208c08cabm.jpg', //打赏咖啡二维码图片地址。如果是跳转网页地址需自行修改代码
             showLantern: false, //是否显示灯笼挂件
             lanternText: ['新', '年'], //灯笼上的字,数组形式
             showFirework: true, //是否显示侧栏烟花特效

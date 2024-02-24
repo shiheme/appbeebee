@@ -2,7 +2,7 @@
 post: true
 title: 4款开源的漂亮的博客/资讯/信息类小程序
 date: 2023-11-10
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hld2mo9k81j20k00dcguf.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld2mo9k81j20k00dcguf.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/iphone-pro-15-3d-mockups-free.gif
 categories:
  - 小程序
@@ -14,7 +14,7 @@ description: 暂无。
 # 4款开源的漂亮的博客/资讯/信息类小程序
 
 ## 1.dulaiduwang003/ScribbleHub
-![dulaiduwang003/ScribbleHub](https://fc.sinaimg.cn/large/6364aa43gy1hlczqtlrvtj20k00dcn35.jpg)
+![dulaiduwang003/ScribbleHub](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlczqtlrvtj20k00dcn35.jpg)
 
 前端基于 uniapp ,后端基于 SpringBoot3 开发的 个人博客小程序。
 
@@ -29,7 +29,7 @@ description: 暂无。
 <ArticleLink via="post" :work="{
     title: 'dulaiduwang003/ScribbleHub',
     view: 'https://github.com/dulaiduwang003/ScribbleHub/',
-    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hld03tfq52j2076076aad.jpg',
+    qrcode: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld03tfq52j2076076aad.jpg',
     github: 'dulaiduwang003/ScribbleHub',
     coveross: '',
     beecode: '', //备用下载的文章 id
@@ -38,7 +38,7 @@ description: 暂无。
     }" />
 
 ## 2.sysucats/zhongdamaopu
-![sysucats/zhongdamaopu](https://fc.sinaimg.cn/large/6364aa43gy1hld1p2xd0jj20k00dcn4a.jpg)
+![sysucats/zhongdamaopu](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld1p2xd0jj20k00dcn4a.jpg)
 
 基于Laf云开发的一款记录流浪猫猫成长轨迹的小程序
 
@@ -52,7 +52,7 @@ description: 暂无。
 <ArticleLink via="post" :work="{
     title: 'sysucats/zhongdamaopu',
     view: 'https://github.com/sysucats/zhongdamaopu/',
-    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hld1kr283ej20by0byq5i.jpg',
+    qrcode: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld1kr283ej20by0byq5i.jpg',
     github: 'sysucats/zhongdamaopu',
     coveross: '',
     beecode: '', //备用下载的文章 id
@@ -61,7 +61,7 @@ description: 暂无。
     }" />
 
 ## 3.DengJe/lu-you
-![DengJe/lu-you](https://fc.sinaimg.cn/large/6364aa43gy1hld2ae6431j20k00dc47r.jpg)
+![DengJe/lu-you](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld2ae6431j20k00dc47r.jpg)
 
 Laravel+Uniapp开发的微信小程序，可适用于资讯、博客等。
 
@@ -70,7 +70,7 @@ Laravel+Uniapp开发的微信小程序，可适用于资讯、博客等。
 <ArticleLink via="post" :work="{
     title: 'DengJe/lu-you',
     view: 'https://gitee.com/DengJe/lu-you',
-    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hld2a3lo58j2076076wes.jpg',
+    qrcode: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld2a3lo58j2076076wes.jpg',
     github: '',
     via: 'https://gitee.com/DengJe/lu-you',
     coveross: '',
@@ -80,7 +80,7 @@ Laravel+Uniapp开发的微信小程序，可适用于资讯、博客等。
     }" />
 
 ## 4.shiheme/booklover-3.0-published
-![shiheme/booklover-3.0-master](https://fc.sinaimg.cn/large/6364aa43gy1hld2mo9k81j20k00dcguf.jpg)
+![shiheme/booklover-3.0-master](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld2mo9k81j20k00dcguf.jpg)
 
 后台基于 wordpress的校园图书借阅，图书信息展示的小程序
 
@@ -98,7 +98,7 @@ Laravel+Uniapp开发的微信小程序，可适用于资讯、博客等。
 <ArticleLink via="post" :work="{
     title: 'shiheme/booklover-3.0-published',
     view: 'https://github.com/shiheme/booklover-3.0-published/',
-    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hld2m8dvcij2076076mxh.jpg',
+    qrcode: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld2m8dvcij2076076mxh.jpg',
     github: 'shiheme/booklover-3.0-published',
     via: '',
     coveross: '',

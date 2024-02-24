@@ -3,12 +3,10 @@
     <Layout :class="{ home: frontmatter?.index }">
         <template #not-found>
             <!-- 页面不存在 -->
-            <ClientOnly>
                 <div class="page404">
                     <PageASide type="page404" />
                     
                 </div>
-            </ClientOnly>
         </template>
         <template #layout-top>
             <ClientOnly><!-- 在布局下方添加 -->
@@ -39,13 +37,11 @@
             <!-- 在标题后添加 -->
         </template>
         <template #sidebar-nav-before>
-            <ClientOnly>
-                
-                <PageNavi />
+            <PageNavi />
+           
                 <div class="fireworkwrap">
                     <Firework></Firework>
                 </div>
-                </ClientOnly>
         </template>
         <template #doc-top>
             <ClientOnly>
@@ -53,26 +49,25 @@
             </ClientOnly>
         </template>
         <template #doc-before>
-            <ClientOnly>
                 <Home v-if="frontmatter?.index" />
                 <ArticleBread v-if="(frontmatter?.post)" :article="page" />
                 <ArticleMetadata v-if="(frontmatter?.post)" type="single" :article="page" :key="md5(page.relativePath)" />
-            </ClientOnly>
         </template>
         <template #aside-bottom>
             <ClientOnly>
                 
                 <!-- <ArticleLink v-if="(frontmatter?.post)" :key="md5(page.relativePath)" /> -->
                 <PageASide v-if="(frontmatter.index)" />
+            </ClientOnly>
                 <PageGZH />
                 <!-- <Links v-if="(frontmatter.index)" /> -->
-            </ClientOnly>
+            
         </template>
         <template #doc-footer-before>
-            <ClientOnly>
+           
                 <ArticleCC v-if="(frontmatter?.post)" />
                 <ArticleRelate v-if="(frontmatter?.post)" :key="md5(page.relativePath)" />
-            </ClientOnly>
+  
         </template>
         <template #doc-bottom>
             <Copyright />

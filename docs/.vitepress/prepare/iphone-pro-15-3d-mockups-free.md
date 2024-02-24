@@ -2,7 +2,7 @@
 post: true
 title: iPhone Pro 15 3D模型 Figma源文件
 date: 2023-12-27
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hl8pp677wxg20k00dckai.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hl8pp677wxg20k00dckai.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/iphone-pro-15-3d-mockups-free.gif
 categories:
  - 设计

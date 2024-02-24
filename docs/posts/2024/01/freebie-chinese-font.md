@@ -2,8 +2,8 @@
 post: true
 title: 7款小米、华为、抖音、淘宝等大厂设计的免费可商用的中文字体
 date: 2024-01-18
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hlxgepmlgvj20k00dctkd.jpg
-coveross: https://fc.sinaimg.cn/large/6364aa43gy1hlxgcx1xxmj21400qokjl.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxgepmlgvj20k00dctkd.jpg
+coveross: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxgcx1xxmj21400qokjl.jpg
 categories:
  - 设计
 tags:
@@ -15,11 +15,11 @@ description:  用于海报、视频设计等，均可商业使用。
 
 
 ## 1.华为HarmonyOS Sans 字体
-![HarmonyOS Sans 字体](https://fc.sinaimg.cn/large/6364aa43gy1hlxg58m6w3j21z40m8dis.jpg)
+![HarmonyOS Sans 字体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxg58m6w3j21z40m8dis.jpg)
 
-![HarmonyOS Sans 字体](https://fc.sinaimg.cn/large/6364aa43gy1hlxg5ko45cj21z42x8alh.jpg)
+![HarmonyOS Sans 字体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxg5ko45cj21z42x8alh.jpg)
 
-![HarmonyOS Sans 字体](https://fc.sinaimg.cn/large/6364aa43gy1hlxg5x3mh3j24js2gohdt.jpg)
+![HarmonyOS Sans 字体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxg5x3mh3j24js2gohdt.jpg)
 
 华为设计师通过研究用户在不同场景下对多终端设备的阅读反馈，综合考量不同设备的尺寸、使用场景等因素，同时也考虑用户使用设备时因视距、视角的差异带来的字体大小和字重的不同诉求，为 HarmonyOS 设计了全新系统默认的字体——HarmonyOS Sans
 
@@ -49,9 +49,9 @@ description:  用于海报、视频设计等，均可商业使用。
 
 
 ## 2. 小米MiSans MIUI13全新系统字体
-![MiSans MIUI13全新系统字体](https://fc.sinaimg.cn/large/6364aa43gy1hlxf9huh9yj21r00zgdt2.jpg)
+![MiSans MIUI13全新系统字体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxf9huh9yj21r00zgdt2.jpg)
 
-![MiSans MIUI13全新系统字体](https://fc.sinaimg.cn/large/6364aa43gy1hlxfa0fvznj21r00zgwmn.jpg)
+![MiSans MIUI13全新系统字体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxfa0fvznj21r00zgwmn.jpg)
 
 小米出品的全新免费商用字体，也是 MIUI 13 上搭载的全新系统字体
 
@@ -76,9 +76,9 @@ description:  用于海报、视频设计等，均可商业使用。
     }" />
 
 ## 3.抖音美好体
-![抖音美好体](https://fc.sinaimg.cn/large/6364aa43gy1hlxfb8gpnuj20u00gwgmd.jpg)
+![抖音美好体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxfb8gpnuj20u00gwgmd.jpg)
 
-![抖音美好体](https://fc.sinaimg.cn/large/6364aa43gy1hlxfcw3vtrj20u00gvq3v.jpg)
+![抖音美好体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxfcw3vtrj20u00gvq3v.jpg)
 
 
 为了更好地传播“记录美好生活”的品牌理念，更好地满足品牌长远发展，打造优质的内容创作与产品体验，抖音体验设计中心与方正字库联合设计开发了一款简洁大方、清晰易读，同时兼具现代气质与人文属性的品牌定制字体——抖音美好体。
@@ -112,11 +112,11 @@ description:  用于海报、视频设计等，均可商业使用。
 
 ### 4.1 阿里妈妈刀隶体
 
-![阿里妈妈刀隶体](https://fc.sinaimg.cn/large/6364aa43gy1hlxfdf47t4g21hc0ty7wk.jpg)
+![阿里妈妈刀隶体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxfdf47t4g21hc0ty7wk.jpg)
 
-![阿里妈妈刀隶体](https://fc.sinaimg.cn/large/6364aa43gy1hlxff0v41oj21jk0rd44n.jpg)
+![阿里妈妈刀隶体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxff0v41oj21jk0rd44n.jpg)
 
-![阿里妈妈刀隶体](https://fc.sinaimg.cn/large/6364aa43gy1hlxfji4pxrj21jk1357na.jpg)
+![阿里妈妈刀隶体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxfji4pxrj21jk1357na.jpg)
 
 
 阿里妈妈刀隶体为中文简体字库，收纳的中文字符包括但不限于GB2312，共计6763个汉字；英文大小写共52个；常用标点符号共227个，总计 7042 个字符。
@@ -143,9 +143,9 @@ description:  用于海报、视频设计等，均可商业使用。
 
 ### 4.2 阿里妈妈方圆体
 
-![阿里妈妈方圆体](https://fc.sinaimg.cn/large/6364aa43gy1hlxfksel73j21jk0rdwki.jpg)
+![阿里妈妈方圆体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxfksel73j21jk0rdwki.jpg)
 
-![阿里妈妈方圆体](https://fc.sinaimg.cn/large/6364aa43gy1hlxfl3h18xj21jk0rt7c0.jpg)
+![阿里妈妈方圆体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxfl3h18xj21jk0rt7c0.jpg)
 
 阿里妈妈方圆体为一款简体中文双轴可变字体，收纳的中文字符包括但不限于 GB2312，共计6763个汉字；英文大小写共52个；常用标点符号共227个，总计7042个字符
 
@@ -172,9 +172,9 @@ description:  用于海报、视频设计等，均可商业使用。
 
 ### 4.3 阿里妈妈东方大楷
 
-![阿里妈妈东方大楷](https://fc.sinaimg.cn/large/6364aa43gy1hlxfoh3budj21sg2mbe81.jpg)
+![阿里妈妈东方大楷](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxfoh3budj21sg2mbe81.jpg)
 
-![阿里妈妈东方大楷](https://fc.sinaimg.cn/large/6364aa43gy1hlxfos5qu6j20y10nvtze.jpg)
+![阿里妈妈东方大楷](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxfos5qu6j20y10nvtze.jpg)
 
 阿里妈妈东方大楷为中文简体字库，收纳的中文字符包括但不限于GB2312，共计6763个汉字；英文大小写（含全角、半角、合体字等）共105个；常用标点符号共175个，总计7043个字符。
 
@@ -200,9 +200,9 @@ description:  用于海报、视频设计等，均可商业使用。
 
 ### 4.4 阿里妈妈数黑体
 
-![阿里妈妈数黑体](https://fc.sinaimg.cn/large/6364aa43gy1hlxfqm0ztkj21sg3conpd.jpg)
+![阿里妈妈数黑体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxfqm0ztkj21sg3conpd.jpg)
 
-![阿里妈妈数黑体](https://fc.sinaimg.cn/large/6364aa43gy1hlxfqyxw9rj21sg0tukjl.jpg)
+![阿里妈妈数黑体](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlxfqyxw9rj21sg0tukjl.jpg)
 
 阿里妈妈数黑体为中文简体字库，收纳的中文字符包括但不限于GB2312，共计6767个汉字；英文大小写共52个；常用标点符号共206个，总计7025个字符。
 

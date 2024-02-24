@@ -2,7 +2,7 @@
 post: true
 title: 5款免费的iPhone14/14pro手机设备渲染模型，提供备用下载
 date: 2023-08-03
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hlbmt59d9kj20k00dcjyw.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbmt59d9kj20k00dcjyw.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/iphone-pro-15-3d-mockups-free.gif
 categories:
  - 设计
@@ -15,7 +15,7 @@ description: 免费 iPhone14 设备渲染模型，方便将你的 APP UI进行�
 # 5款免费的iPhone14/14pro手机设备渲染模型，提供备用下载
 
 ## 1.Yusef Kazemi/Apple IPHONE 14 Pro Mockup
-![Yusef Kazemi/Apple IPHONE 14 Pro Mockup](https://fc.sinaimg.cn/large/6364aa43gy1hlbiz0wxf7j20k00dcgsc.jpg)
+![Yusef Kazemi/Apple IPHONE 14 Pro Mockup](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbiz0wxf7j20k00dcgsc.jpg)
 
 格式：Figma 
 
@@ -33,7 +33,7 @@ description: 免费 iPhone14 设备渲染模型，方便将你的 APP UI进行�
 
 
 ## 2.Artur Konariev/iPhone 14 Free Mockups | Dynamic Island
-![Artur Konariev/iPhone 14 Free Mockups | Dynamic Island](https://fc.sinaimg.cn/large/6364aa43gy1hlbiz0wyo0j20k00dcgwh.jpg)
+![Artur Konariev/iPhone 14 Free Mockups | Dynamic Island](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbiz0wyo0j20k00dcgwh.jpg)
 
 格式：Figma
 
@@ -50,7 +50,7 @@ description: 免费 iPhone14 设备渲染模型，方便将你的 APP UI进行�
     }" />
 
 ## 3.Yash Ranpara/iPhone 14 Mockups - Free
-![Yash Ranpara/iPhone 14 Mockups - Free](https://fc.sinaimg.cn/large/6364aa43gy1hlbmlwelx4j20k00dc44l.jpg)
+![Yash Ranpara/iPhone 14 Mockups - Free](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbmlwelx4j20k00dc44l.jpg)
 
 格式：Figma
 
@@ -67,7 +67,7 @@ description: 免费 iPhone14 设备渲染模型，方便将你的 APP UI进行�
     }" />
 
 ## 4.Uiscore/Free iPhone 14 Pro Mockup
-![Uiscore/Free iPhone 14 Pro Mockup](https://fc.sinaimg.cn/large/6364aa43gy1hlbmt59d9kj20k00dcjyw.jpg)
+![Uiscore/Free iPhone 14 Pro Mockup](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbmt59d9kj20k00dcjyw.jpg)
 
 格式：Figma
 
@@ -84,7 +84,7 @@ description: 免费 iPhone14 设备渲染模型，方便将你的 APP UI进行�
     }" />
     
 ## 5.Estudio 2C/FREE iPhone 14 pro High-Quality MOCKUP
-![Estudio 2C/FREE iPhone 14 pro High-Quality MOCKUP](https://fc.sinaimg.cn/large/6364aa43gy1hlbnxqthh8j20k00dctft.jpg)
+![Estudio 2C/FREE iPhone 14 pro High-Quality MOCKUP](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbnxqthh8j20k00dctft.jpg)
 
 格式：PSD
 

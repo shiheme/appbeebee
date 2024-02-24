@@ -2,7 +2,7 @@
 post: true
 title: 5款免费的iPhone15/15pro手机设备渲染模型，提供备用下载
 date: 2023-12-01
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hlbkg84tp8j20k00dcdjw.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbkg84tp8j20k00dcdjw.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/iphone-pro-15-3d-mockups-free.gif
 categories:
  - 设计
@@ -15,7 +15,7 @@ description: 免费 iPhone15 设备渲染模型，方便将你的 APP UI进行�
 # 5款免费的iPhone15/15pro手机设备渲染模型，提供备用下载
 
 ## 1.Faysal Khan/iPhone 15 Pro Mockup for Adobe XD for Free
-![Faysal Khan/iPhone 15 Pro Mockup for Adobe XD for Free](https://fc.sinaimg.cn/large/6364aa43gy1hlbkg84tp8j20k00dcdjw.jpg)
+![Faysal Khan/iPhone 15 Pro Mockup for Adobe XD for Free](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbkg84tp8j20k00dcdjw.jpg)
 
 格式：Adobe XD 
 
@@ -34,7 +34,7 @@ description: 免费 iPhone15 设备渲染模型，方便将你的 APP UI进行�
 
 ## 2.Gregory Riaguzov/iPhone Pro 15 3D Mockups Free
 ![
-Gregory Riaguzov/iPhone Pro 15 3D Mockups Free](https://fc.sinaimg.cn/large/6364aa43gy1hl8pp677wxg20k00dckai.jpg)
+Gregory Riaguzov/iPhone Pro 15 3D Mockups Free](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hl8pp677wxg20k00dckai.jpg)
 
 格式：Figma
 
@@ -52,7 +52,7 @@ Gregory Riaguzov/iPhone Pro 15 3D Mockups Free](https://fc.sinaimg.cn/large/6364
 
 ## 3.Uiscore/iPhone 15 Pro Free Mockup
 ![
-Uiscore/iPhone 15 Pro Free Mockup](https://fc.sinaimg.cn/large/6364aa43gy1hlbm7mr4ygj20k00dcaib.jpg)
+Uiscore/iPhone 15 Pro Free Mockup](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbm7mr4ygj20k00dcaib.jpg)
 
 格式：Figma
 
@@ -69,7 +69,7 @@ Uiscore/iPhone 15 Pro Free Mockup](https://fc.sinaimg.cn/large/6364aa43gy1hlbm7m
     }" />
 
 ## 4.Sabrina Sultana Tanaaz/iPhone 15 & 15 Pro Free Mockups
-![Sabrina Sultana Tanaaz/iPhone 15 & 15 Pro Free Mockups](https://fc.sinaimg.cn/large/6364aa43gy1hlbnguqredj20k00dc7al.jpg)
+![Sabrina Sultana Tanaaz/iPhone 15 & 15 Pro Free Mockups](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbnguqredj20k00dc7al.jpg)
 
 格式：PSD
 
@@ -86,7 +86,7 @@ Uiscore/iPhone 15 Pro Free Mockup](https://fc.sinaimg.cn/large/6364aa43gy1hlbm7m
     }" />
 
 ## 5.Foxy/iPhone 15 Pro Mockup — free
-![Foxy/iPhone 15 Pro Mockup — free](https://fc.sinaimg.cn/large/6364aa43gy1hlbplcsbqmj20k00dc10b.jpg)
+![Foxy/iPhone 15 Pro Mockup — free](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlbplcsbqmj20k00dc10b.jpg)
 
 格式：PSD
 

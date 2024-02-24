@@ -2,7 +2,7 @@
 post: true
 title: 3款开源的漂亮的活动/打卡/旅游类小程序
 date: 2023-09-22
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hld939y9w0j20k00dcafg.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld939y9w0j20k00dcafg.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/iphone-pro-15-3d-mockups-free.gif
 categories:
  - 小程序
@@ -15,7 +15,7 @@ description: 暂无。
 # 3款开源的漂亮的活动/打卡/旅游类小程序
 
 ## 1.jasongao97/natianyue
-![jasongao97/natianyue](https://fc.sinaimg.cn/large/6364aa43gy1hld8r1awk9j20k00dc42m.jpg)
+![jasongao97/natianyue](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld8r1awk9j20k00dc42m.jpg)
 
 哪天约是一个帮助群约计划时间的微信小程序，用户可以指定范围建立群约并分享，参与者各自选择自己合适的时间，最终选出最好的时间点。本小程序首个版本上线于 2017 年，经过 3 年时间迭代更新，已积累 8 万用户。
 
@@ -30,7 +30,7 @@ description: 暂无。
 <ArticleLink via="post" :work="{
     title: 'jasongao97/natianyue',
     view: 'https://github.com/jasongao97/natianyue/',
-    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hld8qncn9qj203c03ct8p.jpg',
+    qrcode: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld8qncn9qj203c03ct8p.jpg',
     github: 'jasongao97/natianyue',
     coveross: '',
     beecode: '', //备用下载的文章 id
@@ -39,7 +39,7 @@ description: 暂无。
     }" />
 
 ## 2.BuguTech/Bugu-Sport
-![BuguTech/Bugu-Sport](https://fc.sinaimg.cn/large/6364aa43gy1hld939y9w0j20k00dcafg.jpg)
+![BuguTech/Bugu-Sport](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld939y9w0j20k00dcafg.jpg)
 
 不咕约球是一款以校园体育为主题的微信小程序，用户主要集中于学生群体，包括高校学生和中小学学生等。
 
@@ -55,7 +55,7 @@ description: 暂无。
 <ArticleLink via="post" :work="{
     title: 'BuguTech/Bugu-Sport',
     view: 'https://github.com/BuguTech/Bugu-Sport/',
-    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hld93seua7j20by0by3zb.jpg',
+    qrcode: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld93seua7j20by0by3zb.jpg',
     github: 'BuguTech/Bugu-Sport',
     coveross: '',
     beecode: '', //备用下载的文章 id
@@ -64,7 +64,7 @@ description: 暂无。
     }" />
 
 ## 3.3075426724/WeReading
-![3075426724/WeReading](https://fc.sinaimg.cn/large/6364aa43gy1hlpfy7tx1kj21400qo7qc.jpg)
+![3075426724/WeReading](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlpfy7tx1kj21400qo7qc.jpg)
 
 一款云开发的读书会，书友会小程序。采用腾讯提供的小程序云开发解决方案，无须服务器和域名
 
@@ -85,7 +85,7 @@ description: 暂无。
 <ArticleLink via="post" :work="{
     title: '3075426724/WeReading',
     view: 'https://github.com/3075426724/WeReading/',
-    qrcode: 'https://fc.sinaimg.cn/large/6364aa43gy1hlpfy7syk3j208308eab0.jpg',
+    qrcode: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hlpfy7syk3j208308eab0.jpg',
     github: '3075426724/WeReading',
     coveross: '',
     beecode: '', //备用下载的文章 id

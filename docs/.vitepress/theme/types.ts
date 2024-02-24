@@ -1,6 +1,13 @@
 //这里存放 ts要求的内容格式
 import type { DefaultTheme } from 'vitepress'
 
+export interface View {
+  id?: string;
+  views: number;
+  created_at: string;
+  status: number;
+}
+
 export interface ThemeConfig extends DefaultTheme.Config{
   sidebar?: object[]
   search: any

@@ -2,7 +2,7 @@
 post: true
 title: V-shared-element | vue.js实现Web端/H5端共享元素内容切换
 date: 2023-12-10
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hl0kg09eqog20k00dcqci.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hl0kg09eqog20k00dcqci.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/v-shared-element.gif
 categories:
  - 小程序

@@ -2,7 +2,7 @@
 post: true
 title: 2款免费的卡通头像分层源文件，提供备用下载
 date: 2023-10-26
-cover: https://fc.sinaimg.cn/large/6364aa43gy1hld6d7iuy5j20k00dc10o.jpg
+cover: https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld6d7iuy5j20k00dc10o.jpg
 coveross: https://cdn.enshimama.com/appbeebee/posts/iphone-pro-15-3d-mockups-free.gif
 categories:
  - 设计
@@ -14,7 +14,7 @@ description: 暂无。
 # 2款免费的卡通头像分层源文件，提供备用下载
 
 ## 1.openpeeps
-![openpeeps](https://fc.sinaimg.cn/large/6364aa43gy1hld6d7iuy5j20k00dc10o.jpg)
+![openpeeps](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld6d7iuy5j20k00dc10o.jpg)
 
 格式：Figma, Sketch, Adobe XD
 
@@ -31,7 +31,7 @@ description: 暂无。
     }" />
 
 ## 2.notion-style-avatar-creator
-![notion-style-avatar-creator](https://fc.sinaimg.cn/large/6364aa43gy1hld7zpifgdj20k00dc0v6.jpg)
+![notion-style-avatar-creator](https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hld7zpifgdj20k00dc0v6.jpg)
 
 格式：Figma
 
