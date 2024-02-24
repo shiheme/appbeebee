@@ -1,5 +1,5 @@
 <template>
-    <div class="newyearcard">
+    <!-- <div class="newyearcard">
         <a href="https://mp.weixin.qq.com/s?__biz=Mzg2NjY4NDM3MQ==&mid=2247484735&idx=1&sn=ada2866d75923961740976ff83508bab&chksm=ce465983f931d09529b05480982c2563b4f12964bf03aa8b8a1f11ad302b224f9a4fa6a1e353&scene=178&cur_album_id=2990480834551906308#rd" target="_blank" class="a"></a>
         <div class="contain">
             <div class="dengbox" style="pointer-events: none;z-index: 1000;">
@@ -37,7 +37,7 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- 这是一个非常简易的轮播 -->
     <swiper :style="{
         '--swiper-navigation-color': '#ffffff',
